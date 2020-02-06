@@ -1,10 +1,10 @@
 {
     "name": "飞卢",
     "url": "https://b.faloo.com",
-    "version": 101,
+    "version": 102,
     "search": {
         "url": "https://b.faloo.com/l/0/1.html?t=1&k=${key}",
-         "charset": "UTF-8",
+         "charset": "gbk",
         "list": ".l_bar",
         "name": "h1>a",
         "author": "span:nth-child(2) > a",
@@ -41,7 +41,7 @@
 } ,
 "rank": [
     {
-        "title":"最新完本",
+        "title":"完本",
         "url": "https://b.faloo.com/y/0/0/0/0/2/0/${page}.html",
         "page": 1,
         "size": 30
@@ -64,6 +64,11 @@
     }, {
         "title":"点击总榜",
         "url": "https://b.faloo.com/y/0/0/0/0/0/3/${page}.html",
+        "page": 1,
+        "size": 30
+    }, {
+        "title":"字数总榜",
+        "url": "https://b.faloo.com/y/0/0/0/0/0/10/${page}.html",
         "page": 1,
         "size": 30
     }
