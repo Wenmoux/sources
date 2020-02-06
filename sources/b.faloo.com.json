@@ -1,0 +1,73 @@
+{
+    "name": "飞卢",
+    "url": "https://b.faloo.com",
+    "version": 100,
+    "search": {
+        "url": "https://b.faloo.com/l/0/1.html?t=1&k=${key}",
+        "list": ".l_bar",
+        "name": "h1>a",
+        "author": "span:nth-child(2) > a",
+        "summary": ".l_con>a",
+        "cover": "img",
+        "detail": "h1>a"
+    },
+    "detail": {
+        "update": ".ni_12@match->(?<=更新：)(.+)",
+        "lastChapter": "h1 > a",
+        "catalog": ""
+    },
+    "catalog": {
+        "list": ".ni_list>table",
+       "booklet": {
+      "name": "h1",
+      "list": "tbody > tr> td"
+    },
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content":"#content",
+       "filter":["@#content > div"]
+    },
+
+"auth": {
+  "login": "https://u.faloo.com/regist/login.aspx?backurl=https%3A%2F%2Fb.faloo.com%2F",
+  "cookie": "faloo.com",
+  "verify":"https://u.faloo.com/AccountInfo.aspx",
+ "logged": "span.spanOut > a@equal->【退出】",
+  "vip": "font:nth-child(2)@equal->您还没有订阅本章节(VIP章节)，请选择订阅方式："
+ 
+} ,
+"rank": [
+    {
+        "title":"最新完本",
+        "url": "https://b.faloo.com/y/0/0/0/0/2/0/${page}.html",
+        "page": 1,
+        "size": 30
+    },
+    {
+        "title":"催更榜",
+        "url": "https://b.faloo.com/y/0/0/0/0/0/19/${page}.html",
+        "page": 1,
+        "size": 30
+    }, {
+        "title":"月打赏榜",
+        "url": "https://b.faloo.com/y/0/0/0/0/0/17/${page}.html",
+        "page": 1,
+        "size": 30
+    }, {
+        "title":"收藏总榜",
+        "url": "https://b.faloo.com/y/0/0/0/0/0/9/${page}.html",
+        "page": 1,
+        "size": 30
+    }, {
+        "title":"点击总榜",
+        "url": "https://b.faloo.com/y/0/0/0/0/0/3/${page}.html",
+        "page": 1,
+        "size": 30
+    }
+]
+ 
+
+
+}
