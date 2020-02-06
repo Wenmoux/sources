@@ -1,0 +1,39 @@
+{
+    "name": "黑岩",
+    "url": "https://www.heiyan.com",
+    "version": 100,
+    "search": {
+        "url": "http://search.heiyan.com/web/search?queryString=${key}&highlight=false",
+        "charset": "UTF-8",
+        "list": "$..content[*]",
+        "name": "$.name",
+        "author": "$.authorname",
+        "cover": "https://b.heiyanimg.com/book/${$.id}.jpg",
+        "detail": "https://www.heiyan.com/book/${$.id}"
+    },
+    "detail": {
+        "name": "h1",
+        "author": ".right > a > strong",
+        "cover": "",
+        "summary": ".right > div > pre:nth-child(1)",
+        "status": "meta[property=og:novel:status]@attr->content",
+        "update": "h4 > span",
+        "lastChapter": "h4 > a@match->(.+)(?=>>)",
+        "catalog": ".buttons.clearfix > a.index"
+    },
+    "catalog": {
+        "list": ".bd > ul>*",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": ".page-content"
+    }
+    ,
+    "auth": {
+        "login": "https://www.heiyan.com/accounts/login?backUrl=https://www.heiyan.com",
+        "cookie": "www.heiyan.com"
+      }
+
+
+}
