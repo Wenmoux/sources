@@ -1,6 +1,6 @@
 {
     "name": "晋江文学城",
-    "url": "http://app-cdn.jjwxc.net",
+    "url": "https://m.jjwxc.net",
     "version": 105,
     "search": {
         "url": "http://app.jjwxc.org/androidapi/search?keyword=${key}&type=1&page=1&token=null&searchType=1&sortMode=DESC&versionCode=126",
