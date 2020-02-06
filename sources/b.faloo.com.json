@@ -1,9 +1,10 @@
 {
     "name": "飞卢",
     "url": "https://b.faloo.com",
-    "version": 100,
+    "version": 101,
     "search": {
         "url": "https://b.faloo.com/l/0/1.html?t=1&k=${key}",
+         "charset": "UTF-8",
         "list": ".l_bar",
         "name": "h1>a",
         "author": "span:nth-child(2) > a",
