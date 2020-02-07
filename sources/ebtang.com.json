@@ -1,0 +1,29 @@
+{
+    "name": "雁北堂",
+    "url": "http://ebtang.com",
+    "version": 100,
+    "search": {
+        "url": "http://ebtang.com/book/search?searchName=${key}",  
+        "charset": "UTF-8",
+        "list": "ul > li",
+        "name": "li@attr->d-name",
+        "author": "li@attr->d-nick",
+        "cover": "li@attr->d-cover",
+        "detail": "http://www.ebtang.com/book/${li@attr->d-id}"
+    },
+    "detail": {
+        "summary": "meta[property=og:description]@attr->content",
+        "status": "span.status",
+        "update": "#bookDetail@attr->d-lasttime",
+        "lastChapter": "#bookDetail@attr->d-lasttitle",
+        "catalog": "/book/${#bookDetail@attr->d-id}/directory?idd=${#bookDetail@attr->d-id}"
+    },
+    "catalog": {
+        "list": "b",
+        "name": "b@attr->d-title",
+        "chapter": "/book/readbook/${$params.idd}/${b@attr->d-id}"
+    },
+    "chapter": {
+        "content":"$..content"
+    }
+}
