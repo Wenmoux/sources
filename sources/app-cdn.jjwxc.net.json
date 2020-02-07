@@ -1,7 +1,7 @@
 {
     "name": "晋江文学城",
     "url": "https://m.jjwxc.net",
-    "version": 106,
+    "version": 107,
     "search": {
         "url": "http://app.jjwxc.org/androidapi/search?keyword=${key}&type=1&page=1&token=null&searchType=1&sortMode=DESC&versionCode=126",
         "charset": "UTF-8",
@@ -42,45 +42,16 @@
               "title":"长生殿",
               "url": "http://app.robook.com:80/bookstore/getTop@post->channel=${key}&offset=0&limit=100&versionCode=130",
               "size": 100,
-              "categories": [{"key": "700016", "value": "言情"}, {"key": "700017", "value": "纯爱"}, {"key": "700018", "value": "原创"}, {"key": "700019", "value": "衍生"}]
-          },
-          {
-            "title":"月榜",
-            "url": "http://app.robook.com:80/bookstore/getTop@post->channel=${key}&offset=0&limit=100&versionCode=130",
-            "size": 100,
-            "categories": [{"key": "700001", "value": "言情"}, {"key": "700002", "value": "纯爱"}, {"key": "700003", "value": "原创"}, {"key": "700004", "value": "衍生"}]
-        },
-        {
-            "title":"季榜",
-            "url": "http://app.robook.com:80/bookstore/getTop@post->channel=${key}&offset=0&limit=100&versionCode=130",
-            "size": 100,
-            "categories": [{"key": "700006", "value": "言情"}, {"key": "700007", "value": "纯爱"}, {"key": "700008", "value": "原创"}, {"key": "700009", "value": "衍生"}]
-        }, {
-            "title":"半年榜",
-            "url": "http://app.robook.com:80/bookstore/getTop@post->channel=${key}&offset=0&limit=100&versionCode=130",
-            "size": 100,
-            "categories": [{"key": "700011", "value": "言情"}, {"key": "700012", "value": "纯爱"}, {"key": "700013", "value": "原创"}, {"key": "700014", "value": "衍生"}]
-        },{
-            "title":"总分榜",
-            "url": "http://app.robook.com:80/bookstore/getTop@post->channel=${key}&offset=0&limit=100&versionCode=130",
-            "size": 100,
-            "categories": [{"key": "700021", "value": "言情"}, {"key": "700022", "value": "纯爱"}, {"key": "700023", "value": "原创"}, {"key": "700024", "value": "衍生"}]
-        },{
-            "title":"完结金榜",
-            "url": "http://app.robook.com:80/bookstore/getTop@post->channel=${key}&offset=0&limit=100&versionCode=130",
-            "size": 100,
-            "categories": [{"key": "100006", "value": "言情"}, {"key": "100007", "value": "纯爱"}, {"key": "100008", "value": "原创"}, {"key": "100009", "value": "衍生"}]
-        },{
-            "title":"霸王票榜",
-            "url": "http://app.robook.com:80/bookstore/getTop@post->channel=${key}&offset=0&limit=100&versionCode=130",
-            "size": 100,
-            "categories": [{"key": "800001", "value": "言情"}, {"key": "800002", "value": "纯爱"}, {"key": "800003", "value": "原创"}, {"key": "800004", "value": "衍生"}]
-        },{
-            "title":"勤奋指数榜",
-            "url": "http://app.robook.com:80/bookstore/getTop@post->channel=${key}&offset=0&limit=100&versionCode=130",
-            "size": 100,
-            "categories": [{"key": "600006", "value": "言情"}, {"key": "600007", "value": "纯爱"}, {"key": "600008", "value": "原创"}, {"key": "600009", "value": "衍生"}]
-        }
+              "categories": [{"key": "700016", "value": "言情"}, {"key": "700017", "value": "纯爱"}, {"key": "700018", "value": "原创"}, {"key": "700019", "value": "衍生"},
+             "list":$.*,
+             "name":$.novelName,
+              "author":$.authorName,
+               "summary":$.novelIntroShort,
+                "cover":$.cover,
+                "detail":http://app-cdn.jjwxc.net:80/androidapi/novelbasicinfo?novelId=${$.novelId}
+
+          }
+          
       ]
 
 
