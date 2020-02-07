@@ -1,0 +1,39 @@
+{
+    "name": "网易云阅读",
+    "url": "http://m.yuedu.163.com",
+    "version": 100,
+    "search": {
+        "url": "http://m.yuedu.163.com/search/book/data.json?key=${key}",
+         "charset": "UTF-8",
+        "list": "$..books[*]",
+        "name": "$.title",
+        "author": "$.author",
+        "summary": "$.description",
+        "cover": "$.coverImage",
+        "detail": "http://m.yuedu.163.com/source/${$.sourceUuid}"
+    },
+    "detail": {
+        "status": ".info > p:nth-child(4)@match->(?<= | ).+",
+        "update": "p.time@match->.+(?=更新)",
+        "lastChapter": "a.title",
+        "catalog": "http://m.yuedu.163.com/reader/book/info.json?catalog_only=true&source_uuid=${div.j-actions@attr->data-sourceuuid}"
+    },
+    "catalog": {
+        "list": "$..catalog[*]",
+        "name": "$.title",
+        "chapter": "http://m.yuedu.163.com/reader/book/content.json?source_uuid=${$params.source_uuid}&content_uuid=${$.uuid}"
+    },
+    "chapter": {
+        "content":"$..content@decrypt->base64"
+
+    },
+
+    "auth": {
+      "login": "http://m.yuedu.163.com/login.do",
+      "cookie": "m.yuedu.163.com",
+      "verify":"http://m.yuedu.163.com/myinfo.do",
+     "logged": "a.ui-gray-dark.logout@equal->退出登录",
+     "vip":"$.code@equal->-1"
+    }
+
+}
