@@ -1,7 +1,7 @@
 {
     "name": "晋江文学城",
     "url": "https://m.jjwxc.net",
-    "version": 107,
+    "version": 108,
     "search": {
         "url": "http://app.jjwxc.org/androidapi/search?keyword=${key}&type=1&page=1&token=null&searchType=1&sortMode=DESC&versionCode=126",
         "charset": "UTF-8",
@@ -43,12 +43,12 @@
               "url": "http://app.robook.com:80/bookstore/getTop@post->channel=${key}&offset=0&limit=100&versionCode=130",
               "size": 100,
               "categories": [{"key": "700016", "value": "言情"}, {"key": "700017", "value": "纯爱"}, {"key": "700018", "value": "原创"}, {"key": "700019", "value": "衍生"},
-             "list":$.*,
-             "name":$.novelName,
-              "author":$.authorName,
-               "summary":$.novelIntroShort,
-                "cover":$.cover,
-                "detail":http://app-cdn.jjwxc.net:80/androidapi/novelbasicinfo?novelId=${$.novelId}
+             "list":"$.*",
+             "name":"$.novelName",
+              "author":"$.authorName",
+               "summary":"$.novelIntroShort",
+                "cover":"$.cover",
+                "detail":"http://app-cdn.jjwxc.net:80/androidapi/novelbasicinfo?novelId=${$.novelId}"
 
           }
           
