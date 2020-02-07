@@ -1,7 +1,7 @@
 {
     "name": "飞卢",
     "url": "https://b.faloo.com",
-    "version": 102,
+    "version": 103,
     "search": {
         "url": "https://b.faloo.com/l/0/1.html?t=1&k=${key}",
          "charset": "gbk",
