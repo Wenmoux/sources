@@ -1,0 +1,33 @@
+{
+    "name": "完本神站",
+    "url": "www.wanbentxt.com",
+    "version": 100,
+    "search": {
+        "url": "https://www.wanbentxt.com/modules/article/search.php@post->searchtype=articlename&searchkey=${key}",
+         "charset": "GBK",
+        "list": ".resultLeft > ul > li",
+        "name": "h3",
+        "author": "p.author > a",
+        "summary": "p.intro",
+        "cover": ".sortImg > a > img",
+        "detail": ".sortPhr > a"
+    },
+    "detail": {
+        "status": ".detailTopLeft > span",
+        "update": ".chapter > div > span@match->.+(?= 更新至)",
+        "lastChapter": ".chapter > div > span > a",
+        "catalog": ""
+    },
+    "catalog": {
+        "list": ".chapter > ul > li",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content":".readerCon",
+    "page": {
+      "next": ".readPage>a:nth-child(3):matches(下一页)"
+    }
+
+    }
+}
