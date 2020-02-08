@@ -1,7 +1,7 @@
 {
     "name": "完本神站",
     "url": "www.wanbentxt.com",
-    "version": 100,
+    "version": 101,
     "search": {
         "url": "https://www.wanbentxt.com/modules/article/search.php@post->searchtype=articlename&searchkey=${key}",
          "charset": "GBK",
@@ -26,7 +26,7 @@
     "chapter": {
         "content":".readerCon",
     "page": {
-      "next": ".readPage>a:nth-child(3):matches(下一页)"
+      "url": ".readPage>a:nth-child(3):matches(下一页)"
     }
 
     }
