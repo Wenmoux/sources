@@ -1,7 +1,7 @@
 {
     "name": "17k",
     "url": "www.17k.com",
-    "version": 100,
+    "version": 101,
     "search": {
         "url": "https://search.17k.com/search.xhtml?c.st=0&c.q=${key}",
          "charset": "utf-8",
@@ -37,7 +37,7 @@
         "cookie": "17k.com",
         "verify":"https://user.17k.com/www/",
         "logged":"div:nth-child(1) > h2 > span@equal->我的创作",
-          "vip": "p.copy@js->${this}.match(?<= ).+(?=,)@equal->VIP章节"
+          "vip": "p.copy@match->(?<= ).+(?=,)@equal->VIP章节"
       }
 
 }
