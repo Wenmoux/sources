@@ -1,0 +1,43 @@
+{
+    "name": "17k",
+    "url": "www.17k.com",
+    "version": 100,
+    "search": {
+        "url": "https://search.17k.com/search.xhtml?c.st=0&c.q=${key}",
+         "charset": "utf-8",
+        "list": ".search-list>.textlist:nth-child(n+3)",
+        "name": "dt>a",
+        "author": ".bq>span:nth-child(1)>a",
+        "cover": "img",
+        "detail": "dt>a"
+    },
+    "detail": {
+        "status": ".label > a:nth-child(1)", 
+        "update": "#bookInfo > dt > em@match->(?<=更新: ).+",
+        "lastChapter": ".NewsChapter > dd > ul > li:nth-child(2) > a",
+        "summary": ".intro",
+        "catalog": ".read>a"
+    },
+    "catalog": {
+        "list": ".Volume",
+        "booklet": {
+            "name": "span.tit",
+            "list": "dd>A"
+          },
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content":".readAreaBox.content >.p",
+        "filter":["@div.qrcode"]
+
+    },
+    "auth": {
+        "login": "https://passport.17k.com/login",
+        "cookie": "17k.com",
+        "verify":"https://user.17k.com/www/",
+        "logged":"div:nth-child(1) > h2 > span@equal->我的创作",
+          "vip": "p.copy@js->${this}.match(?<= ).+(?=,)@equal->VIP章节"
+      }
+
+}
