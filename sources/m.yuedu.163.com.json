@@ -1,7 +1,7 @@
 {
     "name": "网易云阅读",
     "url": "http://m.yuedu.163.com",
-    "version": 101,
+    "version": 102,
     "search": {
         "url": "http://m.yuedu.163.com/search/book/data.json?key=${key}",
          "charset": "UTF-8",
@@ -42,32 +42,32 @@
             "title":"出版图书",
             "url": "http://yuedu.163.com/book/rank/${key}/all/p${page}/s20",
             "page": 1,
-            "size": 20,
+            "size": 100,
             "categories": [{"key": "sell", "value": "畅销榜"}, {"key": "sub", "value": "订阅榜"}, {"key": "pv", "value": "点击榜"}, {"key": "free", "value": "免费榜"}, {"key": "new", "value": "新书榜"}, {"key": "douban", "value": "豆瓣好评榜"}, {"key": "dangdang", "value": "当当热销榜"}],
             "list":".yd-rank-bookitem",
             "name":"h2",
             "author":"p.author",
             "summary":"a>.desc",
             "cover":"a > img",
-            "detail":"a"
+            "detail":"http://m.yuedu.163.com${a}"
 
         },   {
             "title":"国风中文",
             "url": "http://yuedu.163.com/yc/rank_if/${key}/male/all/p${page}/s30",
             "page": 1,
-            "size": 30,
+            "size": 100,
             "categories": [{"key": "sell", "value": "畅销榜"}, {"key": "sub", "value": "收藏榜"}, {"key": "pv", "value": "点击榜"}, {"key": "articlepresent", "value": "赠阅榜"}, {"key": "monthlyticket", "value": "月票榜"}],
             "list":"$.data[*]",
-            "detail":"$.sourceUrl"
+            "detail":"http://m.yuedu.163.com${$.sourceUrl}"
 
         }, {
             "title":"采薇书院",
             "url": "http://yuedu.163.com/ycmm/rank_if/${key}/female/all/p${page}/s30",
             "page": 1,
-            "size": 30,
+            "size": 100,
             "categories": [{"key": "sell", "value": "畅销榜"}, {"key": "sub", "value": "收藏榜"}, {"key": "pv", "value": "点击榜"}, {"key": "articlepresent", "value": "赠阅榜"}, {"key": "monthlyticket", "value": "月票榜"} ],
             "list":"$.data[*]",
-            "detail":"$.sourceUrl"
+            "detail":"http://m.yuedu.163.com${$.sourceUrl}"
 
         }
     ]
