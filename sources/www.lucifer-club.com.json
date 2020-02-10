@@ -1,7 +1,7 @@
 {
     "name": "露西弗俱乐部",
     "url": "www.lucifer-club.com",
-    "version": 102,
+    "version": 103,
     "search": {
         "url": "https://www.lucifer-club.com/search.php?action=search&style=0&subject=0&content=0&sty=0&state=0&by=title&kw=${key}&rank=click&order=desc+",
         "charset": "UTF-8",
@@ -16,7 +16,7 @@
         "status": ".luf_user_info > li:nth-child(3)",
         "update": ".luf_user_info > li:nth-child(6)@replace->最后更新：->",
         "lastChapter": ".luf_user_info > li:nth-child(12) > a",
-        "catalog": "li.li_02.readBth1 > a"
+        "catalog": ""
     },
     "catalog": {
         "list": "tbody > tr:nth-child(n+2) > td:nth-child(2)",
