@@ -1,0 +1,97 @@
+{
+    "name": "汉扬居",
+    "url": "www.bjhanyang.com",
+    "version": 100,
+    "search": {
+        "url": "http://www.bjhanyang.com/plus/search.php?kwtype=0&searchtype=&q=${key}",
+        "charset": "GB2312",
+        "list": ".ul_b_list> li",
+        "name": "h2 > a",
+        "author": "p.state > a:nth-child(1)",
+        "detail": "h2> a"
+    },
+    "detail": {
+        "summary": ".words > p@replace->简介：->",
+        "cover":".p_box > div.pic > a > img",
+        "status": ".wj",
+        "update": ".words@match->([0-9]{4})-([0-9]{2})-([0-9]{2})\\s([0-9]{2}):([0-9]{2}):([0-9]{2})",
+        "lastChapter": ".words > a",
+        "catalog": ""
+    },
+    "catalog": {
+        "list": ".list_box > ul > li",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content":".box_box > div"
+    }
+    ,
+    "rank": [
+        {
+            "title":"神话·历史",
+            "url": "http://www.bjhanyang.com/chuanshuo/shuku_169_${page}.html",
+            "page": 1,
+            "list": ".ul_m_list>li",
+            "name": ".t > a",
+            "author": ".author > a",
+            "detail": ".t > a",
+            "size": 50
+        }, {
+            "title":"古典·言情",
+            "url": "http://www.bjhanyang.com/yanqing/shuku_176_${page}.html",
+            "page": 1,
+            "list": ".ul_m_list>li",
+            "name": ".t > a",
+            "author": ".author > a",
+            "detail": ".t > a",
+            "size": 50
+        },  {
+            "title":"武侠·演义",
+            "url": "http://www.bjhanyang.com/wuxia/shuku_234_${page}.html",
+            "page": 1,
+            "list": ".ul_m_list>li",
+            "name": ".t > a",
+            "author": ".author > a",
+            "detail": ".t > a",
+            "size": 50
+        }, {
+            "title":"推理·探案",
+            "url": "http://www.bjhanyang.com/tuili/shuku_379_${page}.html",
+            "page": 1,
+            "list": ".ul_m_list>li",
+            "name": ".t > a",
+            "author": ".author > a",
+            "detail": ".t > a",
+            "size": 50
+        }, {
+            "title":"知识·百科",
+            "url": "http://www.bjhanyang.com/baike/shuku_160_${page}.html",
+            "page": 1,
+            "list": ".ul_m_list>li",
+            "name": ".t > a",
+            "author": ".author > a",
+            "detail": ".t > a",
+            "size": 50
+        }, {
+            "title":"世情·文学",
+            "url": "http://www.bjhanyang.com/wenxue/shuku_246_${page}.html",
+            "page": 1,
+            "list": ".ul_m_list>li",
+            "name": ".t > a",
+            "author": ".author > a",
+            "detail": ".t > a",
+            "size": 50
+        }, {
+            "title":"戏曲·剧本",
+            "url": "http://www.bjhanyang.com/juben/shuku_86_${page}.html",
+            "page": 1,
+            "list": ".ul_m_list>li",
+            "name": ".t > a",
+            "author": ".author > a",
+            "detail": ".t > a",
+            "size": 50
+        }
+    ]
+
+}
