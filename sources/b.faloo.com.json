@@ -1,76 +1,71 @@
 {
     "name": "飞卢",
     "url": "https://b.faloo.com",
-    "version": 103,
+    "version": 104,
     "search": {
         "url": "https://b.faloo.com/l/0/1.html?t=1&k=${key}",
          "charset": "gbk",
-        "list": ".l_bar",
+        "list": "#BookContent > .TwoBox02_01>.TwoBox02_02",
         "name": "h1>a",
-        "author": "span:nth-child(2) > a",
-        "summary": ".l_con>a",
-        "cover": "img",
+        "author": ".TwoBox02_09 > span > a",
+        "summary": ".TwoBox02_06 > a",
+        "cover": ".TwoBox02_03 > a > img",
         "detail": "h1>a"
     },
     "detail": {
-        "update": ".ni_12@match->(?<=更新：)(.+)",
-        "lastChapter": "h1 > a",
+        "update": ".T-L-O-Z-Box1 > span > span",
+        "lastChapter": ".T-L-Three > div > a",
         "catalog": ""
     },
     "catalog": {
-        "list": ".ni_list>table",
+        "list": "#mulu",
        "booklet": {
-      "name": "h1",
-      "list": "tbody > tr> td"
+      "name": "#mulu > .C-Fo-Z-ML-TitleBox> span",
+      "list": ".DivTable>.DivTr>.DivTd"
     },
         "name": "a",
         "chapter": "a"
     },
     "chapter": {
-        "content":"#content",
-       "filter":["@#content > div"]
+        "content":".noveContent"
     },
 
 "auth": {
   "login": "https://u.faloo.com/regist/login.aspx?backurl=https%3A%2F%2Fb.faloo.com%2F",
   "cookie": "faloo.com",
   "verify":"https://u.faloo.com/AccountInfo.aspx",
- "logged": "span.spanOut > a@equal->【退出】",
-  "vip": "font:nth-child(2)@equal->您还没有订阅本章节(VIP章节)，请选择订阅方式："
+ "logged": ".spanOut > a@equal->【退出】 ",
+  "vip": "#setAutoBuy@equal->马上设置"
  
 } ,
 "rank": [
     {
-        "title":"完本",
-        "url": "https://b.faloo.com/y/0/0/0/0/2/0/${page}.html",
-        "page": 1,
-        "size": 30
+        "title":"总榜",
+        "url": "https://b.faloo.com/y/0/0/0/0/${key}/${page}.html",
+        "size": 100,
+        "categories": [{"key": "0/1", "value": "总点击"}, {"key": "0/7", "value": "收藏榜"}, {"key": "0/4", "value": "鲜花榜"}, {"key": "0/12", "value": "更新榜"}, {"key": "2/0", "value": "完本榜"}],
+        "page": 1
     },
     {
-        "title":"催更榜",
-        "url": "https://b.faloo.com/y/0/0/0/0/0/19/${page}.html",
-        "page": 1,
-        "size": 30
-    }, {
-        "title":"月打赏榜",
-        "url": "https://b.faloo.com/y/0/0/0/0/0/17/${page}.html",
-        "page": 1,
-        "size": 30
-    }, {
-        "title":"收藏总榜",
-        "url": "https://b.faloo.com/y/0/0/0/0/0/9/${page}.html",
-        "page": 1,
-        "size": 30
-    }, {
-        "title":"点击总榜",
-        "url": "https://b.faloo.com/y/0/0/0/0/0/3/${page}.html",
-        "page": 1,
-        "size": 30
-    }, {
-        "title":"字数总榜",
-        "url": "https://b.faloo.com/y/0/0/0/0/0/10/${page}.html",
-        "page": 1,
-        "size": 30
+        "title":"标新榜",
+        "url": "https://b.faloo.com/y/0/0/0/0/${key}/${page}.html",
+        "size": 100,
+        "categories": [{"key": "3/15", "value": "月票榜"}, {"key": "8/17", "value": "打赏榜"}, {"key": "0/19", "value": "催更榜"}, {"key": "3/66", "value": "新书PK榜"}],
+        "page": 1
+    },
+    {
+        "title":"分类榜",
+        "url": "https://b.faloo.com/y/${key}/0/0/0/0/1/${page}.html",
+        "size": 100,
+        "categories": [{"key": "44", "value": "同人榜"}, {"key": "4", "value": "都市榜"}, {"key": "1", "value": "玄幻榜"}, {"key": "3", "value": "军事榜"}, {"key": "2", "value": "网游榜"}, {"key": "5", "value": "灵异榜"}, {"key": "6", "value": "武侠榜"}, {"key": "54", "value": "女生榜"}, {"key": "7", "value": "校园榜"}, {"key": "97", "value": "轻小说榜"}],
+        "page": 1
+    },
+    {
+        "title":"女生榜",
+        "url": "https://b.faloo.com/y/54/0/0/0/${key}/${page}.html",
+        "size": 100,
+        "categories": [{"key": "0/2", "value": "人气榜"}, {"key": "0/4", "value": "鲜花榜"}, {"key": "0/7", "value": "收藏榜"}, {"key": "0/12", "value": "字数榜"}, {"key": "3/17", "value": "打赏榜"}],
+        "page": 1
     }
 ]
  
