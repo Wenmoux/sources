@@ -1,7 +1,7 @@
 {
     "name": "飞卢",
     "url": "https://b.faloo.com",
-    "version": 104,
+    "version": 105,
     "search": {
         "url": "https://b.faloo.com/l/0/1.html?t=1&k=${key}",
          "charset": "gbk",
@@ -42,28 +42,28 @@
     {
         "title":"总榜",
         "url": "https://b.faloo.com/y/0/0/0/0/${key}/${page}.html",
-        "size": 100,
+        "size": 30,
         "categories": [{"key": "0/1", "value": "总点击"}, {"key": "0/7", "value": "收藏榜"}, {"key": "0/4", "value": "鲜花榜"}, {"key": "0/12", "value": "更新榜"}, {"key": "2/0", "value": "完本榜"}],
         "page": 1
     },
     {
         "title":"标新榜",
         "url": "https://b.faloo.com/y/0/0/0/0/${key}/${page}.html",
-        "size": 100,
+        "size": 30,
         "categories": [{"key": "3/15", "value": "月票榜"}, {"key": "8/17", "value": "打赏榜"}, {"key": "0/19", "value": "催更榜"}, {"key": "3/66", "value": "新书PK榜"}],
         "page": 1
     },
     {
         "title":"分类榜",
         "url": "https://b.faloo.com/y/${key}/0/0/0/0/1/${page}.html",
-        "size": 100,
+        "size": 30,
         "categories": [{"key": "44", "value": "同人榜"}, {"key": "4", "value": "都市榜"}, {"key": "1", "value": "玄幻榜"}, {"key": "3", "value": "军事榜"}, {"key": "2", "value": "网游榜"}, {"key": "5", "value": "灵异榜"}, {"key": "6", "value": "武侠榜"}, {"key": "54", "value": "女生榜"}, {"key": "7", "value": "校园榜"}, {"key": "97", "value": "轻小说榜"}],
         "page": 1
     },
     {
         "title":"女生榜",
         "url": "https://b.faloo.com/y/54/0/0/0/${key}/${page}.html",
-        "size": 100,
+        "size": 30,
         "categories": [{"key": "0/2", "value": "人气榜"}, {"key": "0/4", "value": "鲜花榜"}, {"key": "0/7", "value": "收藏榜"}, {"key": "0/12", "value": "字数榜"}, {"key": "3/17", "value": "打赏榜"}],
         "page": 1
     }
