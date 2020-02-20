@@ -1,0 +1,32 @@
+{
+    "name": "古典文学网",
+    "url": "www.cngdwx.com",
+    "version": 100,
+    "search": {
+        "url": "http://www.cngdwx.com/plus/search.php?kwtype=0&searchtype=&q=${key}",
+         "charset": "UTF-8",
+        "list": "#main > ul > li",
+        "name": "h2 > a",
+        "author": "p.state > a:nth-child(1)",
+        "summary": "div.words > p:nth-child(3)",
+        "cover": ".pic > a:nth-child(1) > img",
+        "detail": "h2 > a"
+    },
+    "detail": {
+        "status": "meta[property=og:novel:status]@attr->content",
+        "update": "meta[property=og:novel:update_time]@attr->content",
+        "lastChapter": "meta[property=og:novel:latest_chapter_name]@attr->content",
+        "catalog": ""
+    },
+    "catalog": {
+        "list": ".list_box > ul > li",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content":".box_box>p"
+    }
+ 
+
+
+}
