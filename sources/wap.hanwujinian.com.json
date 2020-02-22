@@ -1,0 +1,129 @@
+{
+    "name": "寒武纪年",
+    "url": "wap.hanwujinian.com",
+    "version": 100,
+    "search": {
+        "url": "https://wap.hanwujinian.com/modules/article/search.php@post->searchkey=${key}&searchtype=all",
+         "charset": "GBK",
+        "list": ".g-bookInfo",
+        "name": ".title > a",
+        "author": ".author > a",
+        "cover": ".book > a > img",
+        "detail": ".g-bookInfo > a"
+    },
+    "detail": {
+        "summary":".more-box1 > p",
+        "status": ".panel > h1 > span",
+        "update": ".box4 > a@match->([0-9]{4}-[0-9]{2}-[0-9]{2})",
+        "lastChapter": ".box4 > a > span",
+        "catalog": "https://wap.hanwujinian.com/riku/read/bookmenu.php?aid=${$params.id}&uid=0"
+    },
+    "catalog": {
+        "list": "$.data[*]",
+        "name": "$.chaptername",
+        "chapter": "https://www.hanwujinian.com/modules/article/reader.php?aid=${$params.aid}&cid=${$.chapterid}"
+    },
+    "chapter": {
+        "content":".article-con"
+    },
+
+    "auth": {
+      "login": "https://wap.hanwujinian.com/login.php?jumpurl=https%3A%2F%2Fwap.hanwujinian.com%2Fusers.php",
+      "cookie": "wap.hanwujinian.com",
+      "verify":"https://wap.hanwujinian.com/users.php",
+     "logged": ".cnav2 > li:nth-child(1) > a@equal->充值"
+    }
+    ,
+    "rank": [
+        {
+            "title":"热销榜",
+            "url": "https://www.hanwujinian.com/riku/hwjn_module/read/bookorderlist.php?rgroup=1&type=details&sortname=${key}",
+            "page": 1,
+            "size": 50,
+            "categories": [{"key": "daysale", "value": "日"}, {"key": "weeksale", "value": "周"}, {"key": "monthsale", "value": "月"}, {"key": "sumegold", "value": "总"}],
+            "list":"$.*",
+            "name":"$.articlename",
+            "author":"$.author",
+            "summary":"$.intro",
+            "cover":"$.image",
+            "detail":"https://wap.hanwujinian.com/modules/article/articleinfo.php?id=${$.aid}"
+
+        },  {
+            "title":"收藏榜",
+            "url": "https://www.hanwujinian.com/riku/hwjn_module/read/bookorderlist.php?rgroup=1&type=details&sortname=${key}",
+            "page": 1,
+            "size": 50,
+            "categories": [{"key": "daygoodnum", "value": "日"}, {"key": "weekgoodnum", "value": "周"}, {"key": "monthgoodnum", "value": "月"}, {"key": "goodnum", "value": "总"}],
+            "list":"$.*",
+            "name":"$.articlename",
+            "author":"$.author",
+            "summary":"$.intro",
+            "cover":"$.image",
+            "detail":"https://wap.hanwujinian.com/modules/article/articleinfo.php?id=${$.aid}"
+
+        }, {
+            "title":"月票榜",
+            "url": "https://www.hanwujinian.com/riku/hwjn_module/read/bookorderlist.php?rgroup=1&type=details&sortname=${key}",
+            "page": 1,
+            "size": 50,
+            "categories": [{"key": "dayvipvote", "value": "日"}, {"key": "weekvipvote", "value": "周"}, {"key": "monthvipvote", "value": "月"}, {"key": "allvipvote", "value": "总"}],
+            "list":"$.*",
+            "name":"$.articlename",
+            "author":"$.author",
+            "summary":"$.intro",
+            "cover":"$.image",
+            "detail":"https://wap.hanwujinian.com/modules/article/articleinfo.php?id=${$.aid}"
+
+        },{
+            "title":"推荐榜",
+            "url": "https://www.hanwujinian.com/riku/hwjn_module/read/bookorderlist.php?rgroup=1&type=details&sortname=${key}",
+            "page": 1,
+            "size": 50,
+            "categories": [{"key": "dayvote", "value": "日"}, {"key": "weekvote", "value": "周"}, {"key": "monthvote", "value": "月"}, {"key": "allvote", "value": "总"}],
+            "list":"$.*",
+            "name":"$.articlename",
+            "author":"$.author",
+            "summary":"$.intro",
+            "cover":"$.image",
+            "detail":"https://wap.hanwujinian.com/modules/article/articleinfo.php?id=${$.aid}"
+
+        },{
+            "title":"字数榜",
+            "url": "https://www.hanwujinian.com/riku/hwjn_module/read/bookorderlist.php?rgroup=1&type=details&sortname=${key}",
+            "size": 50,
+            "categories": [{"key": "daysize", "value": "日"}, {"key": "weeksize", "value": "周"}, {"key": "monthsize", "value": "月"}, {"key": "size", "value": "总"}],
+            "list":"$.*",
+            "name":"$.articlename",
+            "author":"$.author",
+            "summary":"$.intro",
+            "cover":"$.image",
+            "detail":"https://wap.hanwujinian.com/modules/article/articleinfo.php?id=${$.aid}"
+        },{
+            "title":"访问榜",
+            "url": "https://www.hanwujinian.com/riku/hwjn_module/read/bookorderlist.php?rgroup=1&type=details&sortname=${key}",
+            "size": 50,
+            "categories": [{"key": "dayvisit", "value": "日"}, {"key": "weekvisit", "value": "周"}, {"key": "monthvisit", "value": "月"}, {"key": "allvisit", "value": "总"}],
+            "list":"$.*",
+            "name":"$.articlename",
+            "author":"$.author",
+            "summary":"$.intro",
+            "cover":"$.image",
+            "detail":"https://wap.hanwujinian.com/modules/article/articleinfo.php?id=${$.aid}"
+        },{
+            "title":"总礼物榜",
+            "url": "https://www.hanwujinian.com/riku/hwjn_module/read/bookorderlist.php?rgroup=1&type=details&sortname=giftnums",
+            "size": 50,
+            "list":"$.*",
+            "name":"$.articlename",
+            "author":"$.author",
+            "summary":"$.intro",
+            "cover":"$.image",
+            "detail":"https://wap.hanwujinian.com/modules/article/articleinfo.php?id=${$.aid}"
+        }
+    ]
+
+    
+ 
+
+
+}
