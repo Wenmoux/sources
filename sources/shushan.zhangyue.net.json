@@ -1,7 +1,7 @@
 {
     "name": "书山",
     "url": "shushan.zhangyue.net",
-    "version": 101,
+    "version": 102,
     "search": {
         "url": "http://shushan.zhangyue.net/search/${key}/",
          "charset": "UTF-8",
@@ -32,6 +32,7 @@
         "logged": ".logout-btn.user-info > span@equal->退出登录",
         "vip":"p.sub-title@equal->这是VIP章节 需要订阅后才能阅读"
       }
-
-
-}
+  
+  
+  }
+  
