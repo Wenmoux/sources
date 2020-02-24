@@ -1,0 +1,131 @@
+{
+    "name": "铁血读书",
+    "url": "book.tiexue.net",
+    "version": 100,
+    "search": {
+        "url": "https://book.tiexue.net/SearchResults.aspx?keywords=${key}&noveltype=0",
+        "charset": "GBK",
+        "list": ".tianZhi_list>dl",
+        "name": "h6>a",
+        "author": "span.zuoZhe1 > a",
+        "cover": "dl > dt > a > img",
+        "detail": "h6>a"
+    },
+    "detail": {
+        "summary": ".bookPrdt.colorGray > p",
+        "status": ".mLeft > p@attr->class@equal->rtIcon zt_5",
+        "update": ".newChapter.borderY.marTop > dl > dd@match->(?<=于 ).+",
+        "lastChapter": ".newChapter.borderY.marTop > dl > dt > h3 > a",
+        "catalog": "li.li_02.readBth1 > a"
+    },
+    "catalog": {
+        "list": ".dictry>*",
+        "booklet": {
+         "name": "h2",
+         "list": "li>P"
+       },
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "#mouseRight > p"
+    }
+    ,
+    "auth": {
+        "login": "https://book.tiexue.net",
+        "cookie": "book.tiexue.net",
+        "verify": "https://book.tiexue.net/",
+        "logged": "#loginLater > p.p02 > a@equal->退出登录"
+      },
+      "rank": [
+          {
+              "title":"点击榜",
+              "url": "https://book.tiexue.net/TopMore_0_${key}_0.html",
+              "size": 100,
+              "categories": [
+                {"key": "0", "value": "日"}, 
+                {"key": "1", "value": "周"}, 
+                {"key": "2", "value": "月"}, 
+                {"key": "3", "value": "总"}],
+              "list":".Sort01>dl > dd",
+              "name":".named > a.colorTh",
+              "author":"p.zuoZhe>a",
+              "detail":".named > a.colorTh"
+  
+          },
+          {
+            "title":"收藏榜",
+            "url": "https://book.tiexue.net/TopMore_1_${key}_0.html",
+            "size": 100,
+            "categories": [
+              {"key": "0", "value": "日"}, 
+              {"key": "1", "value": "周"}, 
+              {"key": "2", "value": "月"}, 
+              {"key": "3", "value": "总"}],
+            "list":".Sort01>dl > dd",
+            "name":".named > a.colorTh",
+            "author":"p.zuoZhe>a",
+            "detail":".named > a.colorTh"
+
+        },
+        {
+            "title":"鲜花榜",
+            "url": "https://book.tiexue.net/TopMore_2_${key}_0.html",
+            "size": 100,
+            "categories": [
+              {"key": "0", "value": "日"}, 
+              {"key": "1", "value": "周"}, 
+              {"key": "2", "value": "月"}, 
+              {"key": "3", "value": "总"}],
+            "list":".Sort01>dl > dd",
+            "name":".named > a.colorTh",
+            "author":"p.zuoZhe>a",
+            "detail":".named > a.colorTh"
+
+        },        {
+            "title":"更新榜",
+            "url": "https://book.tiexue.net/TopMore_3_${key}_0.html",
+            "size": 100,
+            "categories": [
+              {"key": "0", "value": "日"}, 
+              {"key": "1", "value": "周"}, 
+              {"key": "2", "value": "月"}, 
+              {"key": "3", "value": "总"}],
+            "list":".Sort01>dl > dd",
+            "name":".named > a.colorTh",
+            "author":"p.zuoZhe>a",
+            "detail":".named > a.colorTh"
+
+        },        {
+            "title":"打赏榜",
+            "url": "https://book.tiexue.net/TopMore_4_${key}_0.html",
+            "size": 100,
+            "categories": [
+              {"key": "0", "value": "日"}, 
+              {"key": "1", "value": "周"}, 
+              {"key": "2", "value": "月"}, 
+              {"key": "3", "value": "总"}],
+            "list":".Sort01>dl > dd",
+            "name":".named > a.colorTh",
+            "author":"p.zuoZhe>a",
+            "detail":".named > a.colorTh"
+
+        },        {
+            "title":"催更榜",
+            "url": "https://book.tiexue.net/TopMore_5_${key}_0.html",
+            "size": 100,
+            "categories": [
+              {"key": "0", "value": "日"}, 
+              {"key": "1", "value": "周"}, 
+              {"key": "2", "value": "月"}, 
+              {"key": "3", "value": "总"}],
+            "list":".Sort01>dl > dd",
+            "name":".named > a.colorTh",
+            "author":"p.zuoZhe>a",
+            "detail":".named > a.colorTh"
+
+        }
+          
+      ]
+
+}
