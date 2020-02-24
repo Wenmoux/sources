@@ -1,7 +1,7 @@
 {
     "name": "书山",
     "url": "shushan.zhangyue.net",
-    "version": 100,
+    "version": 101,
     "search": {
         "url": "http://shushan.zhangyue.net/search/${key}/",
          "charset": "UTF-8",
@@ -10,7 +10,7 @@
         "author": "span.author-name",
         "summary":"p.paragragh",
         "cover": "a > img@attr->data-src",
-        "detail": "book-info>a"
+        "detail": ".book-info>a"
     },
     "detail": {
         "status": ".other-info > a:nth-child(1)",
