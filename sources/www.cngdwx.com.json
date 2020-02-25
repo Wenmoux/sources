@@ -1,7 +1,7 @@
 {
     "name": "古典文学网",
     "url": "www.cngdwx.com",
-    "version": 101,
+    "version": 102,
     "search": {
         "url": "http://www.cngdwx.com/plus/search.php?kwtype=0&searchtype=&q=${key}",
          "charset": "UTF-8",
