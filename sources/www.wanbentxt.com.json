@@ -1,7 +1,7 @@
 {
     "name": "完本神站",
     "url": "www.wanbentxt.com",
-    "version": 103,
+    "version": 104,
     "search": {
         "url": "https://www.wanbentxt.com/modules/article/search.php@post->searchtype=articlename&searchkey=${key}",
          "charset": "GBK",
@@ -32,7 +32,9 @@
     "page": ".readPage>a:nth-child(3):matches(下一页)",
     "purify": ["一秒记住.*?coM",
         "提示.*?看的书！",
-        "-->>本章未完.*?阅读"
+        "-->>本章未完.*?阅读",
+        "【完本神站】(.+)永不丢失！",
+        "支持.*?好友！"
     ]
     
 
