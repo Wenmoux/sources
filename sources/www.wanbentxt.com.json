@@ -1,7 +1,7 @@
 {
     "name": "完本神站",
     "url": "www.wanbentxt.com",
-    "version": 102,
+    "version": 103,
     "search": {
         "url": "https://www.wanbentxt.com/modules/article/search.php@post->searchtype=articlename&searchkey=${key}",
          "charset": "GBK",
@@ -13,6 +13,10 @@
         "detail": ".sortPhr > a"
     },
     "detail": {
+        "name": "h1",
+        "author": ".writer > a",
+        "summary": "tr:nth-child(3) > td:nth-child(2)",
+        "cover": ".detailTopLeft>img",
         "status": ".detailTopLeft > span",
         "update": ".chapter > div > span@match->.+(?= 更新至)",
         "lastChapter": ".chapter > div > span > a",
@@ -25,7 +29,11 @@
     },
     "chapter": {
         "content":".readerCon",
-    "page": ".readPage>a:nth-child(3):matches(下一页)"
+    "page": ".readPage>a:nth-child(3):matches(下一页)",
+    "purify": ["一秒记住.*?coM",
+        "提示.*?看的书！",
+        "-->>本章未完.*?阅读"
+    ]
     
 
     }
