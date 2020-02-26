@@ -1,7 +1,7 @@
 {
     "name": "长佩文学",
     "url": "m.gongzicp.com",
-    "version": 101,
+    "version": 102,
     "search": {
         "url": "https://m.gongzicp.com/novel/searchNovels?keyword=${key}&searchType=1&finishType=0&novelType=0&sortType=1&page=1",
          "charset": "utf-8",
