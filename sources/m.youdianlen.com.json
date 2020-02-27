@@ -1,7 +1,7 @@
 {
     "name": "有点冷",
     "url": "m.youdianlen.com",
-    "version": 100,
+    "version": 101,
     "search": {
         "url": "http://m.youdianlen.com/search/result.html?searchkey=${key}",
         "charset": "UTF-8",
@@ -20,7 +20,7 @@
     },
     "catalog": {
         "list": ".chapter-list",
-        "name": "a",
+        "name": "label > a > div > span",
         "chapter": "a"
     },
     "chapter": {
