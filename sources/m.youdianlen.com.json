@@ -20,7 +20,7 @@
     },
     "catalog": {
         "list": ".chapter-list",
-        "name": "label > a > div > span",
+        "name": ".color62",
         "chapter": "a"
     },
     "chapter": {
