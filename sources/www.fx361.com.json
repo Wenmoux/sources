@@ -1,0 +1,357 @@
+{
+    "name": "参考网",
+    "url": "www.fx361.com",
+    "version": 100,
+    "search": {
+        "url": "http://www.fx361.com/bk/${key}/history_2020.html",
+        "charset": "UTF-8",
+        "list":".results>li",
+        "name":"li",
+        "cover":" a > img",
+        "detail":"a"
+    },
+    "detail": {
+        "list":".results>li",
+        "name":"li",
+        "author":"a > span:nth-child(3)",
+        "cover":" a > img",
+        "summary": ".rec>p",
+        "catalog": ""
+    },
+    "catalog": {
+        "list": "#dirList>div",
+        "booklet": {
+            "name": "h5",
+            "list": "li"
+          },
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": ".detail_body>p"
+    }
+    ,
+      "rank": [
+          {
+              "title":"时政综合",
+              "url": "http://www.fx361.com/bk/${key}/history_${page}.html",
+              "page": 2020,
+              "unit": -1,
+              "size": 10,
+              "categories": [
+                  {"key": "ws", "value": "唯实"},
+                  {"key": "xk", "value": "小康"},
+                  {"key": "nfc","value": "南风窗"},
+                  {"key": "ksj","value": "看世界"},
+                  {"key": "ktx","value": "看天下"},
+                  {"key": "jcts", "value": "决策探索"}, 
+                  {"key": "xmzk", "value": "新民周刊"}, 
+                  {"key": "sjzs", "value": "世界知识"}, 
+                  {"key": "rdyj", "value": "人大研究"},
+                  {"key": "zhen", "value": "中华儿女"},
+                  {"key": "sjrw", "value": "世纪人物"},
+                  {"key": "bsxh", "value": "百姓生活"},
+                  {"key": "mszk", "value": "民生周刊"},
+                  {"key": "dywz", "value": "党员文摘"},
+                  {"key": "rmlt", "value": "人民论坛"},
+                  {"key": "dszl", "value": "党史纵览"},
+                  {"key": "gjzw", "value": "国际展望"},
+                  {"key": "bjjs", "value": "北京纪事"},
+                  {"key": "bwdfzk", "value": "瞭望东方周刊"},
+                  {"key": "nfrwzk", "value": "南方人物周刊"},
+                  {"key": "jrzgzwb","value": "今日中国·中文版"},
+                  {"key": "xxplxby", "value": "新湘评论·下半月"}
+                  ]
+
+
+          },          {
+            "title":"文学小说",
+            "url": "http://www.fx361.com/bk/${key}/history_${page}.html",
+            "page": 2020,
+            "size": 10,
+            "unit": -1,
+            "categories": [
+                {"key": "hd", "value": "红豆"},
+                {"key": "dz", "value": "读者"}, 
+                {"key": "sy", "value": "视野"},
+                {"key": "jn", "value": "江南"},
+                {"key": "dc", "value": "滇池"},
+                {"key": "sw", "value": "书屋"},
+                {"key": "yc", "value": "英才"},
+                {"key": "xh", "value": "星火"},
+                {"key": "mw", "value": "美文"},
+                {"key": "qc","value": "青春"},
+                {"key": "sh","value": "参花"},
+                {"key": "yg","value": "阳光"},
+                {"key": "md", "value": "牡丹"}, 
+                {"key": "yl", "value": "意林"}, 
+                {"key": "ds", "value": "读书"}, 
+                {"key": "hxh", "value": "含笑花"},
+                {"key": "sxk", "value": "诗选刊"},
+                {"key": "gsh", "value": "故事会"},
+                {"key": "zmn", "value": "啄木鸟"},
+                {"key": "sgyk", "value": "诗歌月刊"},
+                {"key": "nfwx", "value": "南方文学"},
+                {"key": "zwxk", "value": "杂文选刊"},
+                {"key": "gsdw", "value": "故事大王"},
+                {"key": "snwy", "value": "少年文艺"},
+                {"key": "gdwm", "value": "古代文明"},
+                {"key": "dswz", "value": "读书文摘"},
+                {"key": "dzsx", "value": "读者欣赏"},
+                {"key": "xcwx", "value": "西藏文学"},
+                {"key": "swbj", "value": "散文百家"},
+                {"key": "xpwxk", "value": "小品文选刊"},
+                {"key": "cqgssx","value": "传奇故事(上旬)"},
+                {"key": "xxsykxby", "value": "小小说月刊·下半月"},
+                {"key": "swbjxxk", "value": "散文百家·下旬刊"}
+                ]
+
+        },            {
+            "title":"文学小说",
+            "url": "http://www.fx361.com/bk/${key}/history_${page}.html",
+            "page": 2019,
+            "size": 10,
+            "unit": -1,
+            "categories": [
+                {"key": "nf", "value": "南风"}, 
+                {"key": "yy", "value": "艺苑"}, 
+                {"key": "yh", "value": "雨花"},
+                {"key": "yd", "value": "月读"},
+                {"key": "ly", "value": "鹿鸣"},
+                {"key": "zj", "value": "作家"},
+                {"key": "js", "value": "金山"},
+                {"key": "dh", "value": "地火"},
+                {"key": "dd", "value": "当代"},
+                {"key": "cc", "value": "长城"},
+                {"key": "sj","value": "商界"},
+                {"key": "cy","value": "草原"},
+                {"key": "qm","value": "清明"},
+                {"key": "sl","value": "诗林"},
+                {"key": "xb", "value": "西部"}, 
+                {"key": "cd", "value": "茶道"}, 
+                {"key": "ylj", "value": "鸭绿江"}, 
+                {"key": "fmha", "value": "飞魔幻A"},
+                {"key": "hha", "value": "花火A"},
+                {"key": "hhb", "value": "花火B"},
+                {"key": "fyqa", "value": "飞言情A"},
+                {"key": "fyqb", "value": "飞言情B"},
+                {"key": "wxg", "value": "文学港"},
+                {"key": "cbr", "value": "出版人"},
+                {"key": "dtx", "value": "读天下"},
+                {"key": "mnf", "value": "闽南风"},
+                {"key": "sys", "value": "三月三"},
+                {"key": "xqn", "value": "新青年"},
+                {"key": "xsj", "value": "小说界"},
+                {"key": "ylh", "value": "伊犁河"},
+                {"key": "ddr", "value": "当代人"},
+                {"key": "yzj", "value": "扬子江"},
+                {"key": "bjg", "value": "北极光"},
+                {"key": "lswx", "value": "凉山文学"},
+                {"key": "mzwx", "value": "民族文学"},
+                {"key": "ddwt", "value": "当代文坛"},
+                {"key": "nfwt", "value": "南方文坛"},
+                {"key": "mjwx", "value": "民间文学"},
+                {"key": "ddwt", "value": "当代文坛"},
+                {"key": "qnwxj", "value": "青年文学家"},
+                {"key": "zysby", "value": "知音·上半月"},
+                {"key": "zyxby", "value": "知音·下半月"},
+                {"key": "zyhwbsby", "value": "知音海外版"},
+                {"key": "zyymb", "value": "知音（月末版"},
+                {"key": "dpcbsc", "value": "东坡赤壁诗词"},
+                {"key": "sdwxsby", "value": "时代文学·上半月"},
+                {"key": "wyshsxk", "value": "文艺生活·上旬刊"},
+                {"key": "wyshzxk", "value": "文艺生活·中旬刊"},
+                {"key": "wyshxxk", "value": "文艺生活·下旬刊"},
+                {"key": "mjgsxks", "value": "民间故事选刊·上"},
+                {"key": "jgcqwxb", "value": "今古传奇·武侠版"},
+                {"key": "jgcqgsb", "value": "今古传奇·故事版"},
+                {"key": "ddcpxsxk", "value": "当代·长篇小说选刊"} ]
+
+        }   ,    {
+            "title":"人文科普",
+            "url": "http://www.fx361.com/bk/${key}/history_${page}.html",
+            "page": 2019,
+            "size": 10,
+            "unit": -1,
+            "categories": [
+                {"key": "bkzs", "value": "百科知识"}, 
+                {"key": "yykj", "value": "演艺科技"},
+                {"key": "ryzr", "value": "人与自然"},
+                {"key": "yskj", "value": "艺术科技"},
+                {"key": "jzyl", "value": "记者摇篮"},
+                {"key": "hqfx", "value": "环球飞行"},
+                {"key": "njkj", "value": "农家科技"},
+                {"key": "kjcb", "value": "科技传播"},
+                {"key": "kxzy", "value": "科学种养"},
+                {"key": "kxzm","value": "科学之谜"},
+                {"key": "khsj","value": "科幻世界"},
+                {"key": "kjsj","value": "科技视界"},
+                {"key": "kjzx","value": "科技资讯"},
+                {"key": "cxkj", "value": "创新科技"}, 
+                {"key": "kxfans", "value": "科学Fans"}, 
+                {"key": "zsjsll", "value": "知识就是力量"}, 
+                {"key": "tsyfx", "value": "探索与发现"},
+                {"key": "kxzgr", "value": "科学中国人"},
+                {"key": "fmycxdkj", "value": "发明与创新"},
+                {"key": "jswzkxsn", "value": "军事文摘·科学少年"}
+                ]
+
+        },          {
+            "title":"摄影数码",
+            "url": "http://www.fx361.com/bk/${key}/history_${page}.html",
+            "page": 2019,
+            "size": 10,
+            "unit": -1,
+            "categories": [
+                {"key": "smsj", "value": "数码世界"}, 
+                {"key": "xfdz", "value": "消费电子"},
+                {"key": "sysj", "value": "摄影世界"},
+                {"key": "xcdz", "value": "新潮电子"},
+                {"key": "rjdk", "value": "软件导刊"},
+                {"key": "szjt", "value": "数字家庭"},
+                {"key": "dzjj", "value": "电子竞技"},
+                {"key": "dzsy", "value": "大众摄影"},
+                {"key": "yxsj", "value": "影像视觉"},
+                {"key": "syzy","value": "摄影之友"},
+                {"key": "wlkjaq","value": "网络空间安全"},
+                {"key": "jsjsd","value": "计算机时代"},
+                {"key": "dnzsyjs","value": "电脑知识与技术"},
+                {"key": "jsjsj", "value": "计算机世界"}, 
+                {"key": "jsjyywzck", "value": "计算机应用文摘·触控"}, 
+                {"key": "xxhst", "value": "信息化视听"}, 
+                {"key": "xddzjs", "value": "现代电子技术"},
+                {"key": "zgxxhzb", "value": "中国信息化周报"}
+                ]
+
+        },          {
+            "title":"农业乡村",
+            "url": "http://www.fx361.com/bk/${key}/history_${page}.html",
+            "page": 2019,
+            "size": 10,
+            "unit": -1,
+            "categories": [
+                {"key": "xny", "value": "新农业"}, 
+                {"key": "sxgs", "value": "山西果树"}, 
+                {"key": "kxzy", "value": "科学种养"},
+                {"key": "zggc", "value": "中国瓜菜"},
+                {"key": "njkj", "value": "农家科技"},
+                {"key": "gdyl", "value": "广东园林"},
+                {"key": "gnzy", "value": "果农之友"},
+                {"key": "nfnc", "value": "南方农村"},
+                {"key": "ncbst", "value": "农村百事通"},
+                {"key": "nmkjpx", "value": "农民科技培训"},
+                {"key": "nmzfzy", "value": "农民致富之友"},
+                {"key": "rdnykx", "value": "热带农业科学"},
+                {"key": "njkjxxk", "value": "农家科技下旬"},
+                {"key": "nmzfzy", "value": "农民致富之友"},
+                {"key": "xdnyyj", "value": "现代农业研究"},
+                {"key": "ahnxtb", "value": "安徽农学通报"},
+                {"key": "ddnccj","value": "当代农村财经"},
+                {"key": "wlkjaq","value": "网络空间安全"},
+                {"key": "jsjsd","value": "计算机时代"},
+                {"key": "dnzsyjs","value": "电脑知识与技术"},
+                {"key": "jsjsj", "value": "计算机世界"}, 
+                {"key": "jsjyywzck", "value": "计算机应用文摘·触控"}, 
+                {"key": "xxhst", "value": "信息化视听"}, 
+                {"key": "xddzjs", "value": "现代电子技术"},
+                {"key": "zgxxhzb", "value": "中国信息化周报"}
+                ]
+
+        },          {
+            "title":"家庭养生",
+            "url": "http://www.fx361.com/bk/${key}/history_${page}.html",
+            "page": 2019,
+            "size": 10,
+            "unit": -1,
+            "categories": [
+                {"key": "bl", "value": "伴侣"}, 
+                {"key": "fn", "value": "妇女"}, 
+                {"key": "wq", "value": "晚晴"}, 
+                {"key": "xtd", "value": "新天地"}, 
+                {"key": "hrz", "value": "好日子"},
+                {"key": "fnsh", "value": "妇女生活"},
+                {"key": "xfjt", "value": "幸福家庭"},
+                {"key": "xdjt", "value": "现代家庭"},
+                {"key": "fmbd", "value": "父母必读"},
+                {"key": "jtbst", "value": "家庭百事通"},
+                {"key": "hyyjk", "value": "婚育与健康"},
+                {"key": "ysbjzn", "value": "养生保健指南"},
+                {"key": "zgddyy", "value": "中国当代医药"},
+                {"key": "xdyssby", "value": "现代养生·上半月"},
+                {"key": "tbjkxby", "value": "特别健康·下半月"},
+                {"key": "jkbdxxk", "value": "健康必读·下旬刊"},
+                {"key": "qcqjkqsb", "value": "青春期健康·青少版"},
+                {"key": "qcqjkjtb", "value": "青春期健康·家庭版"}
+                ]
+
+        }
+        ,          {
+            "title":"旅游美食",
+            "url": "http://www.fx361.com/bk/${key}/history_${page}.html",
+            "page": 2019,
+            "size": 10,
+            "unit": -1,
+            "categories": [
+                {"key": "ly", "value": "旅游"}, 
+                {"key": "pdzs", "value": "烹调知识"}, 
+                {"key": "ddly", "value": "旅游纵览"}, 
+                {"key": "xtd", "value": "当代旅游"}, 
+                {"key": "sczl", "value": "丝绸之路"},
+                {"key": "hwtx", "value": "户外探险"},
+                {"key": "sysj", "value": "摄影世界"},
+                {"key": "spyjk", "value": "食品与健康"},
+                {"key": "spysh", "value": "食品与生活"},
+                {"key": "zggjly", "value": "中国国家旅游"},
+                {"key": "hqrwdl", "value": "环球人文地理"},
+                {"key": "xcrwdl", "value": "西藏人文地理"},
+                {"key": "lyzlxyb", "value": "旅游纵览·行业版"}
+                ]
+
+        },          {
+            "title":"艺术收藏",
+            "url": "http://www.fx361.com/bk/${key}/history_${page}.html",
+            "page": 2019,
+            "size": 10,
+            "unit": -1,
+            "categories": [
+                {"key": "zgms", "value": "中国美术"},
+                {"key": "shys", "value": "书画艺术"},
+                {"key": "ylts", "value": "音乐探索"}, 
+                {"key": "dyzg", "value": "电影中国"}, 
+                {"key": "shxj", "value": "上海戏剧"},  
+                {"key": "shys", "value": "书画艺术"},
+                {"key": "scpm", "value": "收藏·拍卖"}, 
+                {"key": "ysyj", "value": "艺术研究"},
+                {"key": "zgsc", "value": "中国收藏"}
+                ]
+
+        },          {
+            "title":"文化综合",
+            "url": "http://www.fx361.com/bk/${key}/history_${page}.html",
+            "page": 2019,
+            "size": 10,
+            "unit": -1,
+            "categories": [
+                {"key": "dg", "value": "大观"}, 
+                {"key": "qt", "value": "琴童"}, 
+                {"key": "sjwh", "value": "世界文化"}, 
+                {"key": "sjbl", "value": "世界博览"}, 
+                {"key": "whjl", "value": "文化交流"}, 
+                {"key": "wszz", "value": "文史杂志"},
+                {"key": "qwgs", "value": "奇闻怪事"},
+                {"key": "szms", "value": "神州民俗"}, 
+                {"key": "jcrw", "value": "杰出人物"},
+                {"key": "shcfyk", "value": "上海采风月刊"},
+                {"key": "zgtspl", "value": "中国图书评论"},
+                {"key": "wsblws", "value": "文史博览·文史"},
+                {"key": "zgwhyc", "value": "中国文化遗产"},
+                {"key": "swyzhxby", "value": "思维与智慧·下半月"}
+
+                ]
+
+        }
+          
+      ]
+
+
+}
