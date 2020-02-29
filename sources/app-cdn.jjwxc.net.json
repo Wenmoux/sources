@@ -1,7 +1,7 @@
 {
     "name": "晋江文学城",
     "url": "https://m.jjwxc.net",
-    "version": 112,
+    "version": 113,
     "search": {
         "url": "http://app.jjwxc.org/androidapi/search?keyword=${key}&type=1&page=1&token=null&searchType=1&sortMode=DESC&versionCode=126",
         "charset": "UTF-8",
@@ -13,7 +13,7 @@
     },
     "detail": {
         "cover": "$.novelCover",
-        "summary": "$.novelIntro",
+        "summary": "$.novelIntro@replace->&lt;br/&gt;&lt;br/&gt;->\n",
         "status": "$.novelStep@equal->2",
         "update": "$.renewDate",
         "lastChapter": "$.renewChapterName",
@@ -42,7 +42,6 @@
               "list":"$.*",
               "name":"$.novelName",
               "author":"$.authorName",
-              "summary":"$.novelIntroShort",
               "cover":"$.cover",
               "detail":"http://app-cdn.jjwxc.net:80/androidapi/novelbasicinfo?novelId=${$.novelId}"
 
@@ -55,7 +54,6 @@
             "list":"$.*",
               "name":"$.novelName",
               "author":"$.authorName",
-              "summary":"$.novelIntroShort",
               "cover":"$.cover",
               "detail":"http://app-cdn.jjwxc.net:80/androidapi/novelbasicinfo?novelId=${$.novelId}"
 
@@ -68,7 +66,6 @@
             "list":"$.*",
               "name":"$.novelName",
               "author":"$.authorName",
-              "summary":"$.novelIntroShort",
               "cover":"$.cover",
               "detail":"http://app-cdn.jjwxc.net:80/androidapi/novelbasicinfo?novelId=${$.novelId}"
 
@@ -80,7 +77,6 @@
        "list":"$.*",
               "name":"$.novelName",
               "author":"$.authorName",
-              "summary":"$.novelIntroShort",
               "cover":"$.cover",
               "detail":"http://app-cdn.jjwxc.net:80/androidapi/novelbasicinfo?novelId=${$.novelId}"
 
@@ -92,7 +88,6 @@
             "list":"$.*",
               "name":"$.novelName",
               "author":"$.authorName",
-              "summary":"$.novelIntroShort",
               "cover":"$.cover",
               "detail":"http://app-cdn.jjwxc.net:80/androidapi/novelbasicinfo?novelId=${$.novelId}"
 
@@ -104,7 +99,6 @@
        "list":"$.*",
               "name":"$.novelName",
               "author":"$.authorName",
-              "summary":"$.novelIntroShort",
               "cover":"$.cover",
               "detail":"http://app-cdn.jjwxc.net:80/androidapi/novelbasicinfo?novelId=${$.novelId}"
 
@@ -113,10 +107,9 @@
             "url": "http://app.robook.com:80/bookstore/getTop@post->channel=${key}&offset=0&limit=100&versionCode=130",
             "size": 100,
             "categories": [{"key": "100006", "value": "言情"}, {"key": "100007", "value": "纯爱"}, {"key": "100008", "value": "原创"}, {"key": "100009", "value": "衍生"}],
-      "list":"$.*",
+              "list":"$.*",
               "name":"$.novelName",
               "author":"$.authorName",
-              "summary":"$.novelIntroShort",
               "cover":"$.cover",
               "detail":"http://app-cdn.jjwxc.net:80/androidapi/novelbasicinfo?novelId=${$.novelId}"
 
@@ -125,10 +118,9 @@
             "url": "http://app.robook.com:80/bookstore/getTop@post->channel=${key}&offset=0&limit=100&versionCode=130",
             "size": 100,
             "categories": [{"key": "800001", "value": "言情"}, {"key": "800002", "value": "纯爱"}, {"key": "800003", "value": "原创"}, {"key": "800004", "value": "衍生"}],
-     "list":"$.*",
+            "list":"$.*",
               "name":"$.novelName",
               "author":"$.authorName",
-              "summary":"$.novelIntroShort",
               "cover":"$.cover",
               "detail":"http://app-cdn.jjwxc.net:80/androidapi/novelbasicinfo?novelId=${$.novelId}"
 
@@ -182,10 +174,9 @@
             "url": "http://app.robook.com:80/bookstore/getTop@post->channel=${key}&offset=0&limit=100&versionCode=130",
             "size": 100,
             "categories": [{"key": "600006", "value": "言情"}, {"key": "600007", "value": "纯爱"}, {"key": "600008", "value": "原创"}, {"key": "600009", "value": "衍生"}],
-       "list":"$.*",
+              "list":"$.*",
               "name":"$.novelName",
               "author":"$.authorName",
-              "summary":"$.novelIntroShort",
               "cover":"$.cover",
               "detail":"http://app-cdn.jjwxc.net:80/androidapi/novelbasicinfo?novelId=${$.novelId}"
 
