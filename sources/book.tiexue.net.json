@@ -1,7 +1,7 @@
 {
     "name": "铁血读书",
     "url": "book.tiexue.net",
-    "version": 100,
+    "version": 101,
     "search": {
         "url": "https://book.tiexue.net/SearchResults.aspx?keywords=${key}&noveltype=0",
         "charset": "GBK",
@@ -12,6 +12,7 @@
         "detail": "h6>a"
     },
     "detail": {
+      "cover": "ul > li.li_01 > a > img",
         "summary": ".bookPrdt.colorGray > p",
         "status": ".mLeft > p@attr->class@equal->rtIcon zt_5",
         "update": ".newChapter.borderY.marTop > dl > dd@match->(?<=于 ).+",
