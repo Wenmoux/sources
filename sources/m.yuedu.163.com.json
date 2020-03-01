@@ -1,7 +1,7 @@
 {
     "name": "网易云阅读",
     "url": "http://m.yuedu.163.com",
-    "version": 103,
+    "version": 104,
     "search": {
         "url": "http://m.yuedu.163.com/search/book/data.json?key=${key}",
          "charset": "UTF-8",
@@ -13,7 +13,7 @@
         "detail": "http://m.yuedu.163.com/source/${$.sourceUuid}"
     },
     "detail": {
-        "cover":"#identify > a > img",
+        "cover":".info > div > img",
         "status": ".info > p:nth-child(4)@match->(?<= | ).+",
         "update": "p.time@match->.+(?=更新)",
         "lastChapter": "a.title",
