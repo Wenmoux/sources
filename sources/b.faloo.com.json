@@ -1,7 +1,7 @@
 {
     "name": "飞卢",
     "url": "https://b.faloo.com",
-    "version": 105,
+    "version": 106,
     "search": {
         "url": "https://b.faloo.com/l/0/1.html?t=1&k=${key}",
          "charset": "gbk",
@@ -34,8 +34,8 @@
   "login": "https://u.faloo.com/regist/login.aspx?backurl=https%3A%2F%2Fb.faloo.com%2F",
   "cookie": "faloo.com",
   "verify":"https://u.faloo.com/AccountInfo.aspx",
- "logged": ".spanOut > a@equal->【退出】 ",
-  "vip": "#setAutoBuy@equal->马上设置"
+ "logged": ".spanOut > a@equal->【退出】",
+ "vip": ".c_c4 > div:nth-child(1) > div > span@equal->设置自动订阅"
  
 } ,
 "rank": [
