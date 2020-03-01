@@ -1,7 +1,7 @@
 {
     "name": "铁血读书",
     "url": "book.tiexue.net",
-    "version": 101,
+    "version": 102,
     "search": {
         "url": "https://book.tiexue.net/SearchResults.aspx?keywords=${key}&noveltype=0",
         "charset": "GBK",
