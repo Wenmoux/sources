@@ -1,7 +1,7 @@
 {
     "name": "黑岩",
-    "url": "https://www.heiyan.com",
-    "version": 101,
+    "url": "www.heiyan.com",
+    "version": 102,
     "search": {
         "url": "http://search.heiyan.com/web/search?queryString=${key}&highlight=false",
         "charset": "UTF-8",
