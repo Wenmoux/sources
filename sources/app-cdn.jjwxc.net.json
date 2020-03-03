@@ -1,7 +1,7 @@
 {
     "name": "晋江文学城",
-    "url": "https://m.jjwxc.net",
-    "version": 114,
+    "url": "m.jjwxc.net",
+    "version": 115,
     "search": {
         "url": "http://app.jjwxc.org/androidapi/search?keyword=${key}&type=1&page=1&token=null&searchType=1&sortMode=DESC&versionCode=133",
         "charset": "UTF-8",
