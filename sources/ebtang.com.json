@@ -1,7 +1,7 @@
 {
     "name": "雁北堂",
-    "url": "http://ebtang.com",
-    "version": 101,
+    "url": "ebtang.com",
+    "version": 102,
     "search": {
         "url": "http://ebtang.com/book/search?searchName=${key}",  
         "charset": "UTF-8",
