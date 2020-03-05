@@ -1,0 +1,80 @@
+{
+    "name": "英文小说网",
+    "url": "novel.tingroom.com",
+    "version": 100,
+    "search": {
+        "url": "http://novel.tingroom.com/novel_search.php?kw=${key}",
+         "charset": "utf-8",
+        "list": ".list",
+        "name": "h6 > a",
+        "author": "p.cateq > span@match->(?<=作者：).+",
+        "cover": ".picture > a > img",
+        "detail": "h6 > a"
+    },
+    "detail": {
+        "summary": "meta[name=description]@attr->content",
+        "catalog": "#book_detail > div.vgvgd > div > a"
+    },
+    "catalog": {
+        "list": "#tt_text > ol > li",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content":"#tt_text"
+    
+
+    }, "auth": {
+        "login": "https://m.gongzicp.com/login/signIn",
+        "header":"User-Agent:Mozilla/5.0 (Linux; Android 7.0; MHA-AL00 Build/HUAWEIMHA-AL00; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/43.0.2357.134 Mobile Safari/537.36"
+    },
+    "rank": [
+        {
+            "title":"点击排行",
+            "url": "http://novel.tingroom.com/count.php?page=${page}",
+            "page": 1
+
+        },{
+            "title":"最新入库",
+            "url": "http://novel.tingroom.com/new.php?page=${page}",
+            "page": 1
+        },{
+            "title":"双语小说",
+            "url": "http://novel.tingroom.com/shuangyu/list_33_${page}.html",
+            "page": 1
+        },
+         {
+            "title":"经典英文小说",
+            "url": "http://novel.tingroom.com/jingdian/list_1_${page}.html",
+            "page": 1
+
+        },{
+            "title":"英文励志小说",
+            "url": "http://novel.tingroom.com/lizhi/list_6_${page}.html",
+            "page": 1
+
+        },{
+            "title":"英文名人传记",
+            "url": "http://novel.tingroom.com/mingren/list_32_${page}.html",
+            "page": 1
+        },{
+            "title":"英文短篇小说",
+            "url": "http://novel.tingroom.com/duanpian/list_31_${page}.html",
+            "page": 1
+        },{
+            "title":"英文科幻小说",
+            "url": "http://novel.tingroom.com/kehuan/list_30_${page}.html",
+            "page": 1
+        },{
+            "title":"儿童英文小说",
+            "url": "http://novel.tingroom.com/ertong/list_29_${page}.html",
+            "page": 1
+        },{
+            "title":"英文宗教小说",
+            "url": "http://novel.tingroom.com/zongjiao/list_28_${page}.html",
+            "page": 1
+        }
+        
+    ]
+
+}
