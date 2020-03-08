@@ -1,7 +1,7 @@
 {
     "name": "晋江文学城",
     "url": "m.jjwxc.net",
-    "version": 115,
+    "version": 116,
     "search": {
         "url": "http://app.jjwxc.org/androidapi/search?keyword=${key}&type=1&page=1&token=null&searchType=1&sortMode=DESC&versionCode=133",
         "charset": "UTF-8",
@@ -124,51 +124,53 @@
               "cover":"$.cover",
               "detail":"http://app-cdn.jjwxc.net:80/androidapi/novelbasicinfo?novelId=${$.novelId}"
 
-        },{
-            "title":"言情榜单",
-            "url": "http://www.jjwxc.net/channeltoplist.php?channelid=14&str=${key}",
-            "size": 100,
-            "categories": [
-                 {"key": "1", "value": "古代言情"}, 
-                 {"key": "2", "value": "都市青春"}, 
-                 {"key": "3", "value": "幻想现言"},
-                 {"key": "4", "value": "古代穿越"}, 
-                 {"key": "5", "value": "奇幻言情"},
-                 {"key": "12", "value": "衍生言情"}, 
-                 {"key": "11", "value": "二次元言情"}, 
-                 {"key": "6", "value": "未来游戏悬疑"},
-                 {"key": "7", "value": "古言完结vip"}, 
-                 {"key": "8", "value": "现言完结vip"}, 
-                 {"key": "14", "value": "完结半价包月"},
-                 {"key": "13", "value": "衍生言情完结vip"}],
-              "list":"tbody > tr:nth-child(n+2)",
-              "name":".tooltip",
-              "author":"td:nth-child(2) > a",
-              "detail":".tooltip@replace->http://www.jjwxc.net/onebook.php?novelid=->http://app-cdn.jjwxc.net:80/androidapi/novelbasicinfo?novelId="
+        },   {
+          "title":"言情榜单",
+          "url": "http://www.jjwxc.net/channeltoplist.php?channelid=14&str=${key}",
+          "size": 100,
+          "categories": [
+               {"key": "1", "value": "古代言情"}, 
+               {"key": "2", "value": "都市青春"}, 
+               {"key": "3", "value": "幻想现言"},
+               {"key": "4", "value": "古代穿越"}, 
+               {"key": "5", "value": "奇幻言情"},
+               {"key": "12", "value": "衍生言情"}, 
+               {"key": "11", "value": "二次元言情"}, 
+               {"key": "6", "value": "未来游戏悬疑"},
+               {"key": "7", "value": "古言完结vip"}, 
+               {"key": "8", "value": "现言完结vip"}, 
+               {"key": "14", "value": "完结半价包月"},
+               {"key": "13", "value": "衍生言情完结vip"}],
+            "list":"tbody > tr:nth-child(n+2)",
+            "name":".tooltip",
+            "cover":".tooltip@replace->http://www.jjwxc.net/onebook.php?novelid=->http://i9-static.jjwxc.net/novelimage.php?novelid=",
+            "author":"td:nth-child(2) > a",
+            "detail":".tooltip@replace->http://www.jjwxc.net/onebook.php?novelid=->http://app-cdn.jjwxc.net:80/androidapi/novelbasicinfo?novelId="
 
-        },{
-            "title":"纯爱榜单",
-            "url": "http://www.jjwxc.net/channeltoplist.php?channelid=15&str=${key}",
-            "size": 100,
-            "categories": [
-                {"key": "17", "value": "百合"}, 
-                {"key": "18", "value": "无cp"},
-                 {"key": "15", "value": "现代都市"}, 
-                 {"key": "43", "value": "现代幻想"}, 
-                 {"key": "16", "value": "古代纯爱"},
-                 {"key": "21", "value": "衍生纯爱"}, 
-                 {"key": "45", "value": "百合完结vip"}, 
-                 {"key": "46", "value": "无cp完结vip"},
-                 {"key": "23", "value": "古纯完结vip"}, 
-                 {"key": "24", "value": "衍纯完结vip"}, 
-                 {"key": "22", "value": "现代都市纯爱完结vip"},
-                 {"key": "44", "value": "现代幻想纯爱完结vip"}],
-              "list":"tbody > tr:nth-child(n+2)",
-              "name":".tooltip",
-              "author":"td:nth-child(2) > a",
-              "detail":".tooltip@replace->http://www.jjwxc.net/onebook.php?novelid=->http://app-cdn.jjwxc.net:80/androidapi/novelbasicinfo?novelId="
+      },{
+          "title":"纯爱榜单",
+          "url": "http://www.jjwxc.net/channeltoplist.php?channelid=15&str=${key}",
+          "size": 100,
+          "categories": [
+              {"key": "17", "value": "百合"}, 
+              {"key": "18", "value": "无cp"},
+               {"key": "15", "value": "现代都市"}, 
+               {"key": "43", "value": "现代幻想"}, 
+               {"key": "16", "value": "古代纯爱"},
+               {"key": "21", "value": "衍生纯爱"}, 
+               {"key": "45", "value": "百合完结vip"}, 
+               {"key": "46", "value": "无cp完结vip"},
+               {"key": "23", "value": "古纯完结vip"}, 
+               {"key": "24", "value": "衍纯完结vip"}, 
+               {"key": "22", "value": "现代都市纯爱完结vip"},
+               {"key": "44", "value": "现代幻想纯爱完结vip"}],
+            "list":"tbody > tr:nth-child(n+2)",
+            "name":".tooltip",
+            "author":"td:nth-child(2) > a",
+            "cover":".tooltip@replace->http://www.jjwxc.net/onebook.php?novelid=->http://i9-static.jjwxc.net/novelimage.php?novelid=",
+            "detail":".tooltip@replace->http://www.jjwxc.net/onebook.php?novelid=->http://app-cdn.jjwxc.net:80/androidapi/novelbasicinfo?novelId="
 
-        },
+      },
         {
             "title":"勤奋指数榜",
             "url": "http://app.robook.com:80/bookstore/getTop@post->channel=${key}&offset=0&limit=100&versionCode=133",
