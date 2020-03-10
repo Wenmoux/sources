@@ -1,7 +1,7 @@
 {
     "name": "晋江文学城",
     "url": "m.jjwxc.net",
-    "version": 116,
+    "version": 117,
     "search": {
         "url": "http://app.jjwxc.org/androidapi/search?keyword=${key}&type=1&page=1&token=null&searchType=1&sortMode=DESC&versionCode=133",
         "charset": "UTF-8",
@@ -39,11 +39,11 @@
         {
             "title":"新书",
             "url": "http://app.jjwxc.org:80/androidapi/newDayList",
-              "list":"$.*",
-              "name":"$.novelName",
-              "author":"$.authorName",
-              "cover":"$.cover",
-              "detail":"http://app-cdn.jjwxc.net:80/androidapi/novelbasicinfo?novelId=${$.novelId}"
+            "list":"$.*",
+            "name":"$.novelName",
+            "author":"$.authorName",
+            "cover":"$.cover",
+            "detail":"http://app-cdn.jjwxc.net:80/androidapi/novelbasicinfo?novelId=${$.novelId}"
 
         },
           {
@@ -52,10 +52,10 @@
             "size": 100,
             "categories": [{"key": "700001", "value": "言情"}, {"key": "700002", "value": "纯爱"}, {"key": "700003", "value": "原创"}, {"key": "700004", "value": "衍生"}],
             "list":"$.*",
-              "name":"$.novelName",
-              "author":"$.authorName",
-              "cover":"$.cover",
-              "detail":"http://app-cdn.jjwxc.net:80/androidapi/novelbasicinfo?novelId=${$.novelId}"
+            "name":"$.novelName",
+            "author":"$.authorName",
+            "cover":"$.cover",
+            "detail":"http://app-cdn.jjwxc.net:80/androidapi/novelbasicinfo?novelId=${$.novelId}"
 
         },
         {
@@ -64,21 +64,21 @@
             "size": 100,
             "categories": [{"key": "700006", "value": "言情"}, {"key": "700007", "value": "纯爱"}, {"key": "700008", "value": "原创"}, {"key": "700009", "value": "衍生"}],
             "list":"$.*",
-              "name":"$.novelName",
-              "author":"$.authorName",
-              "cover":"$.cover",
-              "detail":"http://app-cdn.jjwxc.net:80/androidapi/novelbasicinfo?novelId=${$.novelId}"
+            "name":"$.novelName",
+            "author":"$.authorName",
+            "cover":"$.cover",
+            "detail":"http://app-cdn.jjwxc.net:80/androidapi/novelbasicinfo?novelId=${$.novelId}"
 
         },{
             "title":"长生殿",
             "url": "http://app.robook.com:80/bookstore/getTop@post->channel=${key}&offset=0&limit=100&versionCode=133",
             "size": 100,
             "categories": [{"key": "700016", "value": "言情"}, {"key": "700017", "value": "纯爱"}, {"key": "700018", "value": "原创"}, {"key": "700019", "value": "衍生"}],
-       "list":"$.*",
-              "name":"$.novelName",
-              "author":"$.authorName",
-              "cover":"$.cover",
-              "detail":"http://app-cdn.jjwxc.net:80/androidapi/novelbasicinfo?novelId=${$.novelId}"
+            "list":"$.*",
+            "name":"$.novelName",
+            "author":"$.authorName",
+            "cover":"$.cover",
+            "detail":"http://app-cdn.jjwxc.net:80/androidapi/novelbasicinfo?novelId=${$.novelId}"
 
         } ,{
             "title":"半年榜",
@@ -86,32 +86,54 @@
             "size": 100,
             "categories": [{"key": "700011", "value": "言情"}, {"key": "700012", "value": "纯爱"}, {"key": "700013", "value": "原创"}, {"key": "700014", "value": "衍生"}],
             "list":"$.*",
-              "name":"$.novelName",
-              "author":"$.authorName",
-              "cover":"$.cover",
-              "detail":"http://app-cdn.jjwxc.net:80/androidapi/novelbasicinfo?novelId=${$.novelId}"
+            "name":"$.novelName",
+            "author":"$.authorName",
+            "cover":"$.cover",
+            "detail":"http://app-cdn.jjwxc.net:80/androidapi/novelbasicinfo?novelId=${$.novelId}"
 
         },{
             "title":"总分榜",
             "url": "http://app.robook.com:80/bookstore/getTop@post->channel=${key}&offset=0&limit=100&versionCode=133",
             "size": 100,
             "categories": [{"key": "700021", "value": "言情"}, {"key": "700022", "value": "纯爱"}, {"key": "700023", "value": "原创"}, {"key": "700024", "value": "衍生"}],
-       "list":"$.*",
-              "name":"$.novelName",
-              "author":"$.authorName",
-              "cover":"$.cover",
-              "detail":"http://app-cdn.jjwxc.net:80/androidapi/novelbasicinfo?novelId=${$.novelId}"
+            "list":"$.*",
+            "name":"$.novelName",
+            "author":"$.authorName",
+            "cover":"$.cover",
+            "detail":"http://app-cdn.jjwxc.net:80/androidapi/novelbasicinfo?novelId=${$.novelId}"
 
-        },{
+        },
+       
+        {
+          "title":"今日限免",
+          "url": "http://app-cdn.jjwxc.net/bookstore/vipNovelFreeByDate?date=&versionCode=137",
+          "list":"$.*",
+          "name":"$.novelName",
+          "author":"$.authorName",
+          "cover":"$.cover",
+          "detail":"http://app-cdn.jjwxc.net:80/androidapi/novelbasicinfo?novelId=${$.novelId}"
+
+      } ,{
+        "title":"完结免费",
+        "url": "http://app.jjwxc.org/bookstore/hotTagNovel@post->type=free&tagid=${key}&order=novelscore&xx=0&novelsize=0&novelendtime=8&sd=0&page=${page}&versionCode=137",
+        "categories":  [{"value": "快穿","key": "125"},{"value": "穿书","key": "134"},{"value": "甜文","key": "124"},{"value": "重生","key": "75"},{"value": "爽文","key": "137"},{"value": "娱乐圈","key": "64"},{"value": "系统","key": "122"},{"value": "穿越时空","key": "60"},{"value": "综漫","key": "6"},{"value": "仙侠修真","key": "68"},{"value": "强强","key": "19"},{"value": "校园","key": "185"},{"value": "无限流","key": "83"},{"value": "星际","key": "135"},{"value": "种田文","key": "66"},{"value": "豪门世家","key": "33"},{"value": "文野","key": "208"},{"value": "生子","key": "20"},{"value": "末世","key": "81"},{"value": "情有独钟","key": "39"},{"value": "年代文","key": "173"},{"value": "女配","key": "96"},{"value": "灵异神怪","key": "26"},{"value": "随身空间","key": "56"},{"value": "英美衍生","key": "17"},{"value": "网王","key": "1"},{"value": "破镜重圆","key": "47"},{"value": "少年漫","key": "90"},{"value": "异能","key": "72"},{"value": "青梅竹马","key": "62"},{"value": "美食","key": "99"},{"value": "火影","key": "4"},{"value": "玄学","key": "206"},{"value": "悬疑推理","key": "128"},{"value": "虐恋情深","key": "42"},{"value": "异世大陆","key": "57"},{"value": "天之骄子","key": "54"},{"value": "宫廷侯爵","key": "32"},{"value": "天作之合","key": "52"},{"value": "游戏网游","key": "92"},{"value": "超级英雄","key": "132"},{"value": "打脸","key": "138"},{"value": "年下","key": "21"},{"value": "直播","key": "142"},{"value": "家教","key": "12"},{"value": "女强","key": "82"},{"value": "西幻","key": "143"},{"value": "现代架空","key": "126"},{"value": "都市情缘","key": "30"},{"value": "未来架空","key": "127"},{"value": "武侠","key": "11"},{"value": "幻想空间","key": "25"},{"value": "性别转换","key": "24"},{"value": "萌宠","key": "205"},{"value": "东方玄幻","key": "144"},{"value": "奇幻魔幻","key": "27"},{"value": "少女漫","key": "14"},{"value": "猎人","key": "5"},{"value": "升级流","key": "139"},{"value": "欢喜冤家","key": "41"},{"value": "恐怖","key": "29"},{"value": "逆袭","key": "184"},{"value": "清穿","key": "18"},{"value": "古穿今","key": "65"},{"value": "婚恋","key": "78"},{"value": "黑篮","key": "95"},{"value": "日韩","key": "86"},{"value": "前世今生","key": "49"},{"value": "竞技","key": "70"},{"value": "女扮男装","key": "136"},{"value": "复仇虐渣","key": "145"},{"value": "励志人生","key": "121"},{"value": "朝堂之上","key": "178"},{"value": "宫斗","key": "74"},{"value": "古代幻想","key": "189"},{"value": "海贼王","key": "13"},{"value": "业界精英","key": "101"},{"value": "科幻","key": "28"},{"value": "机甲","key": "97"},{"value": "齐神","key": "201"},{"value": "民国旧影","key": "61"},{"value": "西方罗曼","key": "59"},{"value": "历史衍生","key": "91"},{"value": "血族","key": "69"},{"value": "科举","key": "174"},{"value": "相爱相杀","key": "103"},{"value": "魔法幻情","key": "191"},{"value": "布衣生活","key": "38"},{"value": "洪荒","key": "67"},{"value": "因缘邂逅","key": "45"},{"value": "市井生活","key": "175"},{"value": "红楼梦","key": "15"},{"value": "姐弟恋","key": "186"},{"value": "灵魂转换","key": "23"},{"value": "网红","key": "141"},{"value": "平步青云","key": "55"},{"value": "成长","key": "183"},{"value": "死神","key": "2"},{"value": "西方名著","key": "16"},{"value": "花季雨季","key": "31"},{"value": "宅斗","key": "73"},{"value": "江湖恩怨","key": "35"},{"value": "异国奇缘","key": "37"},{"value": "亡灵异族","key": "192"},{"value": "原著向","key": "93"},{"value": "制服情缘","key": "85"},{"value": "都市异闻","key": "181"},{"value": "银魂","key": "94"},{"value": "近水楼台","key": "46"},{"value": "史诗奇幻","key": "199"},{"value": "乔装改扮","key": "51"},{"value": "恋爱合约","key": "48"},{"value": "阴差阳错","key": "53"},{"value": "古典名著","key": "130"},{"value": "异闻传说","key": "196"},{"value": "网配","key": "84"},{"value": "职场","key": "98"},{"value": "时代奇缘","key": "22"},{"value": "经商","key": "180"},{"value": "美娱","key": "140"},{"value": "传奇","key": "89"},{"value": "三教九流","key": "36"},{"value": "商战","key": "123"},{"value": "小门小户","key": "177"},{"value": "骑士与剑","key": "63"},{"value": "异想天开","key": "190"},{"value": "边缘恋歌","key": "44"},{"value": "港台","key": "87"},{"value": "授权衍生","key": "148"},{"value": "七年之痒","key": "79"},{"value": "聊斋","key": "188"},{"value": "时尚流行","key": "182"},{"value": "封神","key": "215"},{"value": "爱情战争","key": "50"},{"value": "七五","key": "8"},{"value": "乡村爱情","key": "58"},{"value": "时代新风","key": "210"},{"value": "圣斗士","key": "10"},{"value": "大冒险","key": "198"},{"value": "奇谭","key": "197"},{"value": "霹雳","key": "9"},{"value": "SD","key": "7"},{"value": "婆媳","key": "80"}],
+        "page":1,
+        "list":"$..novellist[*]",
+        "name":"$.novelName",
+        "author":"$.authorName",
+        "cover":"$.cover",
+        "detail":"http://app-cdn.jjwxc.net:80/androidapi/novelbasicinfo?novelId=${$.novelId}"
+
+    },{
             "title":"完结金榜",
             "url": "http://app.robook.com:80/bookstore/getTop@post->channel=${key}&offset=0&limit=100&versionCode=133",
             "size": 100,
             "categories": [{"key": "100006", "value": "言情"}, {"key": "100007", "value": "纯爱"}, {"key": "100008", "value": "原创"}, {"key": "100009", "value": "衍生"}],
-              "list":"$.*",
-              "name":"$.novelName",
-              "author":"$.authorName",
-              "cover":"$.cover",
-              "detail":"http://app-cdn.jjwxc.net:80/androidapi/novelbasicinfo?novelId=${$.novelId}"
+            "list":"$.*",
+            "name":"$.novelName",
+            "author":"$.authorName",
+            "cover":"$.cover",
+            "detail":"http://app-cdn.jjwxc.net:80/androidapi/novelbasicinfo?novelId=${$.novelId}"
 
         },{
             "title":"霸王票榜",
@@ -119,56 +141,32 @@
             "size": 100,
             "categories": [{"key": "800001", "value": "言情"}, {"key": "800002", "value": "纯爱"}, {"key": "800003", "value": "原创"}, {"key": "800004", "value": "衍生"}],
             "list":"$.*",
-              "name":"$.novelName",
-              "author":"$.authorName",
-              "cover":"$.cover",
-              "detail":"http://app-cdn.jjwxc.net:80/androidapi/novelbasicinfo?novelId=${$.novelId}"
+            "name":"$.novelName",
+            "author":"$.authorName",
+            "cover":"$.cover",
+            "detail":"http://app-cdn.jjwxc.net:80/androidapi/novelbasicinfo?novelId=${$.novelId}"
 
         },   {
           "title":"言情榜单",
           "url": "http://www.jjwxc.net/channeltoplist.php?channelid=14&str=${key}",
           "size": 100,
-          "categories": [
-               {"key": "1", "value": "古代言情"}, 
-               {"key": "2", "value": "都市青春"}, 
-               {"key": "3", "value": "幻想现言"},
-               {"key": "4", "value": "古代穿越"}, 
-               {"key": "5", "value": "奇幻言情"},
-               {"key": "12", "value": "衍生言情"}, 
-               {"key": "11", "value": "二次元言情"}, 
-               {"key": "6", "value": "未来游戏悬疑"},
-               {"key": "7", "value": "古言完结vip"}, 
-               {"key": "8", "value": "现言完结vip"}, 
-               {"key": "14", "value": "完结半价包月"},
-               {"key": "13", "value": "衍生言情完结vip"}],
-            "list":"tbody > tr:nth-child(n+2)",
-            "name":".tooltip",
-            "cover":".tooltip@replace->http://www.jjwxc.net/onebook.php?novelid=->http://i9-static.jjwxc.net/novelimage.php?novelid=",
-            "author":"td:nth-child(2) > a",
-            "detail":".tooltip@replace->http://www.jjwxc.net/onebook.php?novelid=->http://app-cdn.jjwxc.net:80/androidapi/novelbasicinfo?novelId="
+          "categories": [{"key": "1", "value": "古代言情"}, {"key": "2", "value": "都市青春"}, {"key": "3", "value": "幻想现言"},{"key": "4", "value": "古代穿越"}, {"key": "5", "value": "奇幻言情"},{"key": "12", "value": "衍生言情"}, {"key": "11", "value": "二次元言情"}, {"key": "6", "value": "未来游戏悬疑"},{"key": "7", "value": "古言完结vip"}, {"key": "8", "value": "现言完结vip"}, {"key": "14", "value": "完结半价包月"},{"key": "13", "value": "衍生言情完结vip"}],
+          "list":"tbody > tr:nth-child(n+2)",
+          "name":".tooltip",
+          "cover":".tooltip@replace->http://www.jjwxc.net/onebook.php?novelid=->http://i9-static.jjwxc.net/novelimage.php?novelid=",
+          "author":"td:nth-child(2) > a",
+          "detail":".tooltip@replace->http://www.jjwxc.net/onebook.php?novelid=->http://app-cdn.jjwxc.net:80/androidapi/novelbasicinfo?novelId="
 
       },{
           "title":"纯爱榜单",
           "url": "http://www.jjwxc.net/channeltoplist.php?channelid=15&str=${key}",
           "size": 100,
-          "categories": [
-              {"key": "17", "value": "百合"}, 
-              {"key": "18", "value": "无cp"},
-               {"key": "15", "value": "现代都市"}, 
-               {"key": "43", "value": "现代幻想"}, 
-               {"key": "16", "value": "古代纯爱"},
-               {"key": "21", "value": "衍生纯爱"}, 
-               {"key": "45", "value": "百合完结vip"}, 
-               {"key": "46", "value": "无cp完结vip"},
-               {"key": "23", "value": "古纯完结vip"}, 
-               {"key": "24", "value": "衍纯完结vip"}, 
-               {"key": "22", "value": "现代都市纯爱完结vip"},
-               {"key": "44", "value": "现代幻想纯爱完结vip"}],
-            "list":"tbody > tr:nth-child(n+2)",
-            "name":".tooltip",
-            "author":"td:nth-child(2) > a",
-            "cover":".tooltip@replace->http://www.jjwxc.net/onebook.php?novelid=->http://i9-static.jjwxc.net/novelimage.php?novelid=",
-            "detail":".tooltip@replace->http://www.jjwxc.net/onebook.php?novelid=->http://app-cdn.jjwxc.net:80/androidapi/novelbasicinfo?novelId="
+          "categories": [{"key": "17", "value": "百合"}, {"key": "18", "value": "无cp"},{"key": "15", "value": "现代都市"},{"key": "43", "value": "现代幻想"},{"key": "16", "value": "古代纯爱"},{"key": "21", "value": "衍生纯爱"},{"key": "45", "value": "百合完结vip"},{"key": "46", "value": "无cp完结vip"},{"key": "23", "value": "古纯完结vip"},{"key": "24", "value": "衍纯完结vip"},{"key": "22", "value": "现代都市纯爱完结vip"},{"key": "44", "value": "现代幻想纯爱完结vip"}],
+          "list":"tbody > tr:nth-child(n+2)",
+          "name":".tooltip",
+          "author":"td:nth-child(2) > a",
+          "cover":".tooltip@replace->http://www.jjwxc.net/onebook.php?novelid=->http://i9-static.jjwxc.net/novelimage.php?novelid=",
+          "detail":".tooltip@replace->http://www.jjwxc.net/onebook.php?novelid=->http://app-cdn.jjwxc.net:80/androidapi/novelbasicinfo?novelId="
 
       },
         {
@@ -176,11 +174,11 @@
             "url": "http://app.robook.com:80/bookstore/getTop@post->channel=${key}&offset=0&limit=100&versionCode=133",
             "size": 100,
             "categories": [{"key": "600006", "value": "言情"}, {"key": "600007", "value": "纯爱"}, {"key": "600008", "value": "原创"}, {"key": "600009", "value": "衍生"}],
-              "list":"$.*",
-              "name":"$.novelName",
-              "author":"$.authorName",
-              "cover":"$.cover",
-              "detail":"http://app-cdn.jjwxc.net:80/androidapi/novelbasicinfo?novelId=${$.novelId}"
+            "list":"$.*",
+            "name":"$.novelName",
+            "author":"$.authorName",
+            "cover":"$.cover",
+            "detail":"http://app-cdn.jjwxc.net:80/androidapi/novelbasicinfo?novelId=${$.novelId}"
 
         }
           
