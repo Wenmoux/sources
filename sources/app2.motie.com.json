@@ -1,0 +1,79 @@
+{
+    "name": "磨铁中文网",
+    "url": "app2.motie.com",
+    "version": 100,
+    "search": {
+        "url": "http://app2.motie.com/search?word=${key}&pageNo=1&pageSize=10&objectType=2",
+         "charset": "utf-8",
+        "list": "$..bookList[*]",
+        "name": "$.name",
+        "author": "$.authorName",
+        "summary": "$.introduce",
+        "cover": "$.icon",
+        "detail": "/books/${$.id}/detail?id=${$.id}"
+    },
+    "detail": {
+        "status": "$..status",
+        "update": "$..lastChapterList[*].chapterShowTime",
+        "lastChapter": "$..lastChapterList[*].name",
+        "catalog": "/pc/book/${$params.id}/catalog"
+    },
+    "catalog": {
+        "list": "$.data.data[*]",
+        "name": "$.name",
+        "chapter": "/pc/chapter/${$.id}"
+    },
+    "chapter": {
+        "content":"$.data.content"
+    }, "auth": {
+        "login": "http://m.motie.com/authIntercept",
+        "cookie": "m.motie.com",
+        "header":"sd:${sd}",
+        "verify": "https://app2.motie.com/personal/basic_info@header->os:wap",
+        "logged": "$.result@equal->1",
+        "vip":"$..free@equal->false",
+        "buy":"$..alreadyBuy@equal->TRUE"
+    },"rank": [
+        {
+            "title":"热销榜",
+            "url": "https://app2.motie.com/ranking?rankType=9&sex=${key}&pageNo=${page}&siteId=99&timeLimit=4&group=1&pageSize=10",
+            "categories": [{"key": "1", "value": "男生"}, {"key": "2", "value": "女生"}, {"key": "3", "value": "出版"}],
+            "page": 1
+        }, {
+            "title":"点击榜",
+            "url": "https://app2.motie.com/ranking?rankType=10&sex=${key}&pageNo=${page}&siteId=99&timeLimit=4&group=1&pageSize=10",
+            "categories": [{"key": "1", "value": "男生"}, {"key": "2", "value": "女生"}, {"key": "3", "value": "出版"}],
+            "page": 1
+        }, {
+            "title":"打赏榜",
+            "url": "https://app2.motie.com/ranking?rankType=11&sex=${key}&pageNo=${page}&siteId=99&timeLimit=4&group=1&pageSize=10",
+            "categories": [{"key": "1", "value": "男生"}, {"key": "2", "value": "女生"}, {"key": "3", "value": "出版"}],
+            "page": 1
+        }, {
+            "title":"推荐榜",
+            "url": "https://app2.motie.com/ranking?rankType=12&sex=${key}&pageNo=${page}&siteId=99&timeLimit=4&group=1&pageSize=10",
+            "categories": [{"key": "1", "value": "男生"}, {"key": "2", "value": "女生"}, {"key": "3", "value": "出版"}],
+            "page": 1
+        }, {
+            "title":"新书榜",
+            "url": "https://app2.motie.com/ranking?rankType=13&sex=${key}&pageNo=${page}&siteId=99&timeLimit=4&group=1&pageSize=10",
+            "categories": [{"key": "1", "value": "男生"}, {"key": "2", "value": "女生"}, {"key": "3", "value": "出版"}],
+            "page": 1
+        }, {
+            "title":"更新榜",
+            "url": "https://app2.motie.com/ranking?rankType=14&sex=${key}&pageNo=${page}&siteId=99&timeLimit=4&group=1&pageSize=10",
+            "categories": [{"key": "1", "value": "男生"}, {"key": "2", "value": "女生"}, {"key": "3", "value": "出版"}],
+            "page": 1
+        }, {
+            "title":"热读榜",
+            "url": "https://app2.motie.com/ranking?rankType=15&sex=${key}&pageNo=${page}&siteId=99&timeLimit=4&group=1&pageSize=10",
+            "categories": [{"key": "1", "value": "男生"}, {"key": "2", "value": "女生"}, {"key": "3", "value": "出版"}],
+            "page": 1
+        }, {
+            "title":"财神榜",
+            "url": "https://app2.motie.com/ranking?rankType=16&sex=${key}&pageNo=${page}&siteId=99&timeLimit=4&group=1&pageSize=10",
+            "categories": [{"key": "1", "value": "男生"}, {"key": "2", "value": "女生"}, {"key": "3", "value": "出版"}],
+            "page": 1
+        }
+    ]
+}
