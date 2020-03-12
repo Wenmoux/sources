@@ -1,7 +1,7 @@
 {
     "name": "晋江文学城",
     "url": "m.jjwxc.net",
-    "version": 117,
+    "version": 118,
     "search": {
         "url": "http://app.jjwxc.org/androidapi/search?keyword=${key}&type=1&page=1&token=null&searchType=1&sortMode=DESC&versionCode=133",
         "charset": "UTF-8",
@@ -37,6 +37,16 @@
       },
       "rank": [
         {
+          "title":"我的",
+          "url":"https://m.jjwxc.net/my/${key}?r=1",
+          "categories": [{"key": "order", "value": "本月订购"}, {"key": "fav", "value": "我的收藏"}],
+          "list":"li",
+          "name":"li>a:nth-child(1)",
+          "author":"li>a:nth-child(2)" ,
+          "cover":"li>a:nth-child(1)@replace->https://m.jjwxc.net/book2/->http://i9-static.jjwxc.net/novelimage.php?novelid=",
+          "detail":"li>a:nth-child(1)@replace->https://m.jjwxc.net/book2/->http://app-cdn.jjwxc.net:80/androidapi/novelbasicinfo?novelId="
+      },
+        {
             "title":"新书",
             "url": "http://app.jjwxc.org:80/androidapi/newDayList",
             "list":"$.*",
@@ -69,17 +79,6 @@
             "cover":"$.cover",
             "detail":"http://app-cdn.jjwxc.net:80/androidapi/novelbasicinfo?novelId=${$.novelId}"
 
-        },{
-            "title":"长生殿",
-            "url": "http://app.robook.com:80/bookstore/getTop@post->channel=${key}&offset=0&limit=100&versionCode=133",
-            "size": 100,
-            "categories": [{"key": "700016", "value": "言情"}, {"key": "700017", "value": "纯爱"}, {"key": "700018", "value": "原创"}, {"key": "700019", "value": "衍生"}],
-            "list":"$.*",
-            "name":"$.novelName",
-            "author":"$.authorName",
-            "cover":"$.cover",
-            "detail":"http://app-cdn.jjwxc.net:80/androidapi/novelbasicinfo?novelId=${$.novelId}"
-
         } ,{
             "title":"半年榜",
             "url": "http://app.robook.com:80/bookstore/getTop@post->channel=${key}&offset=0&limit=100&versionCode=133",
@@ -96,6 +95,17 @@
             "url": "http://app.robook.com:80/bookstore/getTop@post->channel=${key}&offset=0&limit=100&versionCode=133",
             "size": 100,
             "categories": [{"key": "700021", "value": "言情"}, {"key": "700022", "value": "纯爱"}, {"key": "700023", "value": "原创"}, {"key": "700024", "value": "衍生"}],
+            "list":"$.*",
+            "name":"$.novelName",
+            "author":"$.authorName",
+            "cover":"$.cover",
+            "detail":"http://app-cdn.jjwxc.net:80/androidapi/novelbasicinfo?novelId=${$.novelId}"
+
+        },{
+            "title":"长生殿",
+            "url": "http://app.robook.com:80/bookstore/getTop@post->channel=${key}&offset=0&limit=100&versionCode=133",
+            "size": 100,
+            "categories": [{"key": "700016", "value": "言情"}, {"key": "700017", "value": "纯爱"}, {"key": "700018", "value": "原创"}, {"key": "700019", "value": "衍生"}],
             "list":"$.*",
             "name":"$.novelName",
             "author":"$.authorName",
