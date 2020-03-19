@@ -1,0 +1,70 @@
+{
+  "name": "中国灵异网",
+  "url": "www.lingyi.org",
+  "version": 100,
+  "search": {
+      "url": "http://www.lingyi.org/?s=${key}&type=post",
+      "charset": "UTF-8",
+      "list": " li.post-list-item",
+      "name": "h2",
+      "author": ".post-list-meta-user > a > span",
+      "cover": "img.post-thumb@attr->data-src",
+      "summary": ".post-excerpt",
+      "detail": "h2 > a"
+  },
+  "detail": {
+"status":"meta[property=og:site_name]@attr->content@replace->中国灵异网->连载",
+"update":"meta[property=og:updated_time]@attr->content",
+      "catalog": ""
+  },
+  "catalog": {
+      "list": "[rel=alternate]",
+      "name": "[rel=alternate]@attr->title@match->(?<=» ).+(?=评论Feed)",
+      "chapter": "[rel=alternate]@replace->/feed->"
+  },
+  "chapter": {
+      "content": ".entry-content,.comment-floor>time,.comment-content-text>p"
+  }
+  ,
+    "rank": [   {
+          "title":"编辑推荐",
+          "url": "http://www.lingyi.org/topics/tuijian/page/${page}",
+            "page":1
+
+      },
+      {
+          "title":"灵异事件",
+          "url": "http://www.lingyi.org/topics/${key}/page/${page}",
+          "categories": [{"key": "lingyishijian", "value": "灵异事件"},{"key": "lingyijingli", "value": "亲身经历"}, {"key": "lingyiqiuzhu", "value": "灵异求助"}],
+            "page":1
+
+      }, {
+          "title":"灵异图片",
+          "url": "http://www.lingyi.org/topics/${key}/page/${page}",
+          "categories": [{"key": "lingyitupian", "value": "灵异图片"}, {"key": "lingyishipin", "value": "灵异视频"}],
+            "page":1
+
+      }, {
+          "title":"鬼话连篇",
+          "url": "http://www.lingyi.org/${key}/page/${page}",
+          "categories": [{"key": "topics/guihualianpian", "value": "鬼话连篇"}, {"key": "tags/xisijikong", "value": "细思极恐"}, {"key": "tags/tuili", "value": "恐怖推理"}],
+            "page":1
+
+      }, {
+          "title":"民间奇谈",
+          "url": "http://www.lingyi.org/${key}/page/${page}",
+          "categories": [{"key": "topics/minjianqitan", "value": "民间奇谈"}, {"key": "tags/bixie", "value": "辟邪常识"}],
+            "page":1
+
+      }, {
+          "title":"奇闻异事",
+          "url": "http://www.lingyi.org/${key}/page/${page}",
+          "categories": [{"key": "topics/qiwenyishi", "value": "奇闻异事"}, {"key": "topics/tansuofaxian", "value": "探索发现"}, {"key": "tags/weijiezhimi", "value": "未解之谜"}],
+            "page":1
+
+      }
+        
+    ]
+
+
+}
