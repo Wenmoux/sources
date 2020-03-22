@@ -1,7 +1,7 @@
 {
     "name": "知妖",
     "url": "www.cbaigui.com",
-    "version": 101,
+    "version": 102,
     "search": {
         "url": "http://www.cbaigui.com/?s=${key}",
         "charset": "UTF-8",
@@ -35,7 +35,12 @@
         "title":"夜谭",
         "url": "http://www.cbaigui.com/?cat=370&paged=${page}",
         "page":1
-      }, {
+      }, 
+      {
+        "title":"杂谈",
+        "url": "http://www.cbaigui.com/?cat=269&paged=${page}",
+        "page":1
+      },{
         "title":"关于",
         "url": "https://gitee.com/wenmoux/BookSourceRepository/raw/master/sources/about.json",
         "list":"$.*",
