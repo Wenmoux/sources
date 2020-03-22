@@ -1,7 +1,7 @@
 {
     "name": "知妖",
     "url": "www.cbaigui.com",
-    "version": 100,
+    "version": 101,
     "search": {
         "url": "http://www.cbaigui.com/?s=${key}",
         "charset": "UTF-8",
@@ -39,7 +39,7 @@
         "title":"关于",
         "url": "https://gitee.com/wenmoux/BookSourceRepository/raw/master/sources/about.json",
         "list":"$.*",
-        "namee":"$.name",
+        "name":"$.name",
         "summary":"$.summary",
         "detail":"http://www.cbaigui.com${$.detail}"
       }   
