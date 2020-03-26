@@ -1,7 +1,7 @@
 {
     "name": "超星图书",
     "url": "yz4.chaoxing.com",
-    "version": 102,
+    "version": 103,
     "search": {
         "url": "http://yz4.chaoxing.com/circlemarket/getsearch@post->start=0&size=25&sw=${key}&channelId=52",
         "charset": "UTF-8",
