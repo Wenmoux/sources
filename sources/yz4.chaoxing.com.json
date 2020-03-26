@@ -1,7 +1,7 @@
 {
     "name": "超星图书",
     "url": "yz4.chaoxing.com",
-    "version": 100,
+    "version": 101,
     "search": {
         "url": "https://xueya.chaoxing.com/xxt/index/res/search@post->pageNum=1&name=${key}",
         "charset": "UTF-8",
