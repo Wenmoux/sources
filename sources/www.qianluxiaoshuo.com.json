@@ -1,0 +1,41 @@
+{
+    "name": "前路小说",
+    "url": "www.qianluxiaoshuo.com",
+    "version": 100,
+    "search": {
+        "url": "https://www.qianluxiaoshuo.com/modules/article/search_fj.php@post->searchtype=all&searchkey=${key}&act=search&submit=",  
+        "charset": "gbk",
+        "list": ".c_row",
+        "name": ".c_subject>a",
+        "author": ".c_value>a",
+        "cover": "img",
+        "detail": "a"
+    },
+    "detail": {
+        "name": "div:nth-child(2) > span:nth-child(1)",
+        "author": "span:nth-child(2) > a:nth-child(1)",
+         "cover": "td:nth-child(1) > div:nth-child(1) > img",
+        "summary": "td:nth-child(2) > div:nth-child(5)",
+        "status": ".tabvalue > table > tbody > tr:nth-child(2) > td:nth-child(2)@match->(?<=连载状态：).+",
+        "update": "div:nth-child(2) > table > tbody > tr:nth-child(2) > td:nth-child(1)@match->(?<=最后更新：).+",
+        "lastChapter": "p>.pop",
+        "catalog": " .tabvalue> div:nth-child(3) > a:nth-child(2)"
+    },
+    "catalog": {
+        "list": ".index>*",
+        "booklet": {
+            "name": ".volume",
+            "list": "ul>li"
+          },
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content":".acontent"
+    }, "auth": {
+        "login": "https://www.qianluxiaoshuo.com/login.php?jumpurl=https%3A%2F%2Fwww.qianluxiaoshuo.com%2Fuserdetail.php",
+        "cookie": "www.qianluxiaoshuo.com",
+        "verify": "https://www.qianluxiaoshuo.com/userdetail.php",
+        "logged": ".btnlink.b_s.b_hot@equal->充值"
+    }
+}
