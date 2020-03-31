@@ -1,7 +1,7 @@
 {
     "name": "NBA小说",
     "url": "www.nbaxiaoshuo.com",
-    "version": 100,
+    "version": 101,
     "search": {
         "url": "http://www.nbaxiaoshuo.com/modules/article/search.php@post->searchtype=articlename&searchkey=${key}&action=login&submit=",
          "charset": "GBK",
@@ -11,6 +11,8 @@
         "detail": "h4 > a"
     },
     "detail": {
+        "name": "meta[property=og:novel:book_name]@attr->content",
+        "author": "meta[property=og:novel:author]@attr->content",
         "cover": ".bookcover.hidden-xs > img",
         "status": "span.red", 
         "summary": "p.bookintro",
