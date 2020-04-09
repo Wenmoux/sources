@@ -1,7 +1,7 @@
 {
     "name": "掌阅书城-小说",
     "url": "m.zhangyue.com",
-    "version": 100,
+    "version": 101,
     "search": {
         "url": "http://m.zhangyue.com/search?keyWord=${key}",
          "charset": "UTF-8",
