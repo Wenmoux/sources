@@ -1,7 +1,7 @@
 {
     "name": "掌阅书城-出版",
     "url": "www.ireader.com",
-    "version": 100,
+    "version": 101,
     "search": {
         "url": "http://m.zhangyue.com/search?keyWord=${key}",
          "charset": "UTF-8",
@@ -33,8 +33,7 @@
         "login": "https://zypay.ireader.com/pcLogin?sdk=&goUrl=http%3A%2F%2Fwww.ireader.com%2F",
         "cookie": "ireader.com",
         "verify": "http://www.ireader.com/index.php?ca=User.Index",
-        "logged": "#login_box > ul > li:nth-child(3) > a@equal->退出",
-        "vip":".endBuy> span > em:nth-child(3)@equal->购买"
+        "logged": "#login_box > ul > li:nth-child(3) > a@equal->退出"
       },
       "rank": [
      
