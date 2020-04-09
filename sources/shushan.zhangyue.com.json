@@ -1,5 +1,5 @@
 {
-    "name": "掌阅书城",
+    "name": "掌阅书城-小说",
     "url": "m.zhangyue.com",
     "version": 100,
     "search": {
@@ -34,7 +34,72 @@
         "verify": "http://www.ireader.com/index.php?ca=User.Index",
         "logged": "#login_box > ul > li:nth-child(3) > a@equal->退出",
         "vip":".endBuy> span > em:nth-child(3)@equal->购买"
-      }
+      },
+      "rank": [ 
+          {
+        "title":"男频",
+        "url": "http://m.zhangyue.com/category/10/${key}?currentPage=${page}",
+        "categories": [{"key": "11", "value": "玄幻"},
+             {"key": "27", "value": "都市"},
+             {"key": "19", "value": "武侠"},
+             {"key": "22", "value": "仙侠"},
+             {"key": "16", "value": "奇幻"},
+             {"key": "39", "value": "校园"},
+             {"key": "42", "value": "历史"},
+             {"key": "50", "value": "军事"},
+             {"key": "54", "value": "游戏"},
+             {"key": "57", "value": "竞技"},
+             {"key": "60", "value": "科幻"}],
+             "list": ".category_booklist>li",
+         "name": "dt",
+         "page":1,
+         "author": "dd.author",
+         "summary":".content.ellipsis2",
+         "cover": ".category_book>img@attr->data-src",
+         "detail": "${a}?id=${li@attr->data-id}"
+    },      {
+        "title":"女频",
+        "url": "http://m.zhangyue.com/category/68/${key}?currentPage=${page}",
+        "categories": [
+             {"key": "69", "value": "现代言情"},
+             {"key": "74", "value": "古代言情"},
+             {"key": "82", "value": "幻想言情"},
+             {"key": "86", "value": "青春校园"},
+             {"key": "89", "value": "同人作品"},
+             {"key": "90", "value": "推理悬疑"},
+             {"key": "91", "value": "惊悚恐怖"},
+             {"key": "723", "value": "次元专区"}],
+             "list": ".category_booklist>li",
+         "name": "dt",
+         "page":1,
+         "author": "dd.author",
+         "summary":".content.ellipsis2",
+         "cover": ".category_book>img@attr->data-src",
+         "detail": "${a}?id=${li@attr->data-id}"
+    }, 
+          {
+            "title":"女生",
+            "url": "http://m.zhangyue.com/rank/list/${key}",
+            "categories": [{"key": "19261", "value": "热销"}, {"key": "19264", "value": "完结"}, {"key": "19269", "value": "免费"}, {"key": "19266", "value": "灵异新书"}],
+             "list": ".rank_booklist>li",
+             "name": "a@attr->data-name",
+             "author": ".author",
+             "summary":".content.ellipsis3",
+             "cover": ".rank_book>img@attr->data-src",
+             "detail": "${a}?id=${a@attr->data-id}"
+        },
+            {
+              "title":"男生",
+              "url": "http://m.zhangyue.com/rank/list/${key}",
+              "categories": [{"key": "19258", "value": "热销"}, {"key": "19265", "value": "完结"}, {"key": "19272", "value": "免费"}, {"key": "19267", "value": "武道为王"}],
+               "list": ".rank_booklist>li",
+               "name": "a@attr->data-name",
+               "author": ".author",
+               "summary":".content.ellipsis3",
+               "cover": ".rank_book>img@attr->data-src",
+               "detail": "${a}?id=${a@attr->data-id}"
+          }
+      ]
   
   
   }
