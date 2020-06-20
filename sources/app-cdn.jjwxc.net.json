@@ -1,7 +1,7 @@
 {
     "name": "晋江文学城",
     "url": "m.jjwxc.net",
-    "version": 119,
+    "version": 120,
     "search": {
         "url": "http://app.jjwxc.org/androidapi/search?keyword=${key}&type=1&page=1&token=null&searchType=1&sortMode=DESC&versionCode=133",
         "charset": "UTF-8",
@@ -20,7 +20,7 @@
         "catalog": "https://m.jjwxc.net/book2/${$.novelId}?more=0&whole=1"
     },
     "catalog": {
-        "list": "div.grid-c > div:nth-child(9) > div:nth-child(4) > a:nth-child(n+2)",
+        "list": "div.grid-c > div:nth-child(9) > div:nth-child(4) > a:nth-child(n+2),.b>div:nth-child(3)>a:nth-child(n+2)",
         "name": "a",
         "chapter": "a"
     },
@@ -30,6 +30,7 @@
     ,
     "auth": {
         "login": "https://m.jjwxc.net/my/login?login_mode=jjwxc",
+        "header":"User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36",
         "cookie": "m.jjwxc.net",
         "verify": "https://m.jjwxc.net/my",
         "logged": "h2@equal->首页>我的晋江",
