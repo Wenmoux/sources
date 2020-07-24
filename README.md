@@ -17,10 +17,13 @@ https://cdn.jsdelivr.net/gh/Wenmoux/deeplink-booksource/Wen.json
   - [哔哩轻小说](https://m.linovelib.com)
 
  - 影音直播
+   - [开眼](https://www.kaiyanapp.com/)
+   - [场库](https://www.vmovier.com/)
    - [ASMR](https://www.wasmr.com)
-   - [韩剧tv](https://m.hanjutv.com)
+   - [韩剧TV](https://m.hanjutv.com)
    - [猫耳FM](https://fm.missevan.com/)
    - [冰豆直播](https://m.tv.bingdou.net)
+   - [斗鱼直播](https://m.douyu.com)
    - [喜马拉雅](https://www.ximalaya.com)
    - [番茄ASMR](https://www.qqasmr.com)
    - [素白白影视](https://www.subaibai.com)
