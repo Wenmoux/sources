@@ -41,7 +41,8 @@ https://cdn.jsdelivr.net/gh/Wenmoux/deeplink-booksource/Wen.json
 # 影音宝订阅源
 https://raw.githubusercontent.com/Wenmoux/deeplink-booksource/master/yyb/asmr.txt
 
-- [ASMR](https://www.wasmr.com)
+- [WASMR](https://www.wasmr.com)
+- [18ASMR](https://www.18asmr.net)
 
 # Other
  - [一些github上的小说](https://github.com/Wenmoux/deeplink-booksource/blob/master/other/githubnovel.md)
