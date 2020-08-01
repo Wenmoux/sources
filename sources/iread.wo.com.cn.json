@@ -1,0 +1,67 @@
+{
+    "name": "沃阅读",
+    "url": "iread.wo.com.cn",
+    "version": 101,
+    "search": {
+        "url": "https://iread.wo.com.cn/es/search.json?condition=${key}&source=3&searchcnttype=1&pagenum=1&pagecount=10&isfreeLimt=1",
+        "charset": "utf-8",
+        "list": "$.message",
+        "name": "$.cntname",
+        "author": "$.authorname",
+        "summary": "$.shortdesc",
+        "cover": "$.icon_file[0].fileurl",
+        "detail": "https://iread.wo.com.cn/rest/read/cnt/cntdetail/3/${$.cntindex}/0?userid=&catid=&stattype=0&epubflag=1&isfreeLimt=1"
+    },
+    "detail": {
+        "status": "$..status",
+        "update": "$..audittime",
+        "lastChapter": "$..serialnewestchaptitle",
+        "catalog": "https://iread.wo.com.cn/rest/read/cnt/chalist/3/${$..cntindex}/1/55500000/0?catid=&cnttype=0&isfreeLimt=1"
+    },
+    "catalog": {
+        "list": "$.message",
+        "booklet": {
+            "name": "$.volumename",
+            "list": "$..charptercontent[*]"
+          },
+        "name": "$.chaptertitle",
+        "chapter": "https://m.iread.wo.cn/contentread/getChapterContent.action?cntindex=${$.cntindex}&catid=108476&volumeallindex=${$.volumeallindex}&chapterallindex=${$.chapterallindex}&chapterseno=${$.chapterseno}&chaptertitle=&commonFlag=0"
+    },
+    "chapter": {
+        "content": ".cnt_chapter_ctx"
+    },
+    "auth": {
+        "login": "http://m.iread.wo.cn/userinfo/login/gotoLoginPage.action",
+        "cookie": "m.iread.wo.cn",
+        "verify": "https://m.iread.wo.cn/sns/gotoPersonal.action",
+        "logged": "body > section > div:nth-child(39) > ul > li:nth-child(6) > a > p@equal->切换账户",
+        "vip": ".mod-pay-btn@equal->现在支付"
+    },
+    "rank": [
+    {
+        "title":"男频",
+        "url": "https://iread.wo.com.cn/rest/read/cat/catband/cntlist/3/8/275/${key}/3/${page}/20?theCategoryBoard=0&isfreeLimt=1",
+        "categories": [{"key": "4", "value": "畅销榜"}, {"key": "2", "value": "热度榜"},{"key": "9", "value": "风云榜"}],
+        "page": 1
+    },
+    {
+        "title":"女频",
+        "url": "https://iread.wo.com.cn/rest/read/cat/catband/cntlist/3/8/276/${key}/3/${page}/20?theCategoryBoard=0&isfreeLimt=1",
+        "categories": [{"key": "4", "value": "畅销榜"}, {"key": "2", "value": "热度榜"},{"key": "9", "value": "风云榜"}],
+        "page": 1
+    },
+    {
+        "title":"出版",
+        "url": "https://iread.wo.com.cn/rest/read/cat/band/cntlist/3/7/${key}/3/${page}/20?isfreeLimt=1",
+        "categories": [{"key": "4", "value": "订购榜"}, {"key": "2", "value": "人气榜"},{"key": "1", "value": "热搜榜"}],
+        "page": 1
+    },
+    {
+        "title":"杂志",
+        "url": "https://iread.wo.com.cn/rest/read/cat/band/cntlist/3/3/${key}/3/${page}/20?isfreeLimt=1",
+        "categories": [{"key": "4", "value": "订购榜"}, {"key": "2", "value": "人气榜"},{"key": "1", "value": "热搜榜"}],
+        "page": 1
+    }
+
+]
+}
