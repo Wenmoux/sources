@@ -1,16 +1,16 @@
 {
     "name": "完本神站",
     "url": "www.wanbentxt.com",
-    "version": 104,
+    "version": 105,
     "search": {
-        "url": "https://www.wanbentxt.com/modules/article/search.php@post->searchtype=articlename&searchkey=${key}",
-         "charset": "GBK",
-        "list": ".resultLeft > ul > li",
-        "name": "h3",
-        "author": "p.author > a",
-        "summary": "p.intro",
-        "cover": ".sortImg > a > img",
-        "detail": ".sortPhr > a"
+        "url": "https://www.wanbentxt.net/api/api.php@post->skey=${key}&action=search&page=1",
+         "charset": "utf-8",
+        "list": "$..data[*]",
+        "name": "$.articlename",
+        "author": "$.author",
+        "summary": "$.intro",
+        "cover": "$.images",
+        "detail": "www.wanbentxt.com/${$.articleid}/"
     },
     "detail": {
         "name": "h1",
