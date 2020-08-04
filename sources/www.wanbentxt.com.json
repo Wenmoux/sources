@@ -1,7 +1,7 @@
 {
     "name": "完本神站",
     "url": "www.wanbentxt.com",
-    "version": 105,
+    "version": 106,
     "search": {
         "url": "https://www.wanbentxt.net/api/api.php@post->skey=${key}&action=search&page=1",
          "charset": "utf-8",
@@ -10,7 +10,7 @@
         "author": "$.author",
         "summary": "$.intro",
         "cover": "$.images",
-        "detail": "www.wanbentxt.com/${$.articleid}/"
+        "detail": "https://www.wanbentxt.com/${$.articleid}/"
     },
     "detail": {
         "name": "h1",
