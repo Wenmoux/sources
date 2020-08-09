@@ -4,15 +4,15 @@
 shopt -s nullglob
 declare -a jsons
 jsons=(*.json) # ${jsons[@]} now contains the list of files to concatenate
-echo '[' > manifest
+echo '[' > esou.json
 if [ ${#jsons[@]} -gt 0 ]; then # if the list is not empty
-  cat "${jsons[0]}" >> manifest # concatenate the first file to the manifest...
-  unset jsons[0]                     # and remove it from the list
+  cat "${jsons[0]}" >> esou.json # concatenate the first file to the esou.json...
+  unset 'jsons[0]'                     # and remove it from the list
   for f in "${jsons[@]}"; do         # iterate over the rest
-      echo "," >>manifest
-      cat "$f" >>manifest
+      echo "," >>esou.json
+      cat "$f" >>esou.json
   done
 fi
-echo ']' >>manifest             # complete the manifest
+echo ']' >>esou.json             # complete the esou.json
 
 echo success
