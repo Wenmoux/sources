@@ -28,6 +28,8 @@ https://cdn.jsdelivr.net/gh/Wenmoux/deeplink-booksource/Wen.json
    - [番茄ASMR](https://www.qqasmr.com)
    - [素白白影视](https://www.subaibai.com)
    - [网易CC直播](http://cc.163.com)
+   - [电视直播](http://iptv222.com)
+   - [喜马拉雅直播](https://live.ximalaya.com)
    - [哔哩哔哩直播](https://live.bilibili.com)
 
 - 漫画
