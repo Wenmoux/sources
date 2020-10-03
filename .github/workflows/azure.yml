@@ -24,7 +24,7 @@ jobs:
  
     # Runs merge
     - name: Run merge
-      run: bash ./merge.sh
+      run: bash ./esou/merge.sh
       
     - name: Commit files
       run: |
