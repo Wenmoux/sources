@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # https://stackoverflow.com/questions/23387256/shell-script-to-join-5-or-more-json-files-together
+mkdir ./es_source
 shopt -s nullglob
 declare -a jsons
 jsons=(*.json) # ${jsons[@]} now contains the list of files to concatenate
