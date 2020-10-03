@@ -28,10 +28,11 @@ jobs:
       
     - name: Commit files
       run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
+        git config --global user.email "action@github.com"
+        git config --global user.name "GitHub Action"
         git add -A
-        git commit -m "update mainfest" -a
+        git commit -m "update mainfest"
+        git push -u origin master
         
     - name: Push changes
       uses: ad-m/github-push-action@master
