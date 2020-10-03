@@ -24,8 +24,9 @@ jobs:
  
     # Runs me
     - name: Run merge
-      run: cd ./es_source
-    - run: merge merge.sh
+      run: |
+       cd ./es_source
+       merge merge.sh
       
     - name: Commit files
       run: |
