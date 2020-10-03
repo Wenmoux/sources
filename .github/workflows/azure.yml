@@ -22,10 +22,10 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
  
-    # Runs merge
+    # Runs me
     - name: Run merge
-      run : mkdir ./es_source
-      -run: bash merge.sh
+      run: mkdir ./es_source
+    - run: merge merge.sh
       
     - name: Commit files
       run: |
