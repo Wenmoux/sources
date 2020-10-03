@@ -6,9 +6,9 @@ name: update mainfest on push
 # events but only for the master branch
 on:
   push:
-    branches: [ origion,master ]
+    branches:  master 
   pull_request:
-    branches: [ master ]
+    branches: master 
  
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -30,9 +30,9 @@ jobs:
       run: |
         git config --global user.email "action@github.com"
         git config --global user.name "GitHub Action"
-        git add -A
-        git commit -a -m "update mainfest"
-        git push -u origin master
+        git add .
+        git commit  -m "update mainfest" -a
+        
         
     - name: Push changes
       uses: ad-m/github-push-action@master
