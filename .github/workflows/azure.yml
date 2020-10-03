@@ -30,8 +30,8 @@ jobs:
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git commit -m 'update esou source'
-        git push -u origin master
+        git add .
+        git commit -m "update mainfest" -a
         
     - name: Push changes
       uses: ad-m/github-push-action@master
