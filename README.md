@@ -4,7 +4,7 @@ https://cdn.jsdelivr.net/gh/Wenmoux/deeplink-booksource/Wen.json
 
 
 # 亦搜规则
- https://raw.githubusercontent.com/Wenmoux/deeplink-booksource/master/esou.json
+ https://cdn.jsdelivr.net/gh/Wenmoux/deeplink-booksource/esou.json
 
   
 # 影音宝订阅源
