@@ -3,7 +3,7 @@
 # https://stackoverflow.com/questions/23387256/shell-script-to-join-5-or-more-json-files-together
 
 shopt -s nullglob
-mkdir /es_source
+mkdir ./es_source
 declare -a jsons
 jsons=(*.json) # ${jsons[@]} now contains the list of files to concatenate
 echo '[' > esou.json
