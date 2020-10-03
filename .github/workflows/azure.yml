@@ -26,7 +26,7 @@ jobs:
     - name: Run merge
       run: |
        cd ./es_source
-       merge merge.sh
+       merge ./es_source/merge.sh
       
     - name: Commit files
       run: |
