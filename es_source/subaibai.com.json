@@ -1,7 +1,7 @@
 {
     "id": "d9b8f9f4-409f-45bd-a20f-a50e22982d93",
     "createTime": 1594949435423296,
-    "modifiedTime": 1595090158156047,
+    "modifiedTime": 1601455998506732,
     "author": "wenmoux",
     "postScript": "",
     "name": "素白白影视",
@@ -46,7 +46,7 @@
     "chapterTime": "",
     "chapterResult": "href",
     "contentUrl": "",
-    "contentItems": "@js:\nsttr=result.match(/window.isplay=true;(.*?)eval/s)[1];\n    let decryptedStr = CryptoJS.AES.decrypt(CryptoJS.enc.Base64.stringify(CryptoJS.enc.Base64.parse(sttr.split(\"var\")[1].match(/\\\"(.+)\\\"/)[1])), CryptoJS.enc.Utf8.parse(sttr.match(/md5\\.enc\\.Utf8\\.parse\\(\\\"(.+?)\\\"\\);var/)[1]), {\n      iv: CryptoJS.enc.Utf8.parse(\"1234567890983456\"),\n      mode: CryptoJS.mode.CBC,\n      padding: CryptoJS.pad.ZeroPadding\n    }).toString(CryptoJS.enc.Utf8)\n str=eval('('+decryptedStr.match(/video: (.*)\\,danmaku/)[1]+')') \nstr.url",
+    "contentItems": "@js:lastResult@filter:(?:m3u8|mp4)@json:$..url",
     "loginUrl": "",
     "cookies": "",
     "viewStyle": 0
