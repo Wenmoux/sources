@@ -83,4 +83,18 @@
 - 作者：**[zhangbo2008](https://github.com/zhangbo2008/TryingWriteHorrorStory)**
 
 
+## 剑与魔法世界观
+
+- 作者：**[Rack-Wheel](https://github.com/Rack-Wheel/Project-Ortelius)**
+
+
+    > 小说文体，剑与魔法世界观，魔幻朋克风格
+
+## 小说接龙
+
+- 作者：**[lunexnocty](https://github.com/lunexnocty/NovelChains)**
+
+
+    > Create dreams with friends!
+
 
