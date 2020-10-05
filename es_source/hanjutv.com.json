@@ -46,7 +46,7 @@
     "chapterTime": "",
     "chapterResult": "a@href||.btnBox>a.btn-danger@href",
     "contentUrl": "",
-    "contentItems": ".swiper-slide@onclick@js:\na=result[0].split('\\'')\nif(a[1]){\nurl=`https://ww4.hanjutv.com/index.php?path=${a[1]}`\nhttp.get(url).match(/video: {.+url: '(.+?)'/s)[1]\n}\nelse{a[3]}",
+    "contentItems": ".swiper-slide@onclick@js:\na=result.split('\\'')\nif(a[1]){\nurl=`https://ww4.hanjutv.com/index.php?path=${a[1]}`\nhttp.get(url).match(/video: {.+url: '(.+?)'/s)[1]\n}\nelse{a[3]}",
     "loginUrl": "",
     "cookies": "",
     "viewStyle": 2
