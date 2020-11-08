@@ -1,6 +1,6 @@
 {
     "name": "完本神站",
-    "url": "www.wanbentxt.com",
+    "url": "www.xinwanben.com",
     "version": 106,
     "search": {
         "url": "https://www.wanbentxt.net/api/api.php@post->skey=${key}&action=search&page=1",
@@ -10,7 +10,7 @@
         "author": "$.author",
         "summary": "$.intro",
         "cover": "$.images",
-        "detail": "https://www.wanbentxt.com/${$.articleid}/"
+        "detail": "https://www.xinwanben.com/${$.articleid}/"
     },
     "detail": {
         "name": "h1",
@@ -34,9 +34,10 @@
         "提示.*?看的书！",
         "-->>本章未完.*?阅读",
         "【完本神站】(.+)永不丢失！",
-        "支持.*?好友！"
+        "支持.*?好友！",
+        "手机直接访问:m.xinwanben.com",
+        "记不住网址，可以百度搜索:【完本神站】",
+        "章节错误，长时间未更新，请留言，我们会尽快处理！"
     ]
-    
-
     }
 }
