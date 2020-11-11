@@ -1,0 +1,40 @@
+{
+    "name": "豆腐",
+    "url": "doufu.la",
+    "version": 100,
+    "search": {
+        "url": "http://api.doufu.la/index.php/search/content?keyword=${key}&start=0&rows=20&types=18",
+        "charset": "utf-8",
+        "list": "$.data[*]",
+        "name": "$.title",
+        "author": "$.user.name",
+        "cover": "$.with_image_w",
+        "detail": "https://m.doufu.la/novel-${$.id}?id=${$.id}"
+    },
+    "detail": {
+        "status": "meta[property=og:novel:status]@attr->content",
+        "summary":"meta[property=og:description]@attr->content",
+        "category":".book_profile@match->(?<=分类：)(.+)(?= 字)@replace->/-> ",
+        "words":".book_profile@match->(?<=字数：)(.+)(?= )",
+        "update": "meta[property=og:novel:update_time]@attr->content",
+        "lastChapter": "meta[property=og:novel:latest_chapter_name]@attr->content",
+        "catalog": "https://m.doufu.la/api/getCatalogue?novelId=${$params.id}"
+    },
+    "catalog": {
+        "list": "$.*",
+        "name": "$.title",
+        "chapter": "https://m.doufu.la/api/getChapter@post->chapterId=${$.id}"
+    },
+    "chapter": {
+        "content": "$.chapter.content"
+    },
+    "auth": {
+        "login": "https://m.doufu.la/login",
+        "cookie": "m.doufu.la",
+         "header":"x-csrf-token:${XSRF-TOKEN}",
+        "verify": "https://m.doufu.la/api/getCollectUpdated",
+        "logged": "$.lastTime",
+        "vip": "$.chapter.need_pay",
+        "buy":"$.chapter.is_pay"
+    }
+}
