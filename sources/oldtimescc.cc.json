@@ -1,0 +1,34 @@
+{
+    "name": "旧时光",
+    "url": "oldtimescc.cc",
+    "version": 101,
+    "search": {
+        "url": "https://www.oldtimescc.cc/modules/article/search.php?searchkey=${key}&action=login&submit=",
+        "charset": "GBK",
+        "list": ".bookbox",
+        "name": "h4",
+        "author": ".author@replace->作者：->",
+        "detail": "h4>a"
+    },
+    "detail": {
+        "name":"meta[property=og:novel:book_name]@attr->content",
+        "author":"meta[property=og:novel:author]@attr->content",
+        "cover": "meta[property=og:image]@attr->content",
+        "summary": "meta[property=og:description]@attr->content",
+        "category":"meta[property=og:novel:category]@attr->content",
+        "status": "meta[property=og:novel:status]@attr->content",
+        "update": "meta[property=og:novel:update_time]@attr->content",
+        "lastChapter": "meta[property=og:novel:latest_chapter_name]@attr->content",
+        "words":".red+span@replace->字->",
+        "catalog": "meta[property=og:novel:read_url]@attr->content"
+    },
+    "catalog": {
+        "list": "#list-chapterAll>dd",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": ".readcontent",
+        "page": "#linkNext:matches(下一页)"
+    }
+}
