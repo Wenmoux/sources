@@ -122,3 +122,8 @@
 
 
     > 我自己也不知道什么时候能写完
+
+
+## Generalized-life-hypothesis
+
+- 作者：**[linyang23](https://github.com/linyang23/Generalized-life-hypothesis)**
