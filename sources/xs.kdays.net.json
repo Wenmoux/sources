@@ -1,0 +1,30 @@
+{
+    "name": "萌文库",
+    "url": "xs.ldays.net",
+    "version": 100,
+    "search": {
+        "url": "http://xs.kdays.net/search/all?page=1&w=${key}",
+        "charset": "utf-8",
+        "list": ".book-list>.book",
+        "name": "h3 > a",
+        "author": "p:not([class])@match->(?<=作者: ).+?(?=\/)",
+        "cover":"img",
+        "detail": "h3 > a"
+    },
+    "detail": {
+     "catalog": "a.read-btn"
+    },
+    "catalog": {
+        "list": ".info-side",
+        "booklet": {
+            "name": "h2>a@attr->data-name",
+            "list": "li"
+          },
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content":"article"
+
+    }
+}

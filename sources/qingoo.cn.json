@@ -1,0 +1,26 @@
+{
+    "name": "青果阅读",
+    "url": "qingoo.cn",
+    "version": 100,
+    "search": {
+        "url": "http://www.qingoo.cn/search/books/routings?word=${key}&page=1",
+        "charset": "utf-8",
+        "list": "$.model.resultList[*]",
+        "name": "$.name",
+        "author": "$.author.name",
+        "summary": "$.description",
+        "cover": "$.image",
+        "detail": "http://api.qingoo.cn:9090/v3/books/${$.id}/chapters?start=1&host=open.qingoo.cn&packagename=com.quduquxie&os=android&udid=40128CB63D1923C1F9862F070078526D&appversion=35&ch=qg0003_001&token="
+    },
+    "detail": {
+        "catalog": ""
+    },
+    "catalog": {
+        "list": "$.model[*]",
+        "name": "$.name",
+        "chapter": "http://m.qingoo.cn/api/read/v1/content/${$.id}"
+    },
+    "chapter": {
+        "content":"$..content"     
+    }
+}
