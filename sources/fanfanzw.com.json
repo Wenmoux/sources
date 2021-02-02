@@ -1,0 +1,28 @@
+{
+    "name": "饭饭中文",
+    "url": "fanfanzw.com",
+    "version": 100,
+    "search": {
+        "url": "https://www.fanfanzw.com/search.html@post->searchkey=${key}",
+        "charset": "utf-8",
+        "list": "#sitembox>dl",
+        "name": "h3 > a",
+        "author": ".book_other>span:nth-child(1)",
+        "cover":"img",
+        "detail": "h3 > a"
+    },
+    "detail": {
+     "name":"h1",
+     "catalog": ""
+    },
+    "catalog": {
+        "list": "dl>dd:nth-child(n+14)",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content":"#content",
+        "purify": ["喜欢(.+)速度最快。"]
+
+    }
+}

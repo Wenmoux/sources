@@ -1,5 +1,5 @@
 # 厚墨书源
-https://cdn.jsdelivr.net/gh/Wenmoux/deeplink-booksource/Wen.json
+https://cdn.jsdelivr.net/gh/Wenmoux/deeplink-booksource@latest/Wen.json
 
 
 
