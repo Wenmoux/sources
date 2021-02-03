@@ -1,0 +1,26 @@
+{
+    "name": "猫看书",
+    "url": "maokanshu.com",
+    "version": 100,
+    "search": {
+        "url": "https://www.maokanshu.com/search.html@post->s=articlename&searchkey=${key}",  
+        "charset": "utf-8",
+        "list": "#alistbox",
+        "name": "h2>a",
+        "author": "span@replace->作者：->",
+        "cover": "img",
+        "detail": "a"
+    },
+    "detail": {
+         "catalog": ".btopt>a"
+    },
+    "catalog": {
+        "list": "#list>dl>dd",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content":"#content>p",
+        "purify": ["手机阅读访问：(.+)功能更好用."]
+    }
+}
