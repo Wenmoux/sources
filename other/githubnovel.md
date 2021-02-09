@@ -127,3 +127,16 @@
 ## Generalized-life-hypothesis
 
 - 作者：**[linyang23](https://github.com/linyang23/Generalized-life-hypothesis)**
+
+
+## 空青 ~ the Empty Green
+
+- 作者：**[DreamSkyWork](https://github.com/DreamSkyWork/the-Empty-Green)**
+
+
+## 业风故事集
+
+- 作者：**[DragonKnightOfBreeze](https://github.com/DragonKnightOfBreeze/Kareeze-Stories)**
+  
+     
+   > 一名凡人梦想家的空想小说合集。
