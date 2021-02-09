@@ -1,0 +1,24 @@
+{
+    "name": "言情小筑",
+    "url": "yqxz.org",
+    "version": 100,
+    "search": {
+        "url": "https://www.yqxz.org/e/search/index.php@post->keyboard=${key}&show=title&classid=0",  
+        "charset": "gbk",
+        "list": ".bk",
+        "name": "h3",
+        "author": ".author@match->(?<=作者： ).+",
+        "detail": "a"
+    },
+    "detail": {
+        "catalog": ""
+    },
+    "catalog": {
+        "list": ".book_list>ul>li",      
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content":".read_chapterDetail"
+    }
+}
