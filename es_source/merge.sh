@@ -1,7 +1,7 @@
 #!/bin/bash
-
+ 
 # https://stackoverflow.com/questions/23387256/shell-script-to-join-5-or-more-json-files-together
-
+ 
 shopt -s nullglob
 declare -a jsons
 jsons=(*.json) # ${jsons[@]} now contains the list of files to concatenate
@@ -15,5 +15,5 @@ if [ ${#jsons[@]} -gt 0 ]; then # if the list is not empty
   done
 fi
 echo ']' >>esou.json            # complete the esou.json
-
+ 
 echo success
