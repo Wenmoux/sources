@@ -1,0 +1,25 @@
+{
+    "name": "app-1",
+    "url": "novel.riji8.com",
+    "version": 100,
+    "search": {
+        "url": "https://novel.riji8.com/book/search?query=${key}",
+        "charset": "UTF-8",
+        "list": "$..books[*]",
+        "name": "$.title",
+        "author": "$.author",
+        "cover": "$.cover",
+        "detail": "https://novel.riji8.com/mix-atoc/${$._id}?view=chapters"
+    },
+    "detail": {
+        "catalog": ""
+    },
+    "catalog": {
+        "list": "$..chapters[*]",
+        "name": "$.title",
+        "chapter": "$.link"
+    },
+    "chapter": {
+        "content": "$.chapter.body"
+    }
+}

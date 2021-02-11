@@ -1,0 +1,31 @@
+{
+    "name": "宜搜小说",
+    "url": "api.ieasou.com",
+    "version": 100,
+    "search": {
+        "url": "http://api.ieasou.com/api/bookapp/searchdzh.m?word=${key}&type=0&page_id=1&count=20&sort_type=0&subclass=0&datasource=0&showj=1&wc=0&catalog=0&bookStatus=0&cid=eef_easou_book&version=002&os=android&udid=F4D87828E95FE8842FDF6ECB2CA93B55&appverion=1099&ch=blp1298_10891_001&session_id=&lastClock=0&dzh=1&scp=0&appid=10001&utype=0&rtype=3&pushid=f8ed32c57a30b31499e605614f38bed2&ptype=5&gender=1&userInitPay=3&birt=0&userNewMedia=0&instime=1613003140324&chType=0&appType=0",
+        "charset": "UTF-8",
+        "list": "$.all_book_items[*]",
+        "name": "$.name",
+        "author": "$.author",
+        "cover": "$.imgUrl",
+        "detail": "http://api.ieasou.com/api/bookapp/bookSummary.m?nid=${$.nid}&gid=${$.gid}&sort=1&size=50&returnType=010&session_id=&gsort=1&showj=1&ad=0&cid=eef_easou_book&version=002&os=android&udid=F4D87828E95FE8842FDF6ECB2CA93B55&appverion=1099&ch=blp1298_10891_001&session_id=&lastClock=0&dzh=1&scp=0&appid=10001&utype=0&rtype=3&pushid=f8ed32c57a30b31499e605614f38bed2&ptype=5&gender=1&userInitPay=3&birt=0&userNewMedia=0&instime=1613003140324&chType=0&appType=0"
+    },
+    "detail": {
+        "summary": "$.coverInfo.desc",
+        "update":"$.coverInfo.last_time",
+        "lastChapter":"$.coverInfo.last_chapter_name",
+        "words":"$.coverInfo.wordCount",
+        "category":"$.coverInfo.labels@replace->,-> ",
+        "status":"$..status@equal->1",
+        "catalog": "http://api.ieasou.com/api/bookapp/bookSummary.m?gid=${$.coverInfo.gid}&nid=${$.coverInfo.nid}&sort=1&size=10000000&session_id=&returnType=100&gsort=1&cid=eef_easou_book&version=002&os=android&udid=F4D87828E95FE8842FDF6ECB2CA93B55&appverion=1099&ch=blp1298_10891_001&session_id=&lastClock=0&dzh=1&scp=0&appid=10001&utype=0&rtype=3&pushid=f8ed32c57a30b31499e605614f38bed2&ptype=5&gender=1&userInitPay=3&birt=0&userNewMedia=0&instime=1613003140324&chType=0&appType=0"
+    },
+    "catalog": {
+        "list": "$.volumes[*].chapters[*]",
+        "name": "$.chapter_name",
+        "chapter": "http://api.ieasou.com/api/bookapp/chargeChapter.m?a=1&autoBuy=0&cid=eef_easou_book&version=002&os=android&udid=F4D87828E95FE8842FDF6ECB2CA93B55&appverion=1099&ch=blp1298_10891_001&session_id=&lastClock=0&dzh=1&scp=0&appid=10001&utype=0&rtype=3&pushid=f8ed32c57a30b31499e605614f38bed2&ptype=5&gender=1&userInitPay=3&birt=0&userNewMedia=0&instime=1613003140324&chType=0&appType=0&gid=${$params.gid}&nid=${$.nid}&sort=${$.sort}&gsort=0&sgsort=0&sequence=11&chapter_name=${$.chapter_name}"
+    },
+    "chapter": {
+        "content": "$.content"
+    }   
+}
