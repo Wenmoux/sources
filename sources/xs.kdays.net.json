@@ -1,6 +1,6 @@
 {
     "name": "萌文库",
-    "url": "xs.ldays.net",
+    "url": "xs.kdays.net",
     "version": 100,
     "search": {
         "url": "http://xs.kdays.net/search/all?page=1&w=${key}",
