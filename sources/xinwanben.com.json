@@ -1,0 +1,36 @@
+{
+    "name": "新完本神站",
+    "url": "xinwanben.com",
+    "version": 106,
+    "search": {
+        "url": "https://m.xinwanben.com/s.php@post->keyword=${key}",
+         "charset": "utf-8",
+        "list": ".listBottom>ul>a",
+        "name": "h4",
+        "author": "h5",
+        "cover": "img",
+        "detail": "${a}/@replace->m.xin->www.xin"
+    },
+    "detail": {
+         "catalog": ""
+    },
+    "catalog": {
+        "list": ".chapter>ul>li",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content":".readerCon",
+    "page": ".readPage>a:nth-child(3):matches(下一页)",
+    "purify": ["一秒记住.*?coM",
+        "提示.*?看的书！",
+        "-->>本章未完.*?阅读",
+        "【完本神站】(.+)永不丢失！",
+         "【完本神站】(.+)喜欢就分享",
+        "支持.*?好友！",
+        "手机直接访问:m.xinwanben.com",
+        "记不住网址，可以百度搜索:【完本神站】",
+        "章节错误，长时间未更新，请留言，我们会尽快处理！"
+    ]
+    }
+}

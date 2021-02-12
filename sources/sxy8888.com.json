@@ -1,0 +1,27 @@
+{
+    "name": "书香院",
+    "url": "sxy8888.com",
+    "version": 100,
+    "search": {
+        "url": "http://www.sxy8888.com/home/search@post->action=search&q=${key}",
+         "charset": "utf-8",
+        "list": ".gengxin>li",
+        "name": ".col1>a",
+        "author": ".col3>a",
+        "cover": ".col1>a",
+        "detail": ".col1>a"
+    },
+    "detail": {
+         "catalog": ""
+    },
+    "catalog": {
+        "list": ".chapterlist.cate>dd",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content":"#BookText",
+        "page": ".link.xb>a:last-child:matches(下一页)",
+        "filter": ["@p", "%-->>"]
+    }
+}
