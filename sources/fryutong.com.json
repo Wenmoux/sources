@@ -1,0 +1,30 @@
+{
+    "name": "🌺芙蓉📖",
+    "url": "fryutong.com",
+    "version": 100,
+    "search": {
+        "url": "http://m.fryutong.com/search.php@post->searchkey=${key}",  
+        "charset": "gbk",
+        "list": "div.sort_box_list",
+        "name": ".newbook_title",
+        "author": ".newbook_author",
+        "cover":"img",
+        "detail": "a@replace->m.fryutong->www.fryutong"
+    },
+    "detail": {
+        "catalog": ""
+    },
+    "catalog": {
+        "list": ".indexwnm_listbox>.listchapter>ul>li",      
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content":".chapter_content",
+        "page":".buttom_next>a",
+        "purify":[
+        "本章还未完.+?>",
+        "您现在阅读的.*fryutong.com.*提供的.+"
+        ]
+    }
+}
