@@ -140,3 +140,22 @@
   
      
    > 一名凡人梦想家的空想小说合集。
+   
+
+## Jack 的大冒险
+
+- 作者：**[FancyAVGs](https://github.com/FancyAVGs/Adventures-of-Jack)**
+  
+     
+   > 一个有趣的中文文字冒险游戏 (AVG)，在阅读中享受人生。
+   
+
+## 函子风云录
+
+- 作者：**[OlingCat/](https://github.com/OlingCat/functor-fantasy)**
+  
+     
+   > 一个轻小说接力写作企划
+   
+
+
