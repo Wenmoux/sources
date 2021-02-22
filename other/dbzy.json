@@ -23,17 +23,9 @@
     "charset": "utf-8",
     "userAgent": "default"
 }, {
-    "key": "5a2f629a47f411ebb4000a80ff2603de",
-    "name": "AL资源",
-    "order": 3,
-    "baseUrl": "http://www.cqzyw.net:88/api.php/provide/vod/at/xml/",
-    "version": "2020-12-27",
-    "charset": "utf-8",
-    "userAgent": "default"
-}, {
     "key": "942d887c47f511eb96810a80ff2603de",
     "name": "聚合资源",
-    "order": 4,
+    "order": 3,
     "baseUrl": "https:\/\/cj.cbi88.com\/inc\/api_juhem3u8s.php",
     "version": "2020-12-27",
     "charset": "utf-8",
@@ -41,7 +33,7 @@
 }, {
     "key": "7332aca047f611eb94270a80ff2603de",
     "name": "最新资源",
-    "order": 5,
+    "order": 4,
     "baseUrl": "http://api.zuixinapi.com/inc/ldg_seaxinm3u8.php",
     "version": "2020-12-27",
     "charset": "utf-8",
