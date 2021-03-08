@@ -1,0 +1,24 @@
+{
+    "name": "爱下电子书",
+    "url": "aixdzs.com",
+    "version": 100,
+    "search": {
+        "url": "https://m.aixdzs.com/search/?k=${key}&page=1",
+        "list": ".ix-list>li",
+        "name": "h3",
+        "cover":"img",
+        "author": ".book-author",
+        "detail": "${a}?url=${a}@replace->https://m.aixdzs.com/d/->https://read.aixdzs.com/1/"
+    },
+    "detail": {
+             "catalog": ""
+    },
+    "catalog": {
+        "list": "li.chapter",
+        "name": "a",
+        "chapter": "https://read.aixdzs.com${$params.url}/${a}@replace->/d/->/1/"
+    },
+    "chapter": {
+        "content": ".content>p"
+    }
+}
