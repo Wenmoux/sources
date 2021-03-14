@@ -1,4 +1,5 @@
-        async function zhuli() {
+     
+           async function zhuli() {
             await get("2021zhuli", "login")
             for (i of new Array(5)) {
                 await get("2021zhuli", "share")
@@ -33,7 +34,7 @@
 
         }
 
-        async task1() {
+        async function task1() {
             await zhuli()
             console.log("粉丝福利任务开始,记得去app中首页分别搜索80080 25525 630630 79979进行qq号绑定哦！！")
             await lottery2("lottery2", 2, [1, 2, 3, 6, 7, 8])
