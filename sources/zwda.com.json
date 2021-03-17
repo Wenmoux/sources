@@ -1,0 +1,25 @@
+{
+    "name": "E小说",
+    "url": "zwda.com",
+    "version": 100,
+    "search": {
+        "url": "https://www.zwda.com/search.php?q=${key}",
+        "charset": "UTF-8",
+        "list": ".result-item",
+        "name": "h3",
+        "author": ".result-game-item-info>p:nth-child(1)@replace->作者：->",
+        "cover": "img",
+        "detail": "h3>a"
+            },
+    "detail": {
+        "catalog": ""
+            },
+    "catalog": {
+        "list": "#list>dl>dd",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "#content"
+    }   
+}
