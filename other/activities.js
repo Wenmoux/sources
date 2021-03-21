@@ -54,7 +54,8 @@
          await lottery2("lottery", 5, [1, 2, 3, 4, 6, 7])
          await lottery2("lottery", 4, [1, 2, 4, 5, 6, 8])
          await lottery2("lottery", 3, [1, 2, 3, 6, 7, 8, 14])
-         result += "粉丝福利任务开始,记得去app中首页分别搜索80080 25525 630630 79979进行qq号绑定哦！！"         
+         await lottery2("lottery", 9, [1,3,4,5,7,8])
+         result += "新增粉丝福利任务12344,粉丝福利任务开始,记得去app中首页分别搜索80080 25525 630630 79979进行qq号绑定哦！！"         
          console.log("四周年活动开始,请去活动里绑定qq哦,社区-四周年-活动1")
          await szn()
      }
