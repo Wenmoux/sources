@@ -14,14 +14,14 @@ async function zhuli() {
     await get("yearend", "send&content=新年快乐&status=0")
 }
 
-//惊魂奇妙夜 -3.29
-async function jhy() {
-    let logindata = await get("zhuli", "login&comm_id=31")
+//惊魂奇妙夜 -3.29  助力抽奖通用
+async function jhy(id) {
+    let logindata = await get("zhuli", `login&comm_id=${id}`)
     if (logindata.loginStatus == 100 && logindata.key == "ok") {
         uid = logindata.config.uid
         for (i = 0; i < 3; i++) {
-            await get("zhuli", `zhuli&uid=${uid}&comm_id=31`)
-            await get("zhuli", "choujiang&isdown=1&comm_id=31")
+            await get("zhuli", `zhuli&uid=${uid}&comm_id=${id}`)
+            await get("zhuli", `choujiang&isdown=1&comm_id=${id}`)
             await sleep(1000)
         }
     }
@@ -76,9 +76,9 @@ async function task1() {
 5：惊魂奇妙夜`)
     await zhuli()
     console.log("粉丝福利任务开始,记得去app中首页分别搜索80080 25525 630630 79979进行qq号绑定哦！！")
-    await lottery2("lottery2", 2, [1, 2, 3, 6, 7, 8])
+    await lottery2("lottery2", 2, [1, 2, 3, 6, 7, 8,9])
     await lottery2("lottery", 5, [1, 2, 3, 4, 6, 7])
-    await lottery2("lottery", 4, [1, 2, 4, 5, 6, 8])
+    await lottery2("lottery", 4, [1, 2, 4, 5, 6, 8,14])
     await lottery2("lottery", 3, [1, 2, 3, 6, 7, 8, 14])
     await lottery2("lottery", 9, [1, 3, 4, 5, 7, 8])
     await get(`lottery/m`, "duihuanprize&comm_id=9&isyuyue=0&dhid=2")
@@ -87,5 +87,7 @@ async function task1() {
     console.log("四周年活动开始,请去活动里绑定qq哦,社区-四周年-活动1")
     await glist()
     await szn()
-    await jhy()
+    for (id of [30,31,32,33]){
+    await jhy(id)
+    }
 }
