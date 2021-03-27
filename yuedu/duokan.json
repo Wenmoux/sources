@@ -8,18 +8,19 @@
   "enabled": true,
   "enabledExplore": true,
   "header": "{\"cookie\":\"device_id=D900MIVU7AH2SDF9;app_id=duokan_h5;build=999000000;channel=Y0X66A;user_type=2;platform=wap\"}",
-  "lastUpdateTime": 1616843694198,
+  "lastUpdateTime": 1616845659989,
   "loginUrl": "https://www.duokan.com/www/sdk-h5/?ch=Y0X66A&page=store&tab=0",
   "ruleBookInfo": {
     "coverUrl": "",
     "kind": "",
     "lastChapter": "$.item.latest",
     "name": "",
-    "tocUrl": "$.item.fiction_id@js:\"https://www.duokan.com/store/v0/fiction/detail/\"+579316+\"?chapter_id=0&_t=&_c=\"",
+    "tocUrl": "$.item.fiction_id@js:\"https://www.duokan.com/store/v0/fiction/detail/\"+result+\"?chapter_id=0&_t=&_c=\"",
     "wordCount": "$.item.word_count"
   },
   "ruleContent": {
-    "content": "text@js:let str=java.base64Decode(result.match(/\\'(.+?)\\'/)[1])\nresult =\"\"\nlet list=JSON.parse(str).p\nfor (i =0;i<list.length;i++){\nresult += list[i]+\"\\n\"\n}\nresult\n"
+    "content": "$.url@js:\nlet content=\"\"\nif(result){\nlet b64 = java.ajax(result)\nlet str=java.base64Decode(b64.match(/'(.+?)'/)[1])\nlet list=JSON.parse(str).p\nfor (i =0;i<list.length;i++){\ncontent+= list[i]+\"\\n\"\n}\n}else{\ncontent+=\"购买后继续阅读本章内容\"\n}\ncontent",
+    "webJs": ""
   },
   "ruleExplore": {},
   "ruleSearch": {
@@ -36,7 +37,8 @@
   "ruleToc": {
     "chapterList": "$.item.toc[*]",
     "chapterName": "$.title",
-    "chapterUrl": "$.seq_id@js:\nlet res = java.ajax(\"https://www.duokan.com/drm/v0/fiction/link?chapter_id=\"+result+\"&format=jsonp&withid=1&fiction_id=\"+baseUrl.match(/detail\\/(\\d+)/)[1]+\"&_t=&_c=\")\nJSON.parse(res).url"
+    "chapterUrl": "$.seq_id@js:\n\"https://www.duokan.com/drm/v0/fiction/link?chapter_id=\"+result+\"&format=jsonp&withid=1&fiction_id=\"+baseUrl.match(/detail\\/(\\d+)/)[1]+\"&_t=&_c=\"",
+    "isVip": "$.free@js:result?false:true"
   },
   "searchUrl": "https://www.duokan.com/store/v0/lib/query/onebox?start=0&count=10&s={{key}}&source=2%2C5%2C6%2C7&_t=1616840245&_c=3963",
   "weight": 0
