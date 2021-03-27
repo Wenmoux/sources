@@ -1,0 +1,43 @@
+{
+  "bookSourceComment": "",
+  "bookSourceGroup": "wenmoux",
+  "bookSourceName": "多看",
+  "bookSourceType": 0,
+  "bookSourceUrl": "https://www.duokan.com/",
+  "customOrder": 0,
+  "enabled": true,
+  "enabledExplore": true,
+  "header": "{\"cookie\":\"device_id=D900MIVU7AH2SDF9;app_id=duokan_h5;build=999000000;channel=Y0X66A;user_type=2;platform=wap\"}",
+  "lastUpdateTime": 1616843694198,
+  "loginUrl": "https://www.duokan.com/www/sdk-h5/?ch=Y0X66A&page=store&tab=0",
+  "ruleBookInfo": {
+    "coverUrl": "",
+    "kind": "",
+    "lastChapter": "$.item.latest",
+    "name": "",
+    "tocUrl": "$.item.fiction_id@js:\"https://www.duokan.com/store/v0/fiction/detail/\"+579316+\"?chapter_id=0&_t=&_c=\"",
+    "wordCount": "$.item.word_count"
+  },
+  "ruleContent": {
+    "content": "text@js:let str=java.base64Decode(result.match(/\\'(.+?)\\'/)[1])\nresult =\"\"\nlet list=JSON.parse(str).p\nfor (i =0;i<list.length;i++){\nresult += list[i]+\"\\n\"\n}\nresult\n"
+  },
+  "ruleExplore": {},
+  "ruleSearch": {
+    "author": "$.role[0][1]",
+    "bookList": "$.items[*]",
+    "bookUrl": "$.source_id@js:\"https://www.duokan.com/hs/v0/android/fiction/book/\"+result",
+    "coverUrl": "$.cover",
+    "intro": "$.intro",
+    "kind": "",
+    "lastChapter": "",
+    "name": "$.title",
+    "wordCount": ""
+  },
+  "ruleToc": {
+    "chapterList": "$.item.toc[*]",
+    "chapterName": "$.title",
+    "chapterUrl": "$.seq_id@js:\nlet res = java.ajax(\"https://www.duokan.com/drm/v0/fiction/link?chapter_id=\"+result+\"&format=jsonp&withid=1&fiction_id=\"+baseUrl.match(/detail\\/(\\d+)/)[1]+\"&_t=&_c=\")\nJSON.parse(res).url"
+  },
+  "searchUrl": "https://www.duokan.com/store/v0/lib/query/onebox?start=0&count=10&s={{key}}&source=2%2C5%2C6%2C7&_t=1616840245&_c=3963",
+  "weight": 0
+}
