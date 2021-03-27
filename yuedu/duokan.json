@@ -7,12 +7,13 @@
   "customOrder": 0,
   "enabled": true,
   "enabledExplore": true,
-  "header": "{\"cookie\":\"device_id=D900MIVU7AH2SDF9;app_id=duokan_h5;build=999000000;channel=Y0X66A;user_type=2;platform=wap\"}",
-  "lastUpdateTime": 1616845659989,
-  "loginUrl": "https://www.duokan.com/www/sdk-h5/?ch=Y0X66A&page=store&tab=0",
+  "exploreUrl": "👻-------------男生-----------👻::/\n人气榜::https://www.duokan.com/store/v0/fiction/rank?start={{(page-1)*10}}&count=10&r=12001&_t=&_c=\n畅销榜::https://www.duokan.com/store/v0/fiction/rank?start={{(page-1)*10}}&count=10&r=11002&_t=&_c=\nVIP榜::https://www.duokan.com/store/v0/fiction/rank?start={{(page-1)*10}}&count=10&r=43001&_t=&_c=&withid=1\n新书榜::https://www.duokan.com/store/v0/fiction/rank?start={{(page-1)*10}}&count=10&r=13000&_t=1&_c=&withid=1\n收藏榜::https://www.duokan.com/store/v0/fiction/rank?start={{(page-1)*10}}&count=10&r=27002&_t=&_c=&withid=1\n飙升榜::https://www.duokan.com/store/v0/fiction/rank?start={{(page-1)*10}}&count=10&r=14001&_t=&_c=&withid=1\n完本榜::https://www.duokan.com/store/v0/fiction/rank?start={{(page-1)*10}}&count=10&r=15001&_t=&_c=&withid=1\n风云榜::https://www.duokan.com/store/v0/fiction/rank?start={{(page-1)*10}}&count=10&r=29004&_t=&_c=&withid=1\n更新榜::https://www.duokan.com/store/v0/fiction/rank?start={{(page-1)*10}}&count=10&r=28001&_t=&_c=&withid=1\n👻-------------女生-----------👻::/\n人气榜::https://www.duokan.com/store/v0/fiction/rank?start={{(page-1)*10}}&count=10&r=12011&_t=&_c=\n畅销榜::https://www.duokan.com/store/v0/fiction/rank?start={{(page-1)*10}}&count=10&r=11012&_t=&_c=\nVIP榜::https://www.duokan.com/store/v0/fiction/rank?start={{(page-1)*10}}&count=10&r=43011&_t=&_c=&withid=1\n新书榜::https://www.duokan.com/store/v0/fiction/rank?start={{(page-1)*10}}&count=10&r=13010&_t=1&_c=&withid=1\n收藏榜::https://www.duokan.com/store/v0/fiction/rank?start={{(page-1)*10}}&count=10&r=27012&_t=&_c=&withid=1\n飙升榜::https://www.duokan.com/store/v0/fiction/rank?start={{(page-1)*10}}&count=10&r=14011&_t=&_c=&withid=1\n完本榜::https://www.duokan.com/store/v0/fiction/rank?start={{(page-1)*10}}&count=10&r=15011&_t=&_c=&withid=1\n风云榜::https://www.duokan.com/store/v0/fiction/rank?start={{(page-1)*10}}&count=10&r=29014&_t=&_c=&withid=1\n更新榜::https://www.duokan.com/store/v0/fiction/rank?start={{(page-1)*10}}&count=10&r=28011&_t=&_c=&withid=1",
+  "header": "{\"cookie\":\"device_id=D900MIVU7AH2SDF9;platform=wap;user_preference=%7B%7D;Hm_lvt_1c932f22da573f2870e8ab565f4ff9cb=1616847894;build=999000000;Hm_lpvt_1c932f22da573f2870e8ab565f4ff9cb=1616849443;app_id=duokan_h5;channel=Y0X66A;user_type=3\"}",
+  "lastUpdateTime": 1616854811607,
+  "loginUrl": "https://account.xiaomi.com/fe/service/login/password?display=mobile&sid=reader&qs",
   "ruleBookInfo": {
     "coverUrl": "",
-    "kind": "",
+    "kind": "$.item.tags[*]&&$.rights",
     "lastChapter": "$.item.latest",
     "name": "",
     "tocUrl": "$.item.fiction_id@js:\"https://www.duokan.com/store/v0/fiction/detail/\"+result+\"?chapter_id=0&_t=&_c=\"",
@@ -22,7 +23,16 @@
     "content": "$.url@js:\nlet content=\"\"\nif(result){\nlet b64 = java.ajax(result)\nlet str=java.base64Decode(b64.match(/'(.+?)'/)[1])\nlet list=JSON.parse(str).p\nfor (i =0;i<list.length;i++){\ncontent+= list[i]+\"\\n\"\n}\n}else{\ncontent+=\"购买后继续阅读本章内容\"\n}\ncontent",
     "webJs": ""
   },
-  "ruleExplore": {},
+  "ruleExplore": {
+    "author": "$.authors",
+    "bookList": "$.items[*]",
+    "bookUrl": "$.fiction_id@js:\"https://www.duokan.com/hs/v0/android/fiction/book/\"+result",
+    "coverUrl": "$.cover",
+    "intro": "$.summary",
+    "kind": "$.new_tags&&$.rights",
+    "name": "$.title",
+    "wordCount": "$.word_count"
+  },
   "ruleSearch": {
     "author": "$.role[0][1]",
     "bookList": "$.items[*]",

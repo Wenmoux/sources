@@ -41,58 +41,58 @@
     "weight": 0
   },
   {
-    "bookSourceComment": "",
-    "bookSourceGroup": "wenmoux",
-    "bookSourceName": "多看",
-    "bookSourceType": 0,
-    "bookSourceUrl": "https://www.duokan.com/",
-    "customOrder": 0,
-    "enabled": true,
-    "enabledExplore": true,
-    "exploreUrl": "男生•人气榜::https://www.duokan.com/store/v0/fiction/rank?start=0&count=100&r=12001&_t=&_c=\n男生•畅销榜::https://www.duokan.com/store/v0/fiction/rank?start=0&count=100&r=11002&_t=&_c=\n女生•人气榜::https://www.duokan.com/store/v0/fiction/rank?start=0&count=100&r=12011&_t=&_c=\n女生•畅销榜::https://www.duokan.com/store/v0/fiction/rank?start=0&count=100&r=11012&_t=&_c=",
-    "header": "{\"cookie\":\"device_id=D900MIVU7AH2SDF9;app_id=duokan_h5;build=999000000;channel=Y0X66A;user_type=2;platform=wap\"}",
-    "lastUpdateTime": 1616850685091,
-    "loginUrl": "https://account.xiaomi.com/fe/service/login/password?display=mobile&sid=reader&qs=%253Fcallback%253Dhttp%25253A%25252F%25252Flogin.dushu.xiaomi.com%25252Fdk_id%25252Fapi%25252Fcheckin%25253Ffollowup%25253Dhttps%2525253A%2525252F%2525252Fwww.duokan.com%2525252Fwww%2525252Fsdk-h5%2525252F%2525253Fch%2525253DY0X66A%25252526chapter_id%2525253D7%25252526page%2525253Duser_center%25252526_t%2525253D_r%252525253A92452_880%2525252Apos%252525253A880_5-99960.904_0-108684%25252521_r%252525253A99985_270874%25252521_r%252525253A99986_270874%25252526back%2525253Dhome%25252526app_id%2525253Dweb%252526sign%25253DNDFjM2Q1ZTQ2MWJlOWFmN2Q0MjU0MjE0NDUwNmQ4Zjc%25253D%252526device_id%25253D%252526wx_bind%25253D%2526sid%253Dreader%2526display%253Dmobile&callback=http%3A%2F%2Flogin.dushu.xiaomi.com%2Fdk_id%2Fapi%2Fcheckin%3Ffollowup%3Dhttps%253A%252F%252Fwww.duokan.com%252Fwww%252Fsdk-h5%252F%253Fch%253DY0X66A%2526chapter_id%253D7%2526page%253Duser_center%2526_t%253D_r%25253A92452_880%252Apos%25253A880_5-99960.904_0-108684%2521_r%25253A99985_270874%2521_r%25253A99986_270874%2526back%253Dhome%2526app_id%253Dweb%26sign%3DNDFjM2Q1ZTQ2MWJlOWFmN2Q0MjU0MjE0NDUwNmQ4Zjc%3D%26device_id%3D%26wx_bind%3D&_sign=jmADgV11w7O4ZGcEzvfyO1PLIxM%3D&serviceParam=%7B%22checkSafePhone%22%3Afalse%2C%22checkSafeAddress%22%3Afalse%2C%22lsrp_score%22%3A0.0%7D&showActiveX=false&theme=&needTheme=false&bizDeviceType=",
-    "ruleBookInfo": {
-      "coverUrl": "",
-      "kind": "$.item.tags[*]&&$.rights",
-      "lastChapter": "$.item.latest",
-      "name": "",
-      "tocUrl": "$.item.fiction_id@js:\"https://www.duokan.com/store/v0/fiction/detail/\"+result+\"?chapter_id=0&_t=&_c=\"",
-      "wordCount": "$.item.word_count"
-    },
-    "ruleContent": {
-      "content": "$.url@js:\nlet content=\"\"\nif(result){\nlet b64 = java.ajax(result)\nlet str=java.base64Decode(b64.match(/'(.+?)'/)[1])\nlet list=JSON.parse(str).p\nfor (i =0;i<list.length;i++){\ncontent+= list[i]+\"\\n\"\n}\n}else{\ncontent+=\"购买后继续阅读本章内容\"\n}\ncontent",
-      "webJs": ""
-    },
-    "ruleExplore": {
-      "author": "$.authors",
-      "bookList": "$.items[*]",
-      "bookUrl": "$.fiction_id@js:\"https://www.duokan.com/hs/v0/android/fiction/book/\"+result",
-      "coverUrl": "$.cover",
-      "intro": "$.summary",
-      "kind": "$.new_tags&&$.rights",
-      "name": "$.title",
-      "wordCount": "$.word_count"
-    },
-    "ruleSearch": {
-      "author": "$.role[0][1]",
-      "bookList": "$.items[*]",
-      "bookUrl": "$.source_id@js:\"https://www.duokan.com/hs/v0/android/fiction/book/\"+result",
-      "coverUrl": "$.cover",
-      "intro": "$.intro",
-      "kind": "",
-      "lastChapter": "",
-      "name": "$.title",
-      "wordCount": ""
-    },
-    "ruleToc": {
-      "chapterList": "$.item.toc[*]",
-      "chapterName": "$.title",
-      "chapterUrl": "$.seq_id@js:\n\"https://www.duokan.com/drm/v0/fiction/link?chapter_id=\"+result+\"&format=jsonp&withid=1&fiction_id=\"+baseUrl.match(/detail\\/(\\d+)/)[1]+\"&_t=&_c=\"",
-      "isVip": "$.free@js:result?false:true"
-    },
-    "searchUrl": "https://www.duokan.com/store/v0/lib/query/onebox?start=0&count=10&s={{key}}&source=2%2C5%2C6%2C7&_t=1616840245&_c=3963",
-    "weight": 0
-  }
+  "bookSourceComment": "",
+  "bookSourceGroup": "wenmoux",
+  "bookSourceName": "多看",
+  "bookSourceType": 0,
+  "bookSourceUrl": "https://www.duokan.com/",
+  "customOrder": 0,
+  "enabled": true,
+  "enabledExplore": true,
+  "exploreUrl": "👻-------------男生-----------👻::/\n人气榜::https://www.duokan.com/store/v0/fiction/rank?start={{(page-1)*10}}&count=10&r=12001&_t=&_c=\n畅销榜::https://www.duokan.com/store/v0/fiction/rank?start={{(page-1)*10}}&count=10&r=11002&_t=&_c=\nVIP榜::https://www.duokan.com/store/v0/fiction/rank?start={{(page-1)*10}}&count=10&r=43001&_t=&_c=&withid=1\n新书榜::https://www.duokan.com/store/v0/fiction/rank?start={{(page-1)*10}}&count=10&r=13000&_t=1&_c=&withid=1\n收藏榜::https://www.duokan.com/store/v0/fiction/rank?start={{(page-1)*10}}&count=10&r=27002&_t=&_c=&withid=1\n飙升榜::https://www.duokan.com/store/v0/fiction/rank?start={{(page-1)*10}}&count=10&r=14001&_t=&_c=&withid=1\n完本榜::https://www.duokan.com/store/v0/fiction/rank?start={{(page-1)*10}}&count=10&r=15001&_t=&_c=&withid=1\n风云榜::https://www.duokan.com/store/v0/fiction/rank?start={{(page-1)*10}}&count=10&r=29004&_t=&_c=&withid=1\n更新榜::https://www.duokan.com/store/v0/fiction/rank?start={{(page-1)*10}}&count=10&r=28001&_t=&_c=&withid=1\n👻-------------女生-----------👻::/\n人气榜::https://www.duokan.com/store/v0/fiction/rank?start={{(page-1)*10}}&count=10&r=12011&_t=&_c=\n畅销榜::https://www.duokan.com/store/v0/fiction/rank?start={{(page-1)*10}}&count=10&r=11012&_t=&_c=\nVIP榜::https://www.duokan.com/store/v0/fiction/rank?start={{(page-1)*10}}&count=10&r=43011&_t=&_c=&withid=1\n新书榜::https://www.duokan.com/store/v0/fiction/rank?start={{(page-1)*10}}&count=10&r=13010&_t=1&_c=&withid=1\n收藏榜::https://www.duokan.com/store/v0/fiction/rank?start={{(page-1)*10}}&count=10&r=27012&_t=&_c=&withid=1\n飙升榜::https://www.duokan.com/store/v0/fiction/rank?start={{(page-1)*10}}&count=10&r=14011&_t=&_c=&withid=1\n完本榜::https://www.duokan.com/store/v0/fiction/rank?start={{(page-1)*10}}&count=10&r=15011&_t=&_c=&withid=1\n风云榜::https://www.duokan.com/store/v0/fiction/rank?start={{(page-1)*10}}&count=10&r=29014&_t=&_c=&withid=1\n更新榜::https://www.duokan.com/store/v0/fiction/rank?start={{(page-1)*10}}&count=10&r=28011&_t=&_c=&withid=1",
+  "header": "{\"cookie\":\"device_id=D900MIVU7AH2SDF9;platform=wap;user_preference=%7B%7D;Hm_lvt_1c932f22da573f2870e8ab565f4ff9cb=1616847894;build=999000000;Hm_lpvt_1c932f22da573f2870e8ab565f4ff9cb=1616849443;app_id=duokan_h5;channel=Y0X66A;user_type=3\"}",
+  "lastUpdateTime": 1616854811607,
+  "loginUrl": "https://account.xiaomi.com/fe/service/login/password?display=mobile&sid=reader&qs",
+  "ruleBookInfo": {
+    "coverUrl": "",
+    "kind": "$.item.tags[*]&&$.rights",
+    "lastChapter": "$.item.latest",
+    "name": "",
+    "tocUrl": "$.item.fiction_id@js:\"https://www.duokan.com/store/v0/fiction/detail/\"+result+\"?chapter_id=0&_t=&_c=\"",
+    "wordCount": "$.item.word_count"
+  },
+  "ruleContent": {
+    "content": "$.url@js:\nlet content=\"\"\nif(result){\nlet b64 = java.ajax(result)\nlet str=java.base64Decode(b64.match(/'(.+?)'/)[1])\nlet list=JSON.parse(str).p\nfor (i =0;i<list.length;i++){\ncontent+= list[i]+\"\\n\"\n}\n}else{\ncontent+=\"购买后继续阅读本章内容\"\n}\ncontent",
+    "webJs": ""
+  },
+  "ruleExplore": {
+    "author": "$.authors",
+    "bookList": "$.items[*]",
+    "bookUrl": "$.fiction_id@js:\"https://www.duokan.com/hs/v0/android/fiction/book/\"+result",
+    "coverUrl": "$.cover",
+    "intro": "$.summary",
+    "kind": "$.new_tags&&$.rights",
+    "name": "$.title",
+    "wordCount": "$.word_count"
+  },
+  "ruleSearch": {
+    "author": "$.role[0][1]",
+    "bookList": "$.items[*]",
+    "bookUrl": "$.source_id@js:\"https://www.duokan.com/hs/v0/android/fiction/book/\"+result",
+    "coverUrl": "$.cover",
+    "intro": "$.intro",
+    "kind": "",
+    "lastChapter": "",
+    "name": "$.title",
+    "wordCount": ""
+  },
+  "ruleToc": {
+    "chapterList": "$.item.toc[*]",
+    "chapterName": "$.title",
+    "chapterUrl": "$.seq_id@js:\n\"https://www.duokan.com/drm/v0/fiction/link?chapter_id=\"+result+\"&format=jsonp&withid=1&fiction_id=\"+baseUrl.match(/detail\\/(\\d+)/)[1]+\"&_t=&_c=\"",
+    "isVip": "$.free@js:result?false:true"
+  },
+  "searchUrl": "https://www.duokan.com/store/v0/lib/query/onebox?start=0&count=10&s={{key}}&source=2%2C5%2C6%2C7&_t=1616840245&_c=3963",
+  "weight": 0
+}
 ]
