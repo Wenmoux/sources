@@ -1,6 +1,6 @@
 let sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 
-async function zhuli() {
+/*async function zhuli() {
     await get("2021zhuli", "login")
     for (i of new Array(5)) {
         await get("2021zhuli", "share")
@@ -13,6 +13,8 @@ async function zhuli() {
     await get("yearend", "login")
     await get("yearend", "send&content=新年快乐&status=0")
 }
+
+*/
 
 //惊魂奇妙夜 -3.29  助力抽奖通用
 async function jhy(id) {
@@ -47,7 +49,7 @@ async function szn() {
     await get("4zhounian/m", "login")
     await get("4zhounian/m", "normalShare") //分享
     await get("4zhounian/m", "share") /
-        await get("4zhounian/m", "chaundi&liuyan=666&resource=qq") //留言
+  //  await get("4zhounian/m", "chaundi&liuyan=666&resource=qq") //留言
     await get("4zhounian/m", "duihuantouxian&resure=1&dhid=9") //领取头衔
     for (id of [1, 2, 3, 4, 5, 6]) {
         await get("4zhounian/m", "step&id=" + id + "&refer=0")
@@ -74,7 +76,7 @@ async function task1() {
 3：2021助力活动
 4：四周年活动
 5：惊魂奇妙夜`)
-    await zhuli()
+  //  await zhuli()
     console.log("粉丝福利任务开始,记得去app中首页分别搜索80080 25525 630630 79979进行qq号绑定哦！！")
     await lottery2("lottery2", 2, [1, 2, 3, 6, 7, 8,9])
     await lottery2("lottery", 5, [1, 2, 3, 4, 6, 7])

@@ -34,6 +34,8 @@
   "verify":"https://www.lucifer-club.com",
  "logged": "#luf_top > div.luf_top_menu > a:nth-child(3)@equal->退出"
  
+} ,"auth": {
+  "cookie": "cookie:device_id=D900MIVU7AH2SDF9;app_id=duokan_h5;build=999000000;channel=Y0X66A;user_type=2;platform=wap"
 } ,
 "rank": [
     {

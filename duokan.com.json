@@ -1,0 +1,28 @@
+{
+    "name": "多看阅读",
+    "url": "duokan.com",
+    "version": 100,
+    "search": {
+        "url": "https://www.duokan.com/store/v0/lib/query/onebox?start=0&count=10&s=${key}&source=2%2C5%2C7&_t=&_c=",
+        "charset": "UTF-8",
+        "list": "$.items[*]",
+        "name": "$.title",
+        "author": "$.role[0][1]",
+        "cover": "$.cover",
+        "detail": "https://www.duokan.com/hs/v0/android/fiction/book/${$.source_id}"
+    },
+    "detail": {
+        "catalog": "https://www.duokan.com/store/v0/fiction/detail/${$.item.fiction_id}?chapter_id=0&_t=&_c=&fid=${$.item.fiction_id}"
+    },
+    "catalog": {
+        "list": "$.item.toc[*]",
+        "name": "$.title",
+        "chapter": "https://service-jexl96pu-1300177622.gz.apigw.tencentcs.com/release/ciweimao?cid=${$.seq_id}&fid=${$params.fid}&token=AxFmRELNnK69mfZQMgBnHd7Koh7927cMxBSzpanG7LQr1i7cKmlI9R3JOwDYimyv&deviceid=D900MIVU7AH2SDF9"
+    },
+    "chapter": {
+        "content": "$.p[*]"
+    },
+    "auth": {
+  "header":"cookie:device_id=D900MIVU7AH2SDF9;token=AxFmRELNnK69mfZQMgBnHd7Koh7927cMxBSzpanG7LQr1i7cKmlI9R3JOwDYimyv"
+}
+}
