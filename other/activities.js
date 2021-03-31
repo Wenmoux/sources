@@ -72,7 +72,7 @@ async function task1() {
     console.log("四周年活动开始,请去活动里绑定qq哦,社区-四周年-活动1")
     await glist()
     await szn()
-    for (id of [30,,32,33]){
+    for (id of [30,32,33]){
     await jhy(id)
     }
 }
