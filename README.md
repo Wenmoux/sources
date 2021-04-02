@@ -6,9 +6,18 @@ https://cdn.jsdelivr.net/gh/Wenmoux/sources@latest/Wen.json
 # 亦搜规则
  https://cdn.jsdelivr.net/gh/Wenmoux/sources/esou.json
 
+
+
 # 阅读书源
- https://cdn.jsdelivr.net/gh/Wenmoux/sources/yuedu.json
-  
+ https://cdn.jsdelivr.net/gh/Wenmoux/sources/yuedu_booksource.json
+
+
+
+# 阅读订阅源
+ https://cdn.jsdelivr.net/gh/Wenmoux/sources/yuedu_rss.json  
+
+
+
 # 影音宝订阅源
 https://raw.githubusercontent.com/Wenmoux/sources/master/yyb/asmr.txt
 

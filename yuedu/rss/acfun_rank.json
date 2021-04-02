@@ -1,0 +1,20 @@
+{
+  "articleStyle": 0,
+  "customOrder": 0,
+  "enableJs": true,
+  "enabled": true,
+  "loadWithBaseUrl": false,
+  "ruleArticles": "$.rankList[*]",
+  "ruleContent": "<js>\nresult = JSON.parse(result)\n'<video   src=\"'+result.currentVideoInfo.playInfos[0].playUrls[0]+' \" poster=\" '+result.coverCdnUrls[0].url+'\" controls=\"controls\" ></video> <p>'+result.description+\"</p>\"\n</js>",
+  "ruleDescription": "",
+  "ruleImage": "$.videoCover",
+  "ruleLink": "https://api-new.acfunchina.com/rest/app/douga/info?mkey=AAHewK3eIAAyMjAwNzQ5MjUBAhAAMEP1uwQzed6KYAAAAPcfJl8UWqSpEZcS-S3A%0D%0A037gnn9h4r63X9eiAN7WpyfhBQX95IrtiAGzhf-o4P-gmcgPtJ0izmd26BuNCQZg%0D%0A5kHIEXDGL17EZCRUVxdMgZAxEJwgjb1cCx2vkWl5kYjElw%3D%3D&market=appstore&app_version=6.24.0.388&product=ACFUN_APP&sys_version=13.5&priority=0&egid=DFPC0D9972AB4AEF0F57FAD8437DBC6CAD35548B567E77BB25A061A74D89D3A2&origin=ios&ftt=&dougaId={{$.dougaId}}&resolution=2048x1536&sys_name=ios",
+  "rulePubDate": "$.channelName",
+  "ruleTitle": "$.contentTitle",
+  "singleUrl": false,
+  "sortUrl": "舞蹈偶像::https://api-new.acfunchina.com/rest/app/rank/channel?rankPeriod=DAY&channelId=123\n香蕉::https://api-new.acfunchina.com/rest/app/rank/banana?rankPeriod=DAY&channelId=\n全站::https://api-new.acfunchina.com/rest/app/rank/channel?rankPeriod=DAY&channelId=0\n番剧::https://api-new.acfunchina.com/rest/app/rank/channel?rankPeriod=DAY&channelId=155\n动画::https://api-new.acfunchina.com/rest/app/rank/channel?rankPeriod=DAY&channelId=1\n生活::https://api-new.acfunchina.com/rest/app/rank/channel?rankPeriod=DAY&channelId=201\n娱乐::https://api-new.acfunchina.com/rest/app/rank/channel?rankPeriod=DAY&channelId=60\n游戏::https://api-new.acfunchina.com/rest/app/rank/channel?rankPeriod=DAY&channelId=59\n音乐::https://api-new.acfunchina.com/rest/app/rank/channel?rankPeriod=DAY&channelId=58\n科技::https://api-new.acfunchina.com/rest/app/rank/channel?rankPeriod=DAY&channelId=70\n影视::https://api-new.acfunchina.com/rest/app/rank/channel?rankPeriod=DAY&channelId=68\n体育::https://api-new.acfunchina.com/rest/app/rank/channel?rankPeriod=DAY&channelId=69\n鱼塘::https://api-new.acfunchina.com/rest/app/rank/channel?rankPeriod=DAY&channelId=125",
+  "sourceComment": "酷安@在上温某某",
+  "sourceIcon": "https://cdn.aixifan.com/ico/favicon.ico",
+  "sourceName": "Acfun_排行",
+  "sourceUrl": "https://api-new.acfunchina.com/rest/app/rank/banana?rankPeriod=DAY&channelId="
+}

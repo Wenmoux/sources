@@ -71,7 +71,6 @@ async function task1() {
     result += "新增粉丝福利任务12344,粉丝福利任务开始,记得去app中首页分别搜索80080 25525 630630 79979进行qq号绑定哦！！"
     console.log("四周年活动开始,请去活动里绑定qq哦,社区-四周年-活动1")
     await glist()
-    await szn()
     for (id of [30,32,33]){
     await jhy(id)
     }
