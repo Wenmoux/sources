@@ -1,7 +1,7 @@
 {
     "name": "黄易小说",
     "url": "huangyixiaoshuo.com",
-    "version": 100,
+    "version": 101,
     "search": {
         "url": "http://www.huangyixiaoshuo.com/index.php?s=/web/index/search@post->name=${key}",
         "charset": "UTF-8",
@@ -20,6 +20,7 @@
     },
     "chapter": {
         "content": "#content",
-            "filter": ["@p","@div"]
+            "filter": ["@p","@div"],
+            "purify":["天(.+?)记住http.+?,"]
     }   
 }

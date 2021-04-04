@@ -1,0 +1,25 @@
+{
+    "name": "怪本小说",
+    "url": "guaiben.com",
+    "version": 100,
+    "search": {
+        "url": "http://m.guaiben.com/book/?ajaxMethod=getsearchbooks&page=1&pagesize=10&isvip=-1&cid=-1&sort=0&flag=-1&searchkey=${key}&site=-1&again=0&range=-1",
+        "charset": "UTF-8",
+        "list": "$.Data.search_response.books[*]",
+        "name": "$.bookname",
+        "author": "$.authorname",
+        "detail": "http://www.guaiben.com/book/0/${$.bookid}/"
+            },
+    "detail": {
+        "catalog": ""
+            },
+    "catalog": {
+        "list": "#list>dl>dd",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "#content"
+            
+    }   
+}

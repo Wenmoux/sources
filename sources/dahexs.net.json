@@ -1,0 +1,27 @@
+{
+    "name": "大河小说",
+    "url": "dahexs.net",
+    "version": 100,
+    "search": {
+        "url": "https://m.dahexs.net/s.php@post->s=${key}&type=articlename",
+        "charset": "gbk",
+        "list": "p.search_list",
+        "name": "a:nth-child(1)",
+        "author":"a:nth-child(3)",
+        "detail": "a:nth-child(1)@replace->m\\.dahexs->www.dahexs"
+            },
+    "detail": {
+        "catalog": ""
+            },
+    "catalog": {
+        "list": "#list>dl>dd:nth-child(n+11)",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "#content",
+        "filter": ["@center"],
+        "page":"a:matches(下一页)"
+            
+    }   
+}

@@ -1,0 +1,26 @@
+{
+    "name": "奇书网",
+    "url": "qishuzw.com",
+    "version": 100,
+    "search": {
+        "url": "https://www.qishuzw.com/search/@post->searchkey=${key}&q=0",
+        "charset": "utf-8",
+        "list": "#nr",
+        "name": "h3>a",
+        "author":".book_other>span:nth-child(1)",
+        "detail": "h3>a"
+            },
+    "detail": {
+        "catalog": ""
+            },
+    "catalog": {
+        "list": "#chapterList>li",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": ".read-content",
+        "page":"a:matches(下一页)"
+            
+    }   
+}
