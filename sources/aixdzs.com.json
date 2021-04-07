@@ -1,11 +1,11 @@
 {
     "name": "爱下电子书",
     "url": "aixdzs.com",
-    "version": 100,
+    "version": 101,
     "search": {
         "url": "https://m.aixdzs.com/search/?k=${key}&page=1",
         "list": ".ix-list>li",
-        "name": "h3",
+        "name": "h3@replace->完美觉醒->无敌从觉醒开始",
         "cover":"img",
         "author": ".book-author",
         "detail": "${a}?url=${a}@replace->https://m.aixdzs.com/d/->https://read.aixdzs.com/1/"

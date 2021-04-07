@@ -1,0 +1,26 @@
+{
+    "name": "饭饭电子书",
+    "url": "bbs.fanfanf.com",
+    "version": 100,
+    "search": {
+        "url": "https://bbs.fanfanf.com/search.php@post->step=2&keyword=${key}&seekfid=all&orderway=lastpost&method=AND&sch_time=all&page=1",
+        "charset": "gbk",
+        "list": ".tac",
+        "name": ".tal>a@match->(?<=《)(.+)(?=》)",
+        "author": ".tal>a@match->(?<=作者：).+(?=【)",
+        "cover": "img",
+        "detail": ".tal>a"
+    },
+    "detail": {
+
+        "catalog": "a:matches(在线阅读已开放)"
+    },
+    "catalog": {
+        "list": ".cf>li",
+        "name": "a",
+        "chapter": "https://bbs.fanfanf.com/${a@attr->href}"
+    },
+    "chapter": {
+    "content": ".read-content>p"
+    }
+}
