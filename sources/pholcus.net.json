@@ -1,0 +1,28 @@
+{
+    "name": "第八区",
+    "url": "pholcus.net",
+    "version": 100,
+    "search": {
+        "url": "https://www.pholcus.net/search.html?keyword=${key}",
+        "charset": "UTF-8",
+        "list": "tbody>tr",
+        "name": ".book-name>b",
+        "author": ".fs-12",
+        "cover": "img",
+        "detail": ".book-name"
+            },
+    "detail": {
+        "catalog": "a:matches(章节目录)"
+            },
+    "catalog": {
+        "list": ".panel-chapterlist>dd",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "#txt>p",
+        "page":"a.url_next",
+        "purify": ["天才一秒.+?更新最快的小说网站!"]
+    }   
+}
+
