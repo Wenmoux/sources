@@ -1,0 +1,29 @@
+{
+    "name": "新丝路",
+    "url": "xunsilu.com",
+    "version": 100,
+    "search": {
+        "url": "https://m.xunsilu.com/s.php@post->searchkey=${key}",
+        "charset": "UTF-8",
+        "list": ".topul>li",
+        "name": "h2>a",
+        "author": ".author",
+        "cover": "img",
+        "detail": "h2>a@replace->m.xun->www.xun"
+            },
+    "detail": {
+        "catalog": ""
+            },
+    "catalog": {
+        "list": "ul[class^='chapter']>li",
+        "name": "a",
+        "chapter": "a@replace->www->m"
+    },
+    "chapter": {
+        "content": "#content",
+        "page":"a:matches(下一页)",
+        "filter":["@p"],
+        "purify": ["本章未完.+","如遇断更.+"]
+    }   
+}
+
