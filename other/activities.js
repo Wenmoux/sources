@@ -60,6 +60,8 @@ async function task1() {
 2：游戏单第7期
 3：2021助力活动`)
   //  await zhuli()
+   await get("yyzl/m","giftCode&comm_id=17&shareCode=4cae9d15aa53c&isyuyue=0&is_down=1")
+
     console.log("粉丝福利任务开始,记得去app中首页分别搜索80080 25525 630630 79979进行qq号绑定哦！！")
     await lottery2("lottery2", 2, [1, 2, 3, 6, 7, 8,9])
     await lottery2("lottery", 5, [1, 2, 3, 4, 6, 7])
@@ -68,8 +70,10 @@ async function task1() {
     await lottery2("lottery", 9, [1, 3, 4, 5, 7, 8])
     //await get(`lottery/m`, "duihuanprize&comm_id=9&resure=1&isyuyue=0&dhid=2")
    // await get(`lottery/m`, "duihuanprize&comm_id=9&resure=1&isyuyue=0&dhid=1")
-    result += "新增粉丝福利任务12344,粉丝福利任务开始,记得去app中首页分别搜索80080 25525 630630 79979进行qq号绑定哦！！"
+    result += "粉丝福利任务开始,记得去app中首页分别搜索80080 25525 630630 79979进行qq号绑定哦！！"
     console.log("四周年活动开始,请去活动里绑定qq哦,社区-四周年-活动1")
-    await glist()
-    await jhy(34)    
+ //   await glist()
+    for (id of [33,34,35,36]){
+    await jhy(id)
+    }   
 }
