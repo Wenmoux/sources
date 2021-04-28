@@ -70,7 +70,7 @@ async function task1() {
     await lottery2("lottery","[630630]王牌勋章", 5, [1, 2, 3, 4, 6, 7,8,10])
     aawait lottery2("lottery", "[25525]补给箱",4, [1, 2, 4, 5, 6, 8,14])
     await lottery2("lottery","[79979]宝石", 3, [1, 2, 3, 6, 7, 8, 14])
-    await lottery2("lottery", "[12344]洞天百宝10",,[1,2,3,4,6,7])    
+    await lottery2("lottery", "[12344]洞天百宝",10,[1,2,3,4,6,7])    
     result += "新增粉丝福利任务12344,粉丝福利任务开始,记得去app中首页分别搜索80080 25525 630630 79979进行qq号绑定哦！！"
     console.log("四周年活动开始,请去活动里绑定qq哦,社区-四周年-活动1")
  //   await glist()
