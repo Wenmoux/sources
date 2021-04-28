@@ -30,31 +30,23 @@ async function jhy(id) {
 }
 
 //快爆粉丝福利80080
-async function lottery2(a, b, c) {
-    await get(`${a}/m`, `login&comm_id=${b}&isyuyue=0`)
+async function lottery2(a,d, b, c) {
+    
     for (i of c) {
         await get(`${a}/m`, `DailyAppJump&comm_id=${b}&isyuyue=0&id=${i}`)
         await get(`${a}/m`, `DailyAppLing&comm_id=${b}&isyuyue=0&id=${i}`)
         await get(`${a}/m`, `chouqu&comm_id=${b}&isyuyue=0&id=${i}`)
         await get(`${a}/m`, `BaoXiangLing&comm_id=${b}&isyuyue=0&id=${i}`)
     }
-    for (lid of [3, 4, 5]) {
-        await get(`lottery/m`, `duihuanprize&comm_id=${lid}&resure=1&isyuyue=0&dhid=6`)
-        await get(`lottery/m`, `duihuanprize&comm_id=${lid}&resure=1&isyuyue=0&dhid=5`)
-    }
-
+    let info=await get(`${a}/m`, `login&comm_id=${b}&isyuyue=0`)
+    let msg= `\n${d}：${info.config.daoju} 抽奖次数：${info.config.played}`
+    result += msg
 }
 
 async function ddd(id) {
     await get("yuyue2020/m",`invite&comm_id=${id}&isyuyue=0&isfx=1&testkey=4399NoneDeviceId`)
     await get("yuyue2020/m",`choujiang&comm_id=${id}&isyuyue=0&isdown=1&isdownonly=1&testkey=4399NoneDeviceId`)
-    let jl= await get("yuyue2020/m",`mycode&comm_id=${id}&isyuyue=0&testkey=4399NoneDeviceId`)
-   msg=""
-   if (jl.key=="ok"){
-   msg=gl.showhtml
-   }else{   
-   msg=jl.msg}   
-   return msg
+    await get("yuyue2020/m",`mycode&comm_id=${id}&isyuyue=0&testkey=4399NoneDeviceId`)
 }
 
 //游戏单  4.8
@@ -74,20 +66,17 @@ async function task1() {
   //  await zhuli()
    await get("yyzl/m","giftCode&comm_id=17&shareCode=0a3d5e2bc45b9&isyuyue=0&is_down=1")
     console.log("粉丝福利任务开始,记得去app中首页分别搜索80080 25525 630630 79979进行qq号绑定哦！！")
-    await lottery2("lottery2", 2, [1, 2, 3, 6, 7, 8,11,9])
-    await lottery2("lottery", 5, [1, 2, 3, 4, 6, 7,8,10])
-    await lottery2("lottery", 4, [1, 2, 4, 5, 6, 8,14])
-    await lottery2("lottery", 3, [1, 2, 3, 6, 7, 8, 14])
-  //  await lottery2("lottery", 9, [1, 3, 4, 5, 7, 8])
-    //await get(`lottery/m`, "duihuanprize&comm_id=9&resure=1&isyuyue=0&dhid=2")
-   // await get(`lottery/m`, "duihuanprize&comm_id=9&resure=1&isyuyue=0&dhid=1")
-    result += "粉丝福利任务开始,记得去app中首页分别搜索80080 25525 630630 79979进行qq号绑定哦！！"
+//    await lottery2("lottery2", 2, [1, 2, 3, 6, 7, 8,11,9])
+    await lottery2("lottery","[630630]王牌勋章", 5, [1, 2, 3, 4, 6, 7,8,10])
+    aawait lottery2("lottery", "[25525]补给箱",4, [1, 2, 4, 5, 6, 8,14])
+    await lottery2("lottery","[79979]宝石", 3, [1, 2, 3, 6, 7, 8, 14])
+    await lottery2("lottery", "[12344]洞天百宝10",,[1,2,3,4,6,7])    
+    result += "新增粉丝福利任务12344,粉丝福利任务开始,记得去app中首页分别搜索80080 25525 630630 79979进行qq号绑定哦！！"
     console.log("四周年活动开始,请去活动里绑定qq哦,社区-四周年-活动1")
  //   await glist()
     for (id of [35,36,37]){
     await jhy(id)
     }   
     await ddd(101)
-    jl = await ddd(101)
-    result += jl
+    await ddd(101)
 }
