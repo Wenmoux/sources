@@ -28,25 +28,51 @@ async function jhy(id) {
         }
     }
 }
+//云养猫 -05-11 搜索  20210501
+async function cat() {
+    aid = "2021wuyi/m"
+    await get(aid, "login")
+    await get(aid, "gofuli&resure=1")
+    await get(aid, "share")
+    await get(aid, "gozhongcao&resure=1")
+    await get(aid, "xinshou&resure=1")
+    let res = await $http.get(
+        "https://huodong3.3839.com/n/hykb/2021wuyi/m/index.php"
+    );
+    str = res.data.match(/prize1_lingqu_(\d+)/g);
+    for (id of str) {
+        await get(aid, "playgame&gameid=" + id.split("_")[2])
+    }
+    await sleep(69000)
+    for (id of str) {
+        await get(aid, "lingqushiwan&gameid=" + id.split("_")[2])
+    }
+    let into = await get(aid, "login")
+    if (info.key == "ok") {
+        msg = `\n【云养猫】：体重[${info.config.tizhong}]  毛球[${info.config.maoqiu}]`
+        result += msg
+        console.log(msg)
+    }
+}
 
 //快爆粉丝福利80080
-async function lottery2(a,d, b, c) {
-    
+async function lottery2(a, d, b, c) {
+
     for (i of c) {
         await get(`${a}/m`, `DailyAppJump&comm_id=${b}&isyuyue=0&id=${i}`)
         await get(`${a}/m`, `DailyAppLing&comm_id=${b}&isyuyue=0&id=${i}`)
         await get(`${a}/m`, `chouqu&comm_id=${b}&isyuyue=0&id=${i}`)
         await get(`${a}/m`, `BaoXiangLing&comm_id=${b}&isyuyue=0&id=${i}`)
     }
-    let info=await get(`${a}/m`, `login&comm_id=${b}&isyuyue=0`)
-    let msg= `\n${d}：${info.config.daoju} 抽奖次数：${info.config.played}`
+    let info = await get(`${a}/m`, `login&comm_id=${b}&isyuyue=0`)
+    let msg = `\n${d}：${info.config.daoju} 抽奖次数：${info.config.played}`
     result += msg
 }
 
 async function ddd(id) {
-    await get("yuyue2020/m",`invite&comm_id=${id}&isyuyue=0&isfx=1&testkey=4399NoneDeviceId`)
-    await get("yuyue2020/m",`choujiang&comm_id=${id}&isyuyue=0&isdown=1&isdownonly=1&testkey=4399NoneDeviceId`)
-    await get("yuyue2020/m",`mycode&comm_id=${id}&isyuyue=0&testkey=4399NoneDeviceId`)
+    await get("yuyue2020/m", `invite&comm_id=${id}&isyuyue=0&isfx=1&testkey=4399NoneDeviceId`)
+    await get("yuyue2020/m", `choujiang&comm_id=${id}&isyuyue=0&isdown=1&isdownonly=1&testkey=4399NoneDeviceId`)
+    await get("yuyue2020/m", `mycode&comm_id=${id}&isyuyue=0&testkey=4399NoneDeviceId`)
 }
 
 //游戏单  4.8
@@ -63,20 +89,21 @@ async function task1() {
 1：粉丝福利12344,80080,25525,630630,79979都可以去首页搜索对应数字绑定qq
 2：游戏单第7期
 3：2021助力活动`)
-  //  await zhuli()
-   await get("yyzl/m","giftCode&comm_id=17&shareCode=0a3d5e2bc45b9&isyuyue=0&is_down=1")
+    //  await zhuli()
+    await get("yyzl/m", "giftCode&comm_id=17&shareCode=0a3d5e2bc45b9&isyuyue=0&is_down=1")
     console.log("粉丝福利任务开始,记得去app中首页分别搜索80080 25525 630630 79979进行qq号绑定哦！！")
-//    await lottery2("lottery2", 2, [1, 2, 3, 6, 7, 8,11,9])
-    await lottery2("lottery","[630630]王牌勋章", 5, [1, 2, 3, 4, 6, 7,8,10])
-    await lottery2("lottery", "[25525]补给箱",4, [1, 2, 4, 5, 6, 8,14])
-    await lottery2("lottery","[79979]宝石", 3, [1, 2, 3, 6, 7, 8, 14])
-    await lottery2("lottery", "[12344]洞天百宝",10,[1,2,3,4,6,7])    
-    result += "新增粉丝福利任务12344,粉丝福利任务开始,记得去app中首页分别搜索80080 25525 630630 79979进行qq号绑定哦！！"
+    //    await lottery2("lottery2", 2, [1, 2, 3, 6, 7, 8,11,9])
+    await lottery2("lottery", "[630630]王牌勋章", 5, [1, 2, 3, 4, 6, 7, 8, 10])
+    await lottery2("lottery", "[25525]补给箱", 4, [1, 2, 4, 5, 6, 8, 14])
+    await lottery2("lottery", "[79979]宝石", 3, [1, 2, 3, 6, 7, 8, 14])
+    await lottery2("lottery", "[12344]洞天百宝", 10, [1, 2, 3, 4, 6, 7])
+    await cat()
+    result += "新增云养猫活动 搜索20210501 新增粉丝福利任务12344,粉丝福利任务开始,记得去app中首页分别搜索80080 25525 630630 79979进行qq号绑定哦！！"
     console.log("四周年活动开始,请去活动里绑定qq哦,社区-四周年-活动1")
- //   await glist()
-    for (id of [35,36,37]){
-    await jhy(id)
-    }   
+    //   await glist()
+    for (id of [35, 36, 37]) {
+        await jhy(id)
+    }
     await ddd(101)
     await ddd(101)
 }
