@@ -34,6 +34,8 @@ async function cat() {
     await get(aid, "login")
     await get(aid, "gofuli&resure=1")
     await get(aid, "share")
+    await get(aid, "guangczzl")
+    await get(aid, "guang&resure=1")
     await get(aid, "gozhongcao&resure=1")
     await get(aid, "xinshou&resure=1")
     let res = await $http.get(
@@ -43,12 +45,12 @@ async function cat() {
     for (id of str) {
         await get(aid, "playgame&gameid=" + id.split("_")[2])
     }
-    await sleep(60000)
+    //await sleep(60000) 取消延时吧 早晚跑两次好了 不然云函数多账号会超时
     for (id of str) {
         await get(aid, "lingqushiwan&gameid=" + id.split("_")[2])
     }
     let info = await get(aid, "login")
-    if (info.key == "ok") {
+    if (info.key == "ok" && info.config) {
         msg = `\n【云养猫】：体重[${info.config.tizhong}]  毛球[${info.config.maoqiu}]`
         result += msg
         console.log(msg)
@@ -75,15 +77,7 @@ async function ddd(id) {
     await get("yuyue2020/m", `mycode&comm_id=${id}&isyuyue=0&testkey=4399NoneDeviceId`)
 }
 
-//游戏单  4.8
-async function glist() {
-    for (typeid of ["qq", "wx", "weibo"]) {
-        await get("glist", `share&typeid=${typeid}&comm_id=1`)
-        await sleep(1000)
-    }
-    await get("glist", "receiveBmh&comm_id=1")
 
-}
 async function task1() {
     console.log(`临时任务列表：
 1：粉丝福利12344,80080,25525,630630,79979都可以去首页搜索对应数字绑定qq
@@ -98,7 +92,7 @@ async function task1() {
     await lottery2("lottery", "[79979]宝石", 3, [1, 2, 3, 6, 7, 8, 14])
     await lottery2("lottery", "[12344]洞天百宝", 10, [1, 2, 3, 4, 6, 7])
     await cat()
-    result += "新增云养猫活动 搜索20210501 新增粉丝福利任务12344,粉丝福利任务开始,记得去app中首页分别搜索80080 25525 630630 79979进行qq号绑定哦！！"
+    result += "新增云养猫活动20210501 12344,80080 25525 630630 79979记得搜索进行qq号绑定哦！！"
     console.log("四周年活动开始,请去活动里绑定qq哦,社区-四周年-活动1")
     //   await glist()
     for (id of [35, 36, 37]) {
