@@ -1,20 +1,6 @@
 let sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 
-/*async function zhuli() {
-    await get("2021zhuli", "login")
-    for (i of new Array(5)) {
-        await get("2021zhuli", "share")
-    } //分享
-    for (i of [1, 2, 3, 4, 5]) {
-        await get("2021zhuli", `checklingqu&num=${i}`)
-        await get("2021zhuli", `lingqu&num=${i}`)
-    }
-    await get("friend", "LingXinrenFuli")
-    await get("yearend", "login")
-    await get("yearend", "send&content=新年快乐&status=0")
-}
 
-*/
 
 //  助力抽奖通用
 async function jhy(id) {
@@ -57,10 +43,18 @@ async function cat() {
     }
 }
 
+//获取任务id
+async function lottery(a,c,b){
+let res = await $http.get(
+       `https://huodong3.3839.com/n/hykb/${a}/m/?comm_id=${b}`
+   );
+   str=res.data.match(/daily_btn_(\d+)/g);
+await lottery2(a,c,b,str)
+}
 //快爆粉丝福利80080
 async function lottery2(a, d, b, c) {
-
     for (i of c) {
+        i = i.split("_")[2]
         await get(`${a}/m`, `DailyAppJump&comm_id=${b}&isyuyue=0&id=${i}`)
         await get(`${a}/m`, `DailyAppLing&comm_id=${b}&isyuyue=0&id=${i}`)
         await get(`${a}/m`, `chouqu&comm_id=${b}&isyuyue=0&id=${i}`)
@@ -83,19 +77,17 @@ async function task1() {
 1：粉丝福利12344,80080,25525,630630,79979都可以去首页搜索对应数字绑定qq
 2：游戏单第7期
 3：2021助力活动`)
-    //  await zhuli()
     await get("yyzl/m", "giftCode&comm_id=17&shareCode=0a3d5e2bc45b9&isyuyue=0&is_down=1")
     console.log("粉丝福利任务开始,记得去app中首页分别搜索80080 25525 630630 79979进行qq号绑定哦！！")
-    //    await lottery2("lottery2", 2, [1, 2, 3, 6, 7, 8,11,9])
-    await lottery2("lottery", "[630630]王牌勋章", 5, [1, 2, 3, 4, 6, 7, 8, 10])
-    await lottery2("lottery", "[25525]补给箱", 4, [1, 2, 4, 5, 6, 8, 14])
-    await lottery2("lottery", "[79979]宝石", 3, [1, 2, 3, 6, 7, 8, 14])
-    await lottery2("lottery", "[12344]洞天百宝", 10, [1, 2, 3, 4, 6, 7])
+    await lottery("lottery", "[630630]王牌勋章", 5)
+    await lottery("lottery", "[25525]补给箱", 4)
+    await lottery("lottery", "[79979]宝石", 3)
+    await lottery("lottery", "[12344]洞天百宝", 10)
     await cat()
     result += "新增云养猫活动20210501 12344,80080 25525 630630 79979记得搜索进行qq号绑定哦！！"
     console.log("四周年活动开始,请去活动里绑定qq哦,社区-四周年-活动1")
     //   await glist()
-    for (id of [35, 36, 37]) {
+    for (id of [38,39]) {
         await jhy(id)
     }
     await ddd(101)
