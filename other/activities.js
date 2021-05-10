@@ -4,15 +4,23 @@ let sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 
 //  助力抽奖通用
 async function jhy(id) {
+       prize = `[活动id${id}]`
     let logindata = await get("zhuli", `login&comm_id=${id}`)
     if (logindata.loginStatus == 100 && logindata.key == "ok") {
         uid = logindata.config.uid
+
         for (i = 0; i < 3; i++) {
             await get("zhuli", `zhuli&uid=${uid}&comm_id=${id}`)
-            await get("zhuli", `choujiang&isdown=1&comm_id=${id}`)
+            let res = await get("zhuli", `choujiang&isdown=1&comm_id=${id}`)
+            if(res.prize){
+            prize +=res.prize+"-"
+            }else{
+           prize +="未中奖-" 
+            }
             await sleep(1000)
         }
     }
+    return prize
 }
 //云养猫 -05-11 搜索  20210501
 async function cat() {
@@ -86,7 +94,7 @@ async function task1() {
     console.log("四周年活动开始,请去活动里绑定qq哦,社区-四周年-活动1")
     //   await glist()
     for (id of [38,39,40]) {
-        await jhy(id)
+        result += await jhy(id)
     }
     await ddd(101)
     await ddd(101)
