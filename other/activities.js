@@ -77,9 +77,7 @@ async function task1() {
 1：粉丝福利12344,80080,25525,630630,79979都可以去首页搜索对应数字绑定qq
 2：游戏单第7期
 3：2021助力活动`)
-    await get("yyzl/m", "giftCode&comm_id=17&shareCode=0a3d5e2bc45b9&isyuyue=0&is_down=1")
-    console.log("粉丝福利任务开始,记得去app中首页分别搜索80080 25525 630630 79979进行qq号绑定哦！！")
-    await lottery("lottery", "[630630]王牌勋章", 5)
+  await lottery("lottery", "[630630]王牌勋章", 5)
     await lottery("lottery", "[25525]补给箱", 4)
     await lottery("lottery", "[79979]宝石", 3)
     await lottery("lottery", "[12344]洞天百宝", 10)
@@ -87,7 +85,7 @@ async function task1() {
     result += "新增云养猫活动20210501 12344,80080 25525 630630 79979记得搜索进行qq号绑定哦！！"
     console.log("四周年活动开始,请去活动里绑定qq哦,社区-四周年-活动1")
     //   await glist()
-    for (id of [38,39]) {
+    for (id of [38,39,40]) {
         await jhy(id)
     }
     await ddd(101)
