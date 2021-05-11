@@ -22,34 +22,7 @@ async function jhy(id) {
     }
     return prize
 }
-//云养猫 -05-11 搜索  20210501
-async function cat() {
-    aid = "2021wuyi/m"
-    await get(aid, "login")
-    await get(aid, "gofuli&resure=1")
-    await get(aid, "share")
-    await get(aid, "guangczzl")
-    await get(aid, "guang&resure=1")
-    await get(aid, "gozhongcao&resure=1")
-    await get(aid, "xinshou&resure=1")
-    let res = await $http.get(
-        "https://huodong3.3839.com/n/hykb/2021wuyi/m/index.php"
-    );
-    str = res.data.match(/prize1_lingqu_(\d+)/g);
-    for (id of str) {
-        await get(aid, "playgame&gameid=" + id.split("_")[2])
-    }
-    //await sleep(60000) 取消延时吧 早晚跑两次好了 不然云函数多账号会超时
-    for (id of str) {
-        await get(aid, "lingqushiwan&gameid=" + id.split("_")[2])
-    }
-    let info = await get(aid, "login")
-    if (info.key == "ok" && info.config) {
-        msg = `\n【云养猫】：体重[${info.config.tizhong}]  毛球[${info.config.maoqiu}]`
-        result += msg
-        console.log(msg)
-    }
-}
+
 
 //获取任务id
 async function lottery(a,c,b){
@@ -89,10 +62,11 @@ async function task1() {
     await lottery("lottery", "[25525]补给箱", 4)
     await lottery("lottery", "[79979]宝石", 3)
     await lottery("lottery", "[12344]洞天百宝", 10)
-    await cat()
-    result += "新增云养猫活动20210501 12344,80080 25525 630630 79979记得搜索进行qq号绑定哦！！"
-    console.log("四周年活动开始,请去活动里绑定qq哦,社区-四周年-活动1")
-    //   await glist()
+    await get("2021wuyi/m","duihuan&dhid=15&resure=1")  
+    await get("2021wuyi/m","duihuan&dhid=14&resure=1")  
+    await get("2021wuyi/m","duihuan&dhid=13&resure=1")  
+    await get("2021wuyi/m","duihuan&dhid=3&resure=1")  
+        //   await glist()
     for (id of [38,39,40]) {
         result += await jhy(id)
     }
