@@ -1,10 +1,9 @@
 let sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 
 
-
 //  助力抽奖通用
 async function jhy(id) {
-       prize = `[活动id${id}]`
+       prize = `\n[活动id${id}]`
     let logindata = await get("zhuli", `login&comm_id=${id}`)
     if (logindata.loginStatus == 100 && logindata.key == "ok") {
         uid = logindata.config.uid
@@ -30,20 +29,23 @@ let res = await $http.get(
        `https://huodong3.3839.com/n/hykb/${a}/m/?comm_id=${b}`
    );
    str=res.data.match(/daily_btn_(\d+)/g);
+ //  console.log(res.data)
 await lottery2(a,c,b,str)
 }
 //快爆粉丝福利80080
-async function lottery2(a, d, b, c) {
-    for (i of c) {
+async function lottery2(a, c, b, str) {
+    for (i of str) {
         i = i.split("_")[2]
         await get(`${a}/m`, `DailyAppJump&comm_id=${b}&isyuyue=0&id=${i}`)
         await get(`${a}/m`, `DailyAppLing&comm_id=${b}&isyuyue=0&id=${i}`)
         await get(`${a}/m`, `chouqu&comm_id=${b}&isyuyue=0&id=${i}`)
         await get(`${a}/m`, `BaoXiangLing&comm_id=${b}&isyuyue=0&id=${i}`)
     }
+    if(c!=0){
     let info = await get(`${a}/m`, `login&comm_id=${b}&isyuyue=0`)
-    let msg = `\n${d}：${info.config.daoju} 抽奖次数：${info.config.played}`
+    let msg = `\n${c}：${info.config.daoju} 抽奖次数：${info.config.played}`
     result += msg
+    }
 }
 
 async function ddd(id) {
@@ -55,21 +57,14 @@ async function ddd(id) {
 
 async function task1() {
     console.log(`临时任务列表：
-1：粉丝福利12344,80080,25525,630630,79979都可以去首页搜索对应数字绑定qq
-2：游戏单第7期
-3：2021助力活动`)
-  await lottery("lottery", "[630630]王牌勋章", 5)
+1：粉丝福利12344,80080,25525,630630,79979都可以去首页搜索对应数字绑定qq`)
+    await lottery("lottery", "[630630]王牌勋章", 5)
     await lottery("lottery", "[25525]补给箱", 4)
     await lottery("lottery", "[79979]宝石", 3)
     await lottery("lottery", "[12344]洞天百宝", 10)
-    await get("2021wuyi/m","duihuan&dhid=15&resure=1")  
-    await get("2021wuyi/m","duihuan&dhid=14&resure=1")  
-    await get("2021wuyi/m","duihuan&dhid=13&resure=1")  
-    await get("2021wuyi/m","duihuan&dhid=3&resure=1")  
-        //   await glist()
+    await lottery("lottery2", "0", 2)
     for (id of [38,39,40]) {
         result += await jhy(id)
     }
-    await ddd(101)
-    await ddd(101)
+    
 }
