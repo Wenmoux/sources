@@ -62,6 +62,7 @@ async function task1() {
     await lottery("lottery", "[25525]补给箱", 4)
     await lottery("lottery", "[79979]宝石", 3)
     await lottery("lottery2", "0", 2)
+    result += await jhy(41)
    /* for (id of [38,39,40]) {
         result += await jhy(id)
     }*/
