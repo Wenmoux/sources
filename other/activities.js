@@ -49,6 +49,8 @@ async function lottery2(a, c, b, str) {
 }
 
 async function ddd(id) {
+    await get("yuyue2020/m",`yuyuedown&comm_id=${id}&isyuyue=1&testkey=4399NoneDeviceId`)
+    await get("yuyue2020/m",`yuyue&comm_id=${id}&isyuyue=1&testkey=4399NoneDeviceId`)
     await get("yuyue2020/m", `invite&comm_id=${id}&isyuyue=1&isfx=1&testkey=4399NoneDeviceId`)
     await get("yuyue2020/m", `choujiang&comm_id=${id}&isyuyue=1&isdown=1&isdownonly=1&testkey=4399NoneDeviceId`)
     await get("yuyue2020/m", `mycode&comm_id=${id}&isyuyue=1&testkey=4399NoneDeviceId`)
@@ -62,10 +64,10 @@ async function task1() {
     await lottery("lottery", "[25525]补给箱", 4)
     await lottery("lottery", "[79979]宝石", 3)
     await lottery("lottery2", "0", 2)
-    var ids = await axios.get("https://cdn.jsdelivr.net/gh/Wenmoux/sources/other/id.json");
+    var ids = await $http.get("https://cdn.jsdelivr.net/gh/Wenmoux/sources/other/id.json");
     for (id of ids.data) {
         result += await jhy(id)
     }
     await ddd(113)
-    
+    await ddd(113)    
 }
