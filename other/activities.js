@@ -64,6 +64,7 @@ async function task1() {
     await lottery("lottery", "[25525]补给箱", 4)
     await lottery("lottery", "[79979]宝石", 3)
     await lottery("lottery2", "0", 2)
+    await lottery("lottery","[988950]回声海螺",12)
     var ids = await $http.get("https://cdn.jsdelivr.net/gh/Wenmoux/sources/other/id.json");
     for (id of ids.data) {
         result += await jhy(id)
