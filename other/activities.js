@@ -55,7 +55,37 @@ async function ddd(id) {
     await get("yuyue2020/m", `choujiang&comm_id=${id}&isyuyue=1&isdown=1&isdownonly=1&testkey=4399NoneDeviceId`)
     await get("yuyue2020/m", `mycode&comm_id=${id}&isyuyue=1&testkey=4399NoneDeviceId`)
 }
-
+async function slm() {
+    console.log("\n--------夏日福利史莱姆养成计划开始(搜索2021666)--------\n")
+    aid = "2021slm/m"
+    await get(aid, "login")
+    await Promise.all([ 
+         get(aid, "gofuli&resure=1"), 
+         get(aid, "share"),
+         get(aid, "xinshou&resure=1"),
+	 get(aid, "guangczzl")
+	]);         
+    await get(aid,"guang&resure=1")
+    await get(aid, "gozhongcao&resure=1"),
+    let res = await $http.get(
+        "https://huodong3.3839.com/n/hykb/2021slm/m/index.php"
+    );
+    str = res.data.match(/prize1_lingqu_(\d+)/g);
+    for (id of str) {
+        await get(aid, "playgame&gameid=" + id.split("_")[2])
+    }
+   // await sleep(60000)
+    for (id of str) {
+        await get(aid, "lingqushiwan&gameid=" + id.split("_")[2])
+    }
+    let info = await get(aid, "login")
+    if (info.key == "ok") {
+        msg = `\n【史莱姆】：魔法值[${info.config.tizhong}]  露珠[${info.config.maoqiu}]`
+        result += msg
+        console.log(msg)
+    }
+    console.log("\n--------夏日福利 史莱姆养成计划结束--------\n")
+}
 
 async function task1() {
     console.log(`临时任务列表：
@@ -64,11 +94,11 @@ async function task1() {
     await lottery("lottery", "[25525]补给箱", 4)
     await lottery("lottery", "[79979]宝石", 3)
     await lottery("lottery2", "0", 2)
-    await lottery("lottery","[988950]回声海螺",12)
+   // await lottery("lottery","[988950]回声海螺",12)
     var ids = await $http.get("https://cdn.jsdelivr.net/gh/Wenmoux/sources/other/id.json");
     for (id of ids.data) {
         result += await jhy(id)
     }
-    await ddd(113)
-    await ddd(113)    
+    await slm()
+   
 }
