@@ -21,7 +21,33 @@ async function jhy(id) {
     }
     return prize
 }
-
+//原神集卡活动
+async function summer(){
+ aid = "2021summer/m"
+ await get(aid,"giftcode&shareCode=4cae9d15aa53c")
+ await get(aid,"playgame")
+ await get(aid,"lingqushiwan")
+ await get(aid,"lingquinvite")
+ await get(aid,"xuyuan&resure=1")
+ await get(aid,"share")
+ await get(aid,"lingqushare")
+ await get(aid,"qiandao")
+// await get(aid,"GetFuliMa&ma=no_miling")
+for(a=400;a<410;a++){
+await get(aid,"jumprw&rwid="+a)
+let cdata = await get(aid,"lingqujumprw&rwid="+a,true) 
+if(cdata.is_huizhang ==1){
+ console.log(`恭喜您获得卡牌 ${cdata.hz_name}`)  
+}else if(cdata.is_huizhang ==0){  
+  console.log(`恭喜您获得绯樱碎片 ${cdata.wzsp_num} 共${cdata.all_wzsp}`)  
+}else{
+console.log(cdata.msg)    
+}
+}
+let loginres = await get(aid,"login",true)
+info = `${loginres.name}   绯樱碎片 ${loginres.config.wzsp_nums}`
+result += info
+}
 
 //获取任务id
 async function lottery(a,c,b){
@@ -46,6 +72,13 @@ async function lottery2(a, c, b, str) {
     let msg = `\n${c}：${info.config.daoju} 抽奖次数：${info.config.played}`
     result += msg
     }
+}
+async function glist(id) {
+ for (typeid of ["qq", "wx", "weibo"]) {
+ await get("glist", `share&typeid=${typeid}&comm_id=${id}`)
+ await sleep(1000)
+ }
+ await get("glist", `receiveBmh&comm_id=${id}`)
 }
 
 async function ddd(id) {
@@ -101,6 +134,8 @@ await lottery("lottery","[988950]回声海螺",12)
         result += await jhy(id)
     }
 */
+    await summer()
     await slm()
+    await glist(2)
    
 }
