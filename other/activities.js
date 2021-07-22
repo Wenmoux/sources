@@ -21,6 +21,8 @@ async function jhy(id) {
     }
     return prize
 }
+
+
 //原神集卡活动
 async function summer(){
  aid = "2021summer/m"
@@ -33,7 +35,7 @@ async function summer(){
  await get(aid,"lingqushare")
  await get(aid,"qiandao")
 // await get(aid,"GetFuliMa&ma=no_miling")
-for(a=400;a<410;a++){
+for(a=1;a<3;a++){
 await get(aid,"jumprw&rwid="+a)
 let cdata = await get(aid,"lingqujumprw&rwid="+a,true) 
 if(cdata.is_huizhang ==1){
