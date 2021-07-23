@@ -7,7 +7,6 @@ async function jhy(id) {
     let logindata = await get("zhuli", `login&comm_id=${id}`)
     if (logindata.loginStatus == 100 && logindata.key == "ok") {
         uid = logindata.config.uid
-
         for (i = 0; i < 3; i++) {
             await get("zhuli", `zhuli&uid=${uid}&comm_id=${id}`)
             let res = await get("zhuli", `choujiang&isdown=1&comm_id=${id}`)
@@ -25,9 +24,19 @@ async function jhy(id) {
 
 //原神集卡活动 7.21-8.21
 async function summer() {
-    console.log("\n--------原神集卡活动开始--------\n") 
+    console.log("\n--------原神集卡活动开始--------\n")
     aid = "2021summer/m"
-    await get(aid, "giftcode&shareCode=4cae9d15aa53c")
+    let coderes = await axios.get("http://1oner.cn:1919/hykb/all")
+    if(coderes) codeList = coderes.data.message
+    else codeList = ["4cae9d15aa53c"]
+    let needhelp = true
+    while (needhelp) {
+       if(codeList)  code = codeList[Math.round(Math.random() * (codeList.length))].yscode
+       else code = codeList[0]
+        console.log(`为${code}助力...`)
+        let helpres = await get(aid, `giftcode&shareCode=${code}`)
+        if (helpres.key == "ok" || helpres.key == "3007") needhelp = false
+    }
     await get(aid, "playgame")
     await get(aid, "lingqushiwan")
     await get(aid, "lingquinvite")
@@ -48,15 +57,28 @@ async function summer() {
         }
     }
     let loginres = await get(aid, "login", true)
-    config = loginres.config
-    info = `\n【原神集卡】 绯樱碎片${config.wzsp_nums} 神${config.cid1}泡${config.cid2}鸣${config.cid3}动${config.cid4}不${config.cid5}灭${config.cid6}影${config.cid7}断${config.cid8}\n`
-    result += info
-    console.log("\n--------原神集卡活动运行结束--------\n")    
+    if (loginres) {
+        config = loginres.config
+        mycode = config.invite_code
+        console.log(`${loginres.name}的助力码 ${mycode}\n开始提交助力码`)
+        let res1 = await axios.get(`http://1oner.cn:1919/hykb/info?uid=${loginres.uid}`)
+        if (res1.data.err_code == 0) {
+            let resi = await axios.post("http://1oner.cn:1919/hykb/update", `uid=${loginres.uid}&yscode=${mycode}&nickname=${encodeURI(loginres.name)}`)
+            console.log(resi.data)
+        } else {
+            let resi = await axios.post("http://1oner.cn:1919/hykb/add", `uid=${loginres.uid}&yscode=${mycode}&nickname=${encodeURI(loginres.name)}`)
+            console.log(resi.data)
+        }
+        info = `\n【原神集卡】 绯樱碎片${config.wzsp_nums} 神${config.cid1}泡${config.cid2}鸣${config.cid3}动${config.cid4}不${config.cid5}灭${config.cid6}影${config.cid7}断${config.cid8}\n`
+        result += info
+        console.log(info)
+    }
+    console.log("\n--------原神集卡活动运行结束--------\n")
 }
 
 //获取任务id
 async function lottery(a, c, b) {
-    let res = await $http.get(
+    let res = await axios.get(
         `https://huodong3.3839.com/n/hykb/${a}/m/?comm_id=${b}`
     );
     str = res.data.match(/daily_btn_(\d+)/g);
@@ -101,16 +123,18 @@ async function ddd(id) {
 async function slm() {
     console.log("\n--------夏日福利史莱姆养成计划开始(搜索2021666)--------\n")
     aid = "2021slm/m"
-    await get(aid, "login")
+    slmdata = await get(aid, "login", true)
     await Promise.all([
         get(aid, "gofuli&resure=1"),
         get(aid, "share"),
         get(aid, "xinshou&resure=1"),
-        get(aid, "guangczzl"),
         get(aid, "gozhongcao&resure=1")
     ]);
-    await get(aid, "guang&resure=1")
-    let res = await $http.get(
+    if (slmdata.config.day_guang != 2) {
+        await get(aid, "guangczzl")
+        await get(aid, "guang&resure=1")
+    }
+    let res = await axios.get(
         "https://huodong3.3839.com/n/hykb/2021slm/m/index.php"
     );
     str = res.data.match(/prize1_lingqu_(\d+)/g);
@@ -137,15 +161,15 @@ async function task1() {
     await lottery("lottery", "[79979]宝石", 3)
     await lottery("lottery2", "0", 2)
     /*
-    var ids = await $http.get("https://cdn.jsdelivr.net/gh/Wenmoux/sources/other/id.json");
+    var ids = await axios.get("https://cdn.jsdelivr.net/gh/Wenmoux/sources/other/id.json");
     for (id of ids.data) {
         result += await jhy(id)
     }
-*/  
+*/
     await ddd(120)
     await ddd(115)
     await ddd(120)
-    await ddd(115)        
+    await ddd(115)
     await summer()
     await slm()
     await glist(2)
