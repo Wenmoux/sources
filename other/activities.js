@@ -1,6 +1,5 @@
 let sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
-$http = axios = require("axios")
-
+const axios =  require("axios")
 //  助力抽奖通用
 async function jhy(id) {
     prize = `\n[活动id${id}]`
