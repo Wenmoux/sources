@@ -1,5 +1,5 @@
 let sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
-const axios =  require("axios")
+const axios = require("axios")
 //  助力抽奖通用
 async function jhy(id) {
     prize = `\n[活动id${id}]`
@@ -19,21 +19,40 @@ async function jhy(id) {
     }
     return prize
 }
+async function wzcj() {
+    for (id of [1, 2, 3, 4, 5]) {
+        console.log(`礼包${id}抽奖中...`)
+        let wzcjres = await get("wzry2021", `ChouJiang&tag=${id}`, true)
+        if (wzcjres.key == "no_band") {
+            console.log("您还没有绑定qq")
+        } else if (wzcjres.key == "3001") {
+            console.log(`您的探索值还不够哦~ ${wzcjres.score}/${wzcjres.needMinScore}`)
+            return;
+        } else if (wzcjres.key == "ok") {
+            console.log(`恭喜您获得 ${wzcjres.title}`)
+        } else if (wzcjres.key == "3002") {
+            console.log("您已经领过奖啦~")
+        }
+    }
+}
+// 
 
 //王者荣耀快乐一夏 07.23 -08.25
-async function wzry(){
-console.log("\n--------王者荣耀快乐一夏活动开始--------＼n")  
-let wzryres = await get("wzry2021","login",true)
-if(wzryres.config.day_share!=2) await get("wzry2021","dayshare")
-await get("wzry2021","DayLingShare")
-await get("wzry2021","Zhuli&invitecode=crcf804hkfp")
-await get("wzry2021","DayLingInvite")
-if(wzryres.config.day_play_ling!=2) await get("wzry2021","DailyGamePlay")
-await get("wzry2021","DayLingGamedown")
-wzres = await get("wzry2021","login",true)
-wzryinfo ="【王者荣耀快乐一夏】 当前："+wzres.config.score+" 探索值\n"
-console.log(wzryinfo)
-result += wzryinfo
+async function wzry() {
+    console.log("\n--------王者荣耀快乐一夏活动开始--------＼n")
+    let wzryres = await get("wzry2021", "login", true)
+    if (wzryres.config.userDuihuanCode5 == 1) return;
+    if (wzryres.config.day_share != 2) await get("wzry2021", "dayshare")
+    await get("wzry2021", "DayLingShare")
+    await get("wzry2021", "Zhuli&invitecode=crcf804hkfp")
+    await get("wzry2021", "DayLingInvite")
+    if (wzryres.config.day_play_ling != 2) await get("wzry2021", "DailyGamePlay")
+    await get("wzry2021", "DayLingGamedown")
+    wzres = await get("wzry2021", "login", true)
+    if (wzres.config.userDuihuanCode5 == 0) await wzcj()
+    wzryinfo = "【王者荣耀快乐一夏】 当前：" + wzres.config.score + " 探索值\n"
+    console.log(wzryinfo)
+    result += wzryinfo
 }
 
 
@@ -42,12 +61,12 @@ async function summer() {
     console.log("\n--------原神集卡活动开始--------\n")
     aid = "2021summer/m"
     let coderes = await axios.get("http://1oner.cn:1919/hykb/all")
-    if(coderes) codeList = coderes.data.message
+    if (coderes) codeList = coderes.data.message
     else codeList = ["4cae9d15aa53c"]
     let needhelp = true
     while (needhelp) {
-       if(codeList)  code = codeList[Math.round(Math.random() * (codeList.length))].yscode
-       else code = codeList[0]
+        if (codeList) code = codeList[Math.round(Math.random() * (codeList.length))].yscode
+        else code = codeList[0]
         console.log(`为${code}助力...`)
         let helpres = await get(aid, `giftcode&shareCode=${code}`)
         if (helpres.key == "ok" || helpres.key == "3007") needhelp = false
@@ -187,5 +206,4 @@ async function task1() {
     await wzry()
     await slm()
     await glist(2)
-
 }
