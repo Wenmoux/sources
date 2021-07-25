@@ -1,5 +1,5 @@
 let sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
-
+$http = axios = require("axios")
 
 //  助力抽奖通用
 async function jhy(id) {
@@ -19,6 +19,22 @@ async function jhy(id) {
         }
     }
     return prize
+}
+
+//王者荣耀快乐一夏 07.23 -08.25
+async function wzry(){
+console.log("\n--------王者荣耀快乐一夏活动开始--------＼n")  
+let wzryres = await get("wzry2021","login",true)
+if(wzryres.config.day_share!=2) await get("wzry2021","dayshare")
+await get("wzry2021","DayLingShare")
+await get("wzry2021","Zhuli&invitecode=crcf804hkfp")
+await get("wzry2021","DayLingInvite")
+if(wzryres.config.day_play_ling!=2) await get("wzry2021","DailyGamePlay")
+await get("wzry2021","DayLingGamedown")
+wzres = await get("wzry2021","login",true)
+wzryinfo ="【王者荣耀快乐一夏】 当前："+wzres.config.score+" 探索值\n"
+console.log(wzryinfo)
+result += wzryinfo
 }
 
 
@@ -160,17 +176,16 @@ async function task1() {
     await lottery("lottery", "[25525]补给箱", 4)
     await lottery("lottery", "[79979]宝石", 3)
     await lottery("lottery2", "0", 2)
-    /*
     var ids = await axios.get("https://cdn.jsdelivr.net/gh/Wenmoux/sources/other/id.json");
     for (id of ids.data) {
         result += await jhy(id)
     }
-*/
     await ddd(120)
     await ddd(115)
     await ddd(120)
     await ddd(115)
     await summer()
+    await wzry()
     await slm()
     await glist(2)
 
