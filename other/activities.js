@@ -29,6 +29,7 @@ async function wzcj() {
             console.log(`您的探索值还不够哦~ ${wzcjres.score}/${wzcjres.needMinScore}`)
             return;
         } else if (wzcjres.key == "ok") {
+            result += "【王者抽奖】"：+wzcjres.title+"\n"
             console.log(`恭喜您获得 ${wzcjres.title}`)
         } else if (wzcjres.key == "3002") {
             console.log("您已经领过奖啦~")
@@ -79,7 +80,7 @@ async function summer() {
     await get(aid, "lingqushare")
     await get(aid, "qiandao")
     // await get(aid,"GetFuliMa&ma=no_miling")
-    for (a = 1; a < 3; a++) {
+    for (a = 0; a < 3; a++) {
         await get(aid, "jumprw&rwid=" + a)
         let cdata = await get(aid, "lingqujumprw&rwid=" + a, true)
         if (cdata.is_huizhang == 1) {
