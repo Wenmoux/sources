@@ -29,7 +29,7 @@ async function wzcj() {
             console.log(`您的探索值还不够哦~ ${wzcjres.score}/${wzcjres.needMinScore}`)
             return;
         } else if (wzcjres.key == "ok") {
-            result += "【王者抽奖】"：+wzcjres.title+"\n"
+            result += "【王者抽奖】："+wzcjres.title+"\n"
             console.log(`恭喜您获得 ${wzcjres.title}`)
         } else if (wzcjres.key == "3002") {
             console.log("您已经领过奖啦~")
@@ -80,7 +80,7 @@ async function summer() {
     await get(aid, "lingqushare")
     await get(aid, "qiandao")
     // await get(aid,"GetFuliMa&ma=no_miling")
-    for (a = 0; a < 3; a++) {
+    for (a = 0; a < 4; a++) {
         await get(aid, "jumprw&rwid=" + a)
         let cdata = await get(aid, "lingqujumprw&rwid=" + a, true)
         if (cdata.is_huizhang == 1) {
@@ -195,14 +195,14 @@ async function task1() {
     await lottery("lottery", "[25525]补给箱", 4)
     await lottery("lottery", "[79979]宝石", 3)
     await lottery("lottery2", "0", 2)
-    var ids = await axios.get("https://cdn.jsdelivr.net/gh/Wenmoux/sources/other/id.json");
+    let ids = await axios.get("https://cdn.jsdelivr.net/gh/Wenmoux/sources/other/id.json");
     for (id of ids.data) {
         result += await jhy(id)
     }
-    await ddd(120)
-    await ddd(115)
-    await ddd(120)
-    await ddd(115)
+    let ids2 = await axios.get("https://cdn.jsdelivr.net/gh/Wenmoux/sources/other/id2.json");
+    for (id of ids.data) {
+       await ddd(id)
+    }
     await summer()
     await wzry()
     await slm()
