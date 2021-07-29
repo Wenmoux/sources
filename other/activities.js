@@ -51,7 +51,7 @@ async function wzry() {
     await get("wzry2021", "DayLingGamedown")
     wzres = await get("wzry2021", "login", true)
     if (wzres.config.userDuihuanCode5 == 0) await wzcj()
-    wzryinfo = "王者荣耀：" + wzres.config.score + " 探索值\n"
+    wzryinfo = "王者荣耀：" + wzres.config.score + " 探索值"
     console.log(wzryinfo)
     result += wzryinfo
 }
@@ -187,7 +187,7 @@ async function slm() {
     }
     let info = await get(aid, "login")
     if (info.key == "ok") {
-        msg = `史莱姆：魔法值[${info.config.tizhong}]  露珠[${info.config.maoqiu}]`
+        msg = `史莱姆：魔法值 ${info.config.tizhong}  露珠 ${info.config.maoqiu} \n`
         result += msg
         console.log(msg)
     }
