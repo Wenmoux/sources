@@ -3,7 +3,7 @@ const axios = require("axios")
 //  助力抽奖通用
 async function jhy(id) {
     prize = `\n[活动id${id}]`
-    let logindata = await get("zhuli", `login&comm_id=${id}`)
+    let logindata = await get("zhuli", `login&comm_id=${id}`,true)
     if (logindata.loginStatus == 100 && logindata.key == "ok") {
         uid = logindata.config.uid
         for (i = 0; i < 3; i++) {
@@ -29,7 +29,7 @@ async function wzcj() {
             console.log(`您的探索值还不够哦~ ${wzcjres.score}/${wzcjres.needMinScore}`)
             return;
         } else if (wzcjres.key == "ok") {
-            result += "【王者抽奖】："+wzcjres.title+"\n"
+            result += "王者抽奖："+wzcjres.title+"\n"
             console.log(`恭喜您获得 ${wzcjres.title}`)
         } else if (wzcjres.key == "3002") {
             console.log("您已经领过奖啦~")
@@ -40,7 +40,7 @@ async function wzcj() {
 
 //王者荣耀快乐一夏 07.23 -08.25
 async function wzry() {
-    console.log("\n--------王者荣耀快乐一夏活动开始--------＼n")
+    console.log("\n--------王者荣耀快乐一夏活动开始--------n")
     let wzryres = await get("wzry2021", "login", true)
     if (wzryres.config.userDuihuanCode5 == 1) return;
     if (wzryres.config.day_share != 2) await get("wzry2021", "dayshare")
@@ -51,7 +51,7 @@ async function wzry() {
     await get("wzry2021", "DayLingGamedown")
     wzres = await get("wzry2021", "login", true)
     if (wzres.config.userDuihuanCode5 == 0) await wzcj()
-    wzryinfo = "【王者荣耀快乐一夏】 当前：" + wzres.config.score + " 探索值\n"
+    wzryinfo = "王者荣耀：" + wzres.config.score + " 探索值\n"
     console.log(wzryinfo)
     result += wzryinfo
 }
@@ -104,7 +104,7 @@ async function summer() {
             let resi = await axios.post("http://1oner.cn:1919/hykb/add", `uid=${loginres.uid}&yscode=${mycode}&nickname=${encodeURI(loginres.name)}`)
             console.log(resi.data)
         }
-        info = `\n【原神集卡】 绯樱碎片${config.wzsp_nums} 神${config.cid1}泡${config.cid2}鸣${config.cid3}动${config.cid4}不${config.cid5}灭${config.cid6}影${config.cid7}断${config.cid8}\n`
+        info = `原神集卡： 绯樱碎片${config.wzsp_nums} 神${config.cid1}泡${config.cid2}鸣${config.cid3}动${config.cid4}不${config.cid5}灭${config.cid6}影${config.cid7}断${config.cid8}  \n`
         result += info
         console.log(info)
     }
@@ -113,12 +113,17 @@ async function summer() {
 
 //获取任务id
 async function lottery(a, c, b) {
+    let info = await get(`${a}/m`, `login&comm_id=${b}&isyuyue=0`,true) 
+    if(info&&info.config&&info.config.is_end==0){ 
     let res = await axios.get(
         `https://huodong3.3839.com/n/hykb/${a}/m/?comm_id=${b}`
     );
     str = res.data.match(/daily_btn_(\d+)/g);
     //  console.log(res.data)
     await lottery2(a, c, b, str)
+  }else{
+  console.log(`活动 ${c}已结束`)
+  } 
 }
 //快爆粉丝福利80080
 async function lottery2(a, c, b, str) {
@@ -130,8 +135,9 @@ async function lottery2(a, c, b, str) {
         await get(`${a}/m`, `BaoXiangLing&comm_id=${b}&isyuyue=0&id=${i}`)
     }
     if (c != 0) {
-        let info = await get(`${a}/m`, `login&comm_id=${b}&isyuyue=0`)
-        let msg = `\n${c}：${info.config.daoju} 抽奖次数：${info.config.played}`
+        ct = c.split("-")
+        let info = await get(`${a}/m`, `login&comm_id=${b}&isyuyue=0`,true)
+        let msg = `${ct[0]}：${ct[1]} ${info.config.daoju} 抽奖次数 ${info.config.played} \n`
         result += msg
     }
 }
@@ -181,7 +187,7 @@ async function slm() {
     }
     let info = await get(aid, "login")
     if (info.key == "ok") {
-        msg = `\n【史莱姆】：魔法值[${info.config.tizhong}]  露珠[${info.config.maoqiu}]\n`
+        msg = `史莱姆：魔法值[${info.config.tizhong}]  露珠[${info.config.maoqiu}]`
         result += msg
         console.log(msg)
     }
@@ -191,20 +197,20 @@ async function slm() {
 async function task1() {
     console.log(`临时任务列表：
 1：粉丝福利80080,25525,630630,79979都可以去首页搜索对应数字绑定qq`)
-    await lottery("lottery", "[630630]王牌勋章", 5)
-    await lottery("lottery", "[25525]补给箱", 4)
-    await lottery("lottery", "[79979]宝石", 3)
+    await slm()
+    await lottery("lottery", "60030-王牌勋章", 5)
+    await lottery("lottery", "25525-补给箱", 4)
+    await lottery("lottery", "79979-宝石", 3)
     await lottery("lottery2", "0", 2)
     let ids = await axios.get("https://cdn.jsdelivr.net/gh/Wenmoux/sources/other/id.json");
     for (id of ids.data) {
-        result += await jhy(id)
+        result += await jhy(id) +"\n"
     }
     let ids2 = await axios.get("https://cdn.jsdelivr.net/gh/Wenmoux/sources/other/id2.json");
-    for (id of ids.data) {
+    for (id of ids2.data) {
        await ddd(id)
     }
     await summer()
-    await wzry()
-    await slm()
+    await wzry()    
     await glist(2)
 }
