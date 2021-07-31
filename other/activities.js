@@ -162,7 +162,10 @@ async function ddd(id) {
 
 //史莱姆 2021-07-16 ~ 2021-07-31
 async function slm() {
-    console.log("\n--------夏日福利史莱姆养成计划开始(搜索2021666)--------\n")
+     for (cid of [15,14,13,3]) {
+    await get("2021slm/m",`duihuan&resure=1&dhid=${cid}`)
+    }
+/*    console.log("\n--------夏日福利史莱姆养成计划开始(搜索2021666)--------\n")
     aid = "2021slm/m"
     slmdata = await get(aid, "login", true)
     await Promise.all([
@@ -192,6 +195,7 @@ async function slm() {
         console.log(msg)
     }
     console.log("\n--------夏日福利 史莱姆养成计划结束--------\n")
+    */
 }
 
 async function task1() {
