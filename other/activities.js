@@ -162,9 +162,7 @@ async function ddd(id) {
 
 //史莱姆 2021-07-16 ~ 2021-07-31
 async function slm() {
-     for (cid of [15,14,13,3]) {
-    await get("2021slm/m",`duihuan&resure=1&dhid=${cid}`)
-    }
+   console.log("活动已结束")  
 /*    console.log("\n--------夏日福利史莱姆养成计划开始(搜索2021666)--------\n")
     aid = "2021slm/m"
     slmdata = await get(aid, "login", true)

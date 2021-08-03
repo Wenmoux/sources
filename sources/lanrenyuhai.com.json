@@ -1,9 +1,9 @@
 {
     "name": "旧时光",
-    "url": "oldtimescc.cc",
-    "version": 103,
+    "url": "lanrenyuhai.com",
+    "version": 100,
     "search": {
-        "url": "https://www.oldtimescc.cc/modules/article/search.php?searchkey=${key}&action=login&submit=",
+        "url": "https://www.lanrenyuhai.com/modules/article/search.php@post->searchkey=${key}&action=login&submit=",
         "charset": "GBK",
         "list": ".bookbox",
         "name": "h4",

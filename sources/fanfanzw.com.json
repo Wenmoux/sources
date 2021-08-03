@@ -1,9 +1,9 @@
 {
     "name": "饭饭中文",
     "url": "fanfanzw.com",
-    "version": 100,
+    "version": 102,
     "search": {
-        "url": "https://www.fanfanzw.com/search.html@post->searchkey=${key}",
+        "url": "https://www.fanfanzw.com/search.html@post->searchkey=${key}@header->cookie:Hm_lpvt_5ad21bae6b98da233a062cb40232fb22=1627959284",
         "charset": "utf-8",
         "list": "#sitembox>dl",
         "name": "h3 > a",
