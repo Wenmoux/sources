@@ -47,12 +47,12 @@ const catalog = (url) => {
 //章节
 const chapter = (url) => {
     let response = GET(url)
-    let $ = HTML.parse(response.replace(/€/g,"")
+    let $ = HTML.parse(response.replace(/€/g,""))
     return $(".read_chapterDetail")
 }
 
 var bookSource = JSON.stringify({
-    name: "耽美小说",
+    name:"耽美小说",
     url: "dmxs.org",
-    version: 100
+    version: 102
 })
