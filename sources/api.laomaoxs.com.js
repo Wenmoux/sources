@@ -33,7 +33,7 @@ const detail = (url) => {
     let $ = JSON.parse(response).data
     let book = {
         status: $.book_status == 1 ? "连载" : "完结",
-        update: formatDate($.update_time),
+        update: formatDate($.update_time*1000),
         lastChapter: $.chapter_list[$.chapter_list.length-1],
         catalog: url
     }
@@ -41,7 +41,7 @@ const detail = (url) => {
 }
 //转换更新时间 时间戳
 function formatDate(timeStamp) {
-    let diff = (Date.now() - timeStamp) / 1000
+    let diff = (Date.now() - timeStamp) 
     if (diff < 60) {
         return '刚刚'
     } else if (diff < 3600) {
