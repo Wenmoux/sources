@@ -10,6 +10,7 @@ function decode(word) {
     })
    return str.toString(CryptoJS.enc.Utf8)    
 }
+
 //搜索
 const search = (key) => {
     let response = GET(`${baseURI}/Search/index?key=${encodeURI(key)}&page=1`)
