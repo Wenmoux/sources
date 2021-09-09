@@ -152,10 +152,17 @@
 
 ## 函子风云录
 
-- 作者：**[OlingCat/](https://github.com/OlingCat/functor-fantasy)**
+- 作者：**[OlingCat](https://github.com/OlingCat/functor-fantasy)**
   
      
    > 一个轻小说接力写作企划
-   
+    
+
+## 白蛇缘起 小说版
+
+- 作者：**[NinePieces](https://github.com/NinePieces/BaiSheYuanQi)**
+  
+     
+   > 《白蛇缘起》，很喜欢画面，但觉得故事不够通畅，想试着改一改。  
 
 
