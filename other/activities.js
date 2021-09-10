@@ -199,7 +199,6 @@ async function slm() {
 async function task1() {
     console.log(`临时任务列表：
 1：粉丝福利80080,25525,630630,79979都可以去首页搜索对应数字绑定qq`)
-    await slm()
     await lottery("lottery", "60030-王牌勋章", 5)
     await lottery("lottery", "25525-补给箱", 4)
     await lottery("lottery", "79979-宝石", 3)
@@ -212,7 +211,4 @@ async function task1() {
     for (id of ids2.data) {
        await ddd(id)
     }
-    await summer()
-    await wzry()    
-    await glist(2)
 }
