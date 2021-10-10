@@ -19,8 +19,8 @@ https://cdn.jsdelivr.net/gh/Wenmoux/sources/Wen.json
 
 
 # 影音宝订阅源
-https://raw.githubusercontent.com/Wenmoux/sources/master/yyb/asmr.txt
-
+ - https://raw.githubusercontent.com/Wenmoux/sources/master/yyb/asmr.txt  
+ - https://raw.githubusercontent.com/Wenmoux/asmr/main/asmr/asmr.txt
 
 
 # Other
