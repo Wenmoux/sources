@@ -115,5 +115,4 @@ async function task1() {
     for (id of ids2.data) {
        await ddd(id)
     }
-    await cfm()
 }
