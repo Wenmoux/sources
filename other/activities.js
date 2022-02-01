@@ -25,6 +25,7 @@ async function slm() {
     console.log("\n--------寅春爆爆庙会开始--------\n")
  aid = "2022xinnian/m"
  slmdata = await get(aid, "login", true)
+ await get(aid,"giftCode&shareCode=4cae9d15aa53c")
  await Promise.all([
      get(aid, "gofuli&resure=1"),
      get(aid, "share"),
