@@ -148,4 +148,5 @@ async function task1() {
        await ddd(id)
     }
     await slm()
+    await glist(3)
 }
