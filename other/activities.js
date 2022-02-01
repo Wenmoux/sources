@@ -20,8 +20,7 @@ async function jhy(id) {
     return prize
 }
 
-// 
--2.15
+// 2.15
 async function slm() {
     console.log("\n--------寅春爆爆庙会开始--------\n")
  aid = "2022xinnian/m"
@@ -36,7 +35,7 @@ async function slm() {
      await get(aid, "guangczzl")
      await get(aid, "guang&resure=1")
  }
- let res = await $http.get(
+ let res = await axios.get(
      "https://huodong3.3839.com/n/hykb/2022xinnian/m/index.php"
  );
  str = res.data.match(/prize1_lingqu_(\d+)/g);
