@@ -21,7 +21,39 @@ async function jhy(id) {
 }
 
 // 
-
+-2.15
+async function slm() {
+    console.log("\n--------寅春爆爆庙会开始--------\n")
+ aid = "2022xinnian/m"
+ slmdata = await get(aid, "login", true)
+ await Promise.all([
+     get(aid, "gofuli&resure=1"),
+     get(aid, "share"),
+     get(aid, "xinshou&resure=1"),
+     get(aid, "gozhongcao&resure=1")
+ ]);
+ if (slmdata.config.day_guang != 2) {
+     await get(aid, "guangczzl")
+     await get(aid, "guang&resure=1")
+ }
+ let res = await $http.get(
+     "https://huodong3.3839.com/n/hykb/2022xinnian/m/index.php"
+ );
+ str = res.data.match(/prize1_lingqu_(\d+)/g);
+ for (id of str) {
+     await get(aid, "playgame&gameid=" + id.split("_")[2])
+ }
+ for (id of str) {
+     await get(aid, "lingqushiwan&gameid=" + id.split("_")[2])
+ }
+ let info = await get(aid, "login")
+ if (info.key == "ok") {
+     msg = `庙会：福气值 ${info.config.tizhong}  🧨 ${info.config.maoqiu} \n`
+     result += msg
+     console.log(msg)
+ }
+ console.log("\n--------寅春爆爆庙会结束--------\n")
+ }
 
 //获取任务id
 async function lottery(a, c, b) {
