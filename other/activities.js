@@ -163,7 +163,7 @@ async function task1() {
     for (id of ids2.data) {
         await ddd(id)
     }
-    await slm()
+ //   await slm()
     await glist(3)
-    await getxz()
+  //  await getxz()
 }
