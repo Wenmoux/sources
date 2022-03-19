@@ -139,6 +139,43 @@ async function cfm() {
 
 
 
+    async function zn5() {
+      console.log('\n--------5周年活动开始--------\n')
+      aid = '5zhounian/m'
+      await get(aid, 'share')
+      for (i = 5; i < 14; i++) {
+        await get(aid, 'DailyAppJump&id=' + i)
+        await get(aid, 'DailyAppLing&id=' + i)
+      }
+
+      pn = ''
+      info1 = await get(aid, 'login',true)
+      if (info1.key == 'ok') {
+        mh = info1.config.mh
+        console.log('可抽取盲盒次数：' + mh)
+        //开盲盒
+        for (k = 0; k < mh; k++) {
+          let cq = await get(aid, 'chouqu')
+          if (cq.key == 'ok') pn += cq.prizename + '  '
+        }
+        //勋章
+        if (info1.config.liuyanling != 1) {
+          await get(aid, 'chaundi&liuyan=快乐(ง+•̀_•́)ง快乐快乐&resource=0')
+          await get(aid, 'lingquliuyan')
+        }
+      }
+      let info = await get(aid, 'login',true)
+      //查询
+      if (info.key == 'ok') {
+        msg = `5周年：卡片 ${info.config.mykpnum} 奖励 ${pn}  \n`
+        result += msg
+        console.log(msg)
+      }
+      console.log('\n--------5周年活动结束--------\n')
+    }
+
+
+
 //勋章区
 async function getxz() {
     /*
@@ -169,4 +206,5 @@ async function task1() {
  //   await slm()
     await glist(3)
     await getxz()
+    await zn5()
 }
