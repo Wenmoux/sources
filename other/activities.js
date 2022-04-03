@@ -166,6 +166,8 @@ async function cfm() {
       }
       let info = await get(aid, 'login',true)
       //查询
+      await(aid,"lingqu5kp")
+      await(aid,"lingqu8kp")
       if (info.key == 'ok') {
         msg = `5周年：卡片 ${info.config.mykpnum} 奖励 ${pn}  \n`
         result += msg
@@ -203,6 +205,7 @@ async function task1() {
     for (id of ids2.data) {
         await ddd(id)
     }
+    await lottery("lottery","0",49)
  //   await slm()
     await glist(3)
     await getxz()
