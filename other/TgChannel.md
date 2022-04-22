@@ -34,6 +34,7 @@
  - [科技爱好者周刊](https://t.me/NewlearnerChannel)
  - [荔枝木](https://t.me/lychee_wood)
 
+
 ## 小说/阅读
  - [开心书库](https://t.me/happylibrary)
  - [Po18脸红心跳](https://t.me/po18book)
@@ -41,14 +42,17 @@
  - [好书分享频道](https://t.me/haoshufenxiang)
  - [好读](https://t.me/Readfine)
  - [web轻小说](https://t.me/WebQXS)
- - 
+   
+   
 ## 其它
  - [扫地僧笔记](https://t.me/lover_links)
  - [日常人间观察](https://t.me/hayami_kiraa)
  - [前女友们用过的机场](https://t.me/gebaopiCloud)
  - [DuYao](https://t.me/DuyaoSS)
-  - [TG极客](https://t.me/TGgeek)
-  - 
+ - [TG极客](https://t.me/TGgeek)
+ - [我的](https://t.me/wenmouxx)
+  
+  
 ## 不可以涩涩
 - [欧美/OnlyFans/Pornhub](https://t.me/gtkankan8)  
 - [好东西一起看](https://t.me/gtkankan1)   
@@ -65,6 +69,7 @@
  - [ASMR混乱](https://t.me/asmrforme)
  - [NiceAsmr](https://t.me/niceasmrs)
  - [QW素材区](https://t.me/qwsucai)
+ 
  
 ## 资源分享
  - [odyssey](https://t.me/odysseyplus)
