@@ -25,4 +25,4 @@ https://cdn.jsdelivr.net/gh/Wenmoux/sources/Wen.json
 
 # Other
  - [一些github上的小说](https://github.com/Wenmoux/sources/blob/master/other/githubnovel.md)
- - [一些telegram频道收藏](https://raw.githubusercontent.com/Wenmoux/sources/master/other/TgChannel.md)
+ - [一些telegram频道收藏](https://github.com/Wenmoux/sources/blob/master/other/TgChannel.md)
