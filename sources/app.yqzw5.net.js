@@ -22,6 +22,8 @@ const detail = (url) => {
     let book = {
         update: $.lastupdate_fmt,
         lastChapter: $.lastchapter,
+        summary: $.intro,
+        words: $.words_w,       
         catalog: `${baseurl}indexlist.php?aid=${$.articleid}`
     }
   return JSON.stringify(book)

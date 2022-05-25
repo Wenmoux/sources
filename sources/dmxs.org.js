@@ -47,7 +47,7 @@ const catalog = (url) => {
 //章节
 const chapter = (url) => {
     let response = GET(url)
-    let $ = HTML.parse(response.replace(/€/g,""))
+    let $ = HTML.parse(response.replace(/�/g,""))
     return $(".read_chapterDetail")
 }
 
