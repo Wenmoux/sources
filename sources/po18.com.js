@@ -82,7 +82,7 @@ let res= GET('https://www.po18.tw/panel')
     })
     return JSON.stringify({
         basic: [{
-                name: '昵稱',
+                name: '账号',
                 value: $('.memberInfo>h3').text().replace("會員資料編輯", ""),
                 url: 'https://www.po18.tw/panel'
             },
