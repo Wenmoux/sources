@@ -128,7 +128,8 @@ const rank = (title, category, page) => {
         $ = HTML.parse(book)             
         books.push({
             name: $('.l_bookname').text(),
-            author: $('.l_author').text(),          
+            author: $('.l_author').text(),        
+            cover: "https://cdn0.po18.tw/bc/default_icons/default_7_4_O.jpg",  
             detail: $('.l_bookname').attr('href'),
         })
     })
@@ -151,5 +152,5 @@ var bookSource = JSON.stringify({
     authorization: "https://members.po18.tw/apps/login.php",
     cookies: [".po18.tw"],
 ranks,
-    version: 101
+    version: 102
 })
