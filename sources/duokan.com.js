@@ -1,5 +1,6 @@
 require("crypto-js")
 //搜索
+
 const search = (key) => {
     let response = GET(`https://www.duokan.com/store/v0/lib/query/onebox?start=0&count=10&s=${encodeURI(key)}&source=2%2C5%2C7&_t=1616840245&_c=3963`)
     let array = []
@@ -39,26 +40,15 @@ const catalog = (url) => {
         array.push({
             name: chapter.title,
             url: `https://www.duokan.com/drm/v0/fiction/link?chapter_id=${chapter.seq_id}&format=jsonp&withid=1&fiction_id=${url.query("fid")}&_t=&_c=`,
-            vip: chapter.free
+            vip: chapter.free?false:true
         })
     })
     return JSON.stringify(array)
 }
-const catalog = (url) => {
-    let response = GET(url)
-    let $ = JSON.parse(response)
-    let array = []
-    $.item.toc.forEach((chapter, index) => {
-        array.push({
-            name: chapter.title,
-            url: `https://www.duokan.com/drm/v0/fiction/link?chapter_id=${chapter.seq_id}&format=json&withid=1&fiction_id=${url.query("fid")}&_t=&_c=`,
-            vip: chapter.free ? false : true
-        })
-    })
-    return JSON.stringify(array)
-}
+
 const chapter = (url) => {
     let $ = JSON.parse(GET(url))
+    SET_COOKIE('user_id')
     content = ""
     if ($.url) enC = GET($.url).match(/'(.+?)'/)[1]
     else throw JSON.stringify({
@@ -111,8 +101,8 @@ const profile = () => {
 
 var bookSource = JSON.stringify({
     name: "多看阅读",
-    url: "duokan.com",
+    url: "www.duokan.com",
     authorization: "https://www.duokan.com/www/sdk-h5/?ch=Y0X66A&chapter_id=510&page=user_center&_t=_r%3A",
     cookie: [".duokan.com"],
-    version: 100
+    version: 101
 })
