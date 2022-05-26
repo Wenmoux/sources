@@ -15,7 +15,7 @@ const search = (key) => {
             name: $('.book_name>a').text(),
             author: $('.book_author').text(),
             cover: $('img').attr('src'),
-            detail: `${baseUrl}${$('.book_name>a').attr('href')}`,
+            detail: `${$('.book_name>a').attr('href')}`,
         })
     })
     return JSON.stringify(array)
@@ -23,7 +23,7 @@ const search = (key) => {
 
 //详情
 const detail = (url) => {
-    let response = GET(url)
+    let response = GET(baseUrl+url)
     let $ = HTML.parse(response)
     let book = {
         summary: $('.B_I_content').text(),
@@ -31,7 +31,7 @@ const detail = (url) => {
         category: $(".tag").text(),
         lastChapter: $(".C_wrapbox>h4").text(),
         update: $(".date").text().replace(/公開 /, ""),
-        words: $(".book_data").text().match(/總字數 (\d+)/)[1],
+        words: $(".book_data").text().match(/總字數 (\d+)/)?$(".book_data").text().match(/總字數 (\d+)/)[1]:0,
         catalog: url + "/articles"
     }
     return JSON.stringify(book)
@@ -39,7 +39,7 @@ const detail = (url) => {
 
 //目录
 const catalog = (url) => {
-    let response = GET(url)
+    let response = GET(baseUrl+url)
     let $ = HTML.parse(response)
     let array = []
     $('#w0>div').forEach((booklet) => {
@@ -74,9 +74,7 @@ const chapter = (url) => {
 
 const profile = () => {
 let res= GET('https://www.po18.tw/panel')
- 
     let $ = HTML.parse(res)
- 
        if (/登入/.test(res)) throw JSON.stringify({
         code: 401
     })
@@ -115,10 +113,43 @@ const bookshelf = () => {
     })
 }
 
+const rank = (title, category, page) => {
+    let url = "https://www.po18.tw/rank/index"
+    let res = GET(url)
+    tk = res.match(/_po18rf-tk001\" value=\"(.+?)\">/)[1]  
+    let data = `_po18rf-tk001=${tk}&kind=${title}&type=${category}`
+    let response = POST(`https://www.po18.tw/rank/more`, {
+        data
+       
+    })  
+    let $ = HTML.parse(response)    
+    let books = []   
+    $('.row').forEach((book) => {
+        $ = HTML.parse(book)             
+        books.push({
+            name: $('.l_bookname').text(),
+            author: $('.l_author').text(),          
+            detail: $('.l_bookname').attr('href'),
+        })
+    })
+  return JSON.stringify({
+        end: page == 0,
+        books: books
+    })
+}
+
+
+let categories=[{key:"total",value:"weekly"},{key:"monthly",value:"月"},{key:"total",value:"總"}]
+const ranks=[{title:{key:'sex',value:'人氣榜'}},{title:{key:'pearl',value:'珍珠榜'}},{title:{key:'bestsale',value:'訂購榜'}},{title:{key:'stocked',value:'收藏榜'}},{title:{key:'mostcomments',value:'留言榜'}}]
+for (var i = 0; i < ranks.length; i++) {
+    cate = categories
+    ranks[i].categories = cate;
+}
 var bookSource = JSON.stringify({
     name: "po18臉紅心跳",
     url: "https://www.po18.tw",
     authorization: "https://members.po18.tw/apps/login.php",
     cookies: [".po18.tw"],
-    version: 100
+ranks,
+    version: 101
 })
