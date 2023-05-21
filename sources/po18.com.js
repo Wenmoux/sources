@@ -1,6 +1,6 @@
 const baseUrl = "https://www.po18.tw"
 const search = (key) => {
-    let url = "https://www.po18.tw/search/index"
+    let url = "https://www.po18.tw"
     let res = GET(url)
     tk = res.match(/_po18rf-tk001\" value=\"(.+?)\">/)[1]  
     data = `searchtype=all&name=${encodeURI(key)}&_po18rf-tk001=${tk}`
